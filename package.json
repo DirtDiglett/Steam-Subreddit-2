@@ -1,0 +1,12 @@
+{
+  "name": "steam-subreddit-2",
+  "version": "1.0.0",
+  "description": "This project handles to styling for the subreddit www.reddit.com/r/steam",
+  "author": "/u/dirtdiglett",
+  "devDependencies": {
+    "grunt": "^1.0.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-sass": "^1.0.0"
+  },
+  "dependencies": {}
+}

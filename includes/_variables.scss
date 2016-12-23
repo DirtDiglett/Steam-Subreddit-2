@@ -1,0 +1,10 @@
+// Here we will store every primary variable. Colors, sizing, etc.
+$header-height:			250px !default;
+$sr-header-area-padding:7px !default;
+$sr-header-area-height:	24px + $sr-header-area-padding + $sr-header-area-padding !default; // 24px + padding*2
+$header-tabs-height:	35px !default;
+$header-tabs-margin:	20px !default;
+
+
+$anchor-color:			#66c0f4 !default;
+$anchor-hover-color:	#fff !default;

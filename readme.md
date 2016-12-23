@@ -104,9 +104,9 @@ In order to properly contribute to this project there's a few requirements:
 Once you have all of these tools installed you'll need to install the grunt tasks. Run these commands in the node.js command prompt:
 
 ```
+npm install -g grunt
+npm install -g grunt-cli
 npm install grunt-contrib-sass --save-dev
-npm install grunt-autoprefixer --save-dev
-npm install grunt-remove --save-dev
 ```
 
 Now you should be able to navigate to the repo location on your PC in the node.js command prompt and run the command `grunt` and it should perform the rest for you.
