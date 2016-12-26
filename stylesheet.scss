@@ -110,10 +110,23 @@ input[type=password] {
 	}
 }
 
+.toggle .error {
+	font-size: 13px;
+	color: #e1c48a;
+	background: #827251;
+	padding: 6px 8px;
+	height: 24px;
+	position: relative;
+	margin: 0;
+	border-radius: 2px;
+	text-transform: uppercase;	
+}
+
 // Import our specific includes
 @import "includes/header";
 @import "includes/side";
-@import "includes/things"; // Things are links and comments, generally.
+@import "includes/things"; // Things include both main page links, and comments page stuff.
+@import "includes/expando";
 @import "includes/footer";
 
 // Include the 'special' things.

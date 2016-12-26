@@ -1,0 +1,74 @@
+.expando {
+	margin: 0;
+}
+
+.expando-button {
+	margin: 0;
+	width: 24px;
+	height: 24px;
+	background: rgba(103, 193, 245, 0.4);
+	max-width: 24px;
+	max-height: 24px;
+	margin-top: 24px;
+	margin-right: 8px;
+	border-radius: 2px;
+	background-image: url(%%spritesheet%%) !important;
+
+	&:hover {
+		background: #67c1f5;
+	}
+
+	&.selftext.collapsed {
+		background-position: -104px -182px !important;
+		
+		&:hover {
+			background-position: -104px -182px !important;
+		}
+	}
+
+	&.image.collapsedExpando {
+		background-position: -104px -206px !important;
+
+		&:hover {
+			background-position: -104px -206px !important;
+		}
+	}
+	
+	&.video.collapsed {
+		background-position: -104px -230px !important;
+
+		&:hover {
+			background-position: -104px -230px !important
+		}
+	}
+	
+	&.image.gallery.collapsedExpando {
+		background-position: -104px -254px !important;
+
+		&:hover {
+			background-position: -104px -254px !important;
+		}
+	}
+	
+	&.video-muted.collapsed {
+		background-position: -104px -278px !important;
+
+		&:hover {
+			background-position: -104px -278px !important;
+		}
+	}
+	
+	&.selftext.expanded,
+	&.video.expanded,
+	&.image.expanded,
+	&.image.gallery.expanded,
+	&.video-muted.expanded {
+		background-position: -104px -158px !important;
+		margin-bottom: 0;
+	}
+}
+
+.usertext-body .md .expando-button {
+	margin-top: -4px;
+	margin-left: 4px;
+}

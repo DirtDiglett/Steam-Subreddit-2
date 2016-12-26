@@ -1022,6 +1022,39 @@
 	}
 }
 
+.gadget {
+	.midcol {
+		width: 32px;
+
+		.arrow.up,
+		.arrow.upmod {
+			margin-bottom: 4px;
+		}
+	}
+
+	.thing {
+		.score {
+			color: rgba(255, 255, 255, 0.7);
+			line-height: 16px;
+			font-size: 11px;
+			text-align: left;
+			margin: 0;			
+		}
+
+		.entry {
+			min-height: 0;
+		}
+	}
+
+	small {
+		color: #8f98a0;
+	}
+
+	.reddit-link-end {
+		padding: 0;
+	}
+}
+
 .account-activity-box {
 	padding-top: 0;
 	text-align: left;
@@ -1051,7 +1084,7 @@
 	padding: 8px !important;
 
 	&:after {
-		content: "advertisement";
+		content: "Advertisement";
 		text-align: center;
 		display: block;
 		margin-top: -9px;
