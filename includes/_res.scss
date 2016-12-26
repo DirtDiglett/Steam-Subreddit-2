@@ -1,0 +1,6 @@
+// Everything is nested in .res to ensure specifity and to ensure it doesn't affect non-res users.
+.res {
+	.toggle.res-sr-style-toggle {
+		order: 1
+	}
+}

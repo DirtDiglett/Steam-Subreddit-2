@@ -1,0 +1,1088 @@
+.side {
+	margin: 150px 16px 108px 0;
+	padding: 0;
+	background: none;
+	width: 320px;
+
+	.spacer {
+		margin: 0 0 16px 0;
+
+		&:last-child {
+			margin-top: -16px;
+		}
+	}
+
+	.md>blockquote,
+	.md>p {
+		margin: 0
+	}
+
+	// This handles the modal on the top right that holds the helpful links.
+	.md>ul:nth-of-type(1) {
+		@include modal();
+
+		position: absolute;
+		top: 53px;
+		right: 20px;
+		width: 320px;
+		overflow: hidden;
+		list-style: none;
+		padding: 8px;
+		margin: 0;
+		font-size: 13px;
+
+		li {
+			margin: 0;
+
+			a {
+				@include modal-button();
+
+				&:hover {
+					@include modal-button(hover);
+				}
+
+				&:active {
+					@include modal-button(active);
+				}		
+			}
+
+			&:last-child a {
+				margin: 0;
+			}
+		}
+	}
+
+	form.toggle,
+	a[href$="give.me.flair.in.r.steam.pm"] {
+		@include sidebarbutton();
+
+		min-height: 17px;
+		line-height: 17px;
+		margin-bottom: 2px;
+		padding: 0;	
+		
+		&:hover {
+			@include sidebarbutton(hover);
+		}	
+	}
+
+	a[href$="give.me.flair.in.r.steam.pm"] {
+		padding-top: 4px;
+		padding-left: 8px;
+		padding-bottom: 4px;
+		display: block;
+	}
+
+	.md {
+		color: #8f98a0;
+
+		p {
+			line-height: 1.4;
+			font-size: 13px;
+			color: #8f98a0;
+		}
+
+		strong {
+			color: #c6d4df;	
+		}
+
+		h3 {
+			@include sidebarh3(font-inclusive, margins-inclusive);		
+		}
+
+		// Steam Status table, provided by Steamstat.us
+		table:nth-of-type(1) {
+			min-width: 100%;
+			margin: 0;
+			margin-bottom: 6px;
+
+			td {
+				border: none;
+				padding: 3px 0;
+
+				a,
+				a:hover {
+					cursor: default;
+					color: #61686d;
+				}
+
+				a[href$="//steamstat.us/#good"] {
+					color: #a4d007;
+					background: #4c6b22;
+					text-align: center;
+					padding: 2px 6px
+				}
+				a[href$="//steamstat.us/#bad"] {
+					color: #c25a2c;
+					background: #783614;
+					text-align: center;
+					padding: 2px 6px
+				}
+			}
+		}
+
+		// The rules.
+		ol:nth-of-type(1) {
+			margin-bottom: 18px;
+			counter-reset: li;
+			padding-left: 30px;
+			font-family: $special-font;
+
+			li {
+				position: relative;
+				display: block;
+				padding: 4px 6px;
+				margin: 6px 0px;
+				background: rgba(103, 193, 245, 0.1);
+				color: #c6d4df;
+				border-radius: 1px;
+
+				&:before {
+					content: counter(li);
+					counter-increment: li;
+					position: absolute;
+					left: -30px;
+					top: 0;
+					background: #383737;
+					bottom: 0;
+					color: #fff;
+					text-align: center;
+					width: 30px;
+					padding-top: 6px;
+					background-color: rgba(0, 0, 0, 0.2)
+				}
+
+				strong {
+					color: #fff;
+				}
+			}
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				margin-bottom: 2px;
+
+				& > a {
+					display: block;
+					height: 26px;
+					padding-top: 4px;
+					padding-left: 8px;
+					line-height: 19px;
+					background: rgba(103, 193, 245, 0.1);
+					color: #67c1f5;
+					border-radius: 1px;
+
+					&:hover {
+						color: #fff;
+						background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%)
+					}
+				}
+			}
+		}
+
+		// The Community section
+		ul:nth-of-type(2) li {
+			a {
+				margin-left: 37px;
+
+				&:before {
+					content: "";
+					background-image: url(%%spritesheet%%);
+					background-color: rgba(0, 0, 0, 0.2);
+					position: absolute;
+					width: 36px;
+					height: 26px;
+					margin-left: -45px;
+					margin-top: -4px;
+				}
+			}
+
+			&:nth-of-type(1) a:before {
+				background-position: -122px -24px
+			}
+
+			&:nth-of-type(2) a:before {
+				background-position: -122px -51px
+			}
+
+			&:nth-of-type(3) a:before {
+				background-position: -122px -78px
+			}
+
+			&:nth-of-type(4) a:before {
+				background-position: -122px -105px
+			}
+		}
+
+		// The Subreddit Friends section (Makes the /r/ less visible)
+		ul:nth-of-type(3) li a em {
+			color: rgba(255, 255, 255, 0.4);
+			font-style: normal;
+		}
+	}
+
+	#moderation_tools {
+		border: 1px solid #a55b13;
+		border-radius: 4px;
+		box-shadow: 1px 1px 0 0 #39393a;
+		padding: 0;
+		background: rgba(27, 27, 27, 0.36);
+		margin-bottom: 17px;
+		color: #8e8e8e;
+
+		.title {
+			border-radius: 2px;
+			border: none;
+			padding: 6px 15px;
+			display: inline-block;
+			cursor: pointer;
+			text-decoration: none !important;
+			color: #67c1f5 !important;
+			background: rgba(0, 0, 0, 0.5);
+			margin: 10px;
+			padding-right: 34px;
+
+			&:hover {
+				text-decoration: none !important;
+				color: #fff !important;
+				background: rgba(102, 192, 244, 0.4);
+
+				h1,
+				.collapse-button {
+					color: #fff;
+				}
+
+				.collapse-button {
+					border-color: #fff;
+				}
+			}
+
+			h1 {
+				font-size: 0;
+				color: #67c1f5;
+
+				&:before {
+					font-size: 15px;
+					content: "Moderator Tools";
+				}
+			}
+
+			.collapse-button {
+				background: none;
+				border: 1px solid #67c1f5;
+				border-radius: 3px;
+				color: #67c1f5;
+				margin: 0;
+				margin-left: 8px;
+				width: 14px;
+				height: 14px;
+				font-size: 16px;
+				line-height: 8px;
+				vertical-align: middle;
+				position: absolute;
+				margin-top: 2px;
+				font-weight: bold;
+				font-family: $special-font;
+			}		
+		}
+
+		ul {
+			border: none;
+			border-top: 1px solid #333;
+			padding: 0;
+
+			li ul {
+				border: none;
+				padding: 10px;
+				margin: 0;
+
+				li a {
+					@include sidebarbutton();
+
+					min-height: 26px;
+					padding-top: 4px;
+					padding-left: 8px;
+					line-height: 19px;
+					display: inline-block;
+					margin-left: 37px;
+					width: 261px;
+					font-size: 13px;
+
+					&:before {
+						content: "";
+						background-color: rgba(0, 0, 0, 0.2);
+						position: absolute;
+						width: 36px;
+						min-height: 26px;
+						margin-left: -45px;
+						margin-top: -4px;
+						background-image: url(%%spritesheet%%);						
+					}	
+					
+					&:hover {
+						@include sidebarbutton(hover);
+					}			
+				}
+			}
+		}
+
+		.icon-menu {
+			li {
+				margin: 0;
+				margin-bottom: 2px;
+			}
+
+			.reddit-edit:before {
+				background-position: -158px -24px
+			}
+
+			.edit-stylesheet:before {
+				background-position: -158px -50px
+			}
+
+			.community-rules:before {
+				background-position: -158px -78px
+			}
+
+			.moderator-mail:before {
+				background-position: -158px -105px
+			}
+
+			.reddit-moderators:before {
+				background-position: -158px -132px
+			}
+
+			.reddit-contributors:before {
+				background-position: -158px -159px
+			}
+
+			.reddit-traffic:before {
+				background-position: -158px -186px
+			}
+
+			.reddit-modqueue:before {
+				background-position: -158px -214px
+			}
+
+			.reddit-reported:before {
+				background-position: -158px -241px
+			}
+
+			.reddit-spam:before {
+				background-position: -158px -268px
+			}
+
+			.reddit-edited:before {
+				background-position: -158px -295px
+			}
+
+			.reddit-ban:before {
+				background-position: -158px -322px
+			}
+
+			.reddit-mute:before {
+				background-position: -158px -349px
+			}
+
+			.reddit-flair:before {
+				background-position: -158px -376px
+			}
+
+			.reddit-automod:before {
+				background-position: -158px -402px
+			}
+
+			.reddit-moderationlog:before {
+				background-position: -158px -430px
+			}
+
+			.reddit-unmoderated:before {
+				background-position: -158px -456px
+			}
+		}
+	}
+}
+
+.flairselector {
+	@include modal();
+	position: fixed;
+	top: 20% !important;
+	left: 50% !important;
+	margin-left: -170px;
+	padding: 16px !important;
+	width: 380px !important;
+	overflow: hidden;		
+	
+	h2 {
+		font-weight: bold;
+		font-family: $special-font;
+		text-align: left;
+		background: none;
+		margin: 0;
+		color: #2a3e59;
+		font-size: 17px;
+		padding-bottom: 8px;
+		text-transform: uppercase;					
+	}
+
+	.flairoptionpane {
+		max-height: none;
+		margin-bottom: 24px;
+	}
+
+	.flair {
+		min-width: 0;
+		position: relative;
+		margin-right: 0;
+		margin-top: 0;
+	}
+
+	ul {
+		width: 86px !important;
+		margin-right: 4px;
+
+		li {
+			border: none;
+			padding: 4px;
+			margin: 4px 0;
+			width: auto !important;
+			text-align: center !important;
+			border-radius: 2px;
+
+			&:hover {
+				background: rgba(0,0,0,0.1);
+			}
+
+			&.selected {
+				background: #212c3d;
+			}
+		}
+	}
+
+	form {
+		border: none;
+		padding: 0;
+		text-align: left;
+		padding-bottom: 34px;
+
+		.flairselection {
+			line-height: 24px;
+			background: #27455e;
+			border-radius: 3px;
+			padding: 4px 8px;
+
+			&:before {
+				content: "Flair Preview";
+				color: #fff;
+				display: block;				
+			}		
+		}
+
+		input[type=text] {
+			margin-bottom: 16px;
+		}
+
+		button {
+			position: absolute;
+			left: 16px;
+			bottom: 16px;
+			padding: 0 15px;
+			font-size: 0;
+			height: 30px;
+			border-radius: 2px;
+			border: none;
+			color: #66c0f4;
+			background: #212c3d;
+			text-transform: capitalize;
+			margin: 0;
+			margin-right: 4px;
+			width: 100px;
+
+			&:hover {
+				color: #fff;
+				background: #66c0f4;
+			}
+
+			&:after {
+				content: "Save Flair";
+				font-size: 15px;
+				line-height: 30px;
+			}	
+		}
+	}
+
+	.flairremove {
+		position: absolute;
+		left: 128px;
+		bottom: 16px;
+		padding: 0 15px;
+		font-size: 0;
+		height: 30px;
+		border-radius: 2px;
+		border: none;
+		color: #66c0f4;
+		background: #212c3d;
+		text-transform: capitalize;
+		margin: 0;
+		margin-right: 4px;
+		cursor: pointer;
+
+		&:hover {
+			color: #fff;
+			background: #66c0f4;			
+		}
+
+		&:after {
+			content: "Remove Flair";
+			font-size: 15px;
+			line-height: 30px;
+		}
+	}
+}
+
+.morelink {
+	height: auto;
+	position: absolute;
+	top: 272px;
+	padding: 16px;
+	border: 0;
+	background: 0 0 !important;
+	padding-top: 42px;
+
+	&:hover a,
+	a {
+		color: #66c0f4;	
+	}
+
+	a {
+		position: relative;
+		width: 136px;
+		height: 58px;
+		display: inline-block;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 56px;
+		color: #66c0f4;
+		text-align: center;
+		background-image: url(%%spotlight-bg%%);
+		background-position-y: -105px;
+		border-radius: 3px;
+		box-shadow: 0 0 4px #000;
+		font-family: $special-font;
+
+		&:hover {
+			background-position-y: -142px;
+			color: #fff;	
+		}
+	}
+}
+
+.submit-link .morelink {
+	&:before {
+		content: "";
+		position: absolute;
+		width: 320px;
+		top: 0;
+		left: 0;
+		bottom: 0;
+	}
+
+	&:after {
+		content: "Submit content";
+		position: absolute;
+		top: 7px;
+		left: 15px;
+		color: #fff;
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 17px;
+		letter-spacing: 1px;
+		font-family: $special-font;
+		width: 300px;
+		text-align: left;		
+	}
+}
+
+.submit-text .morelink {
+	margin-left: 152px;
+}
+
+.infobar.newsletterbar {
+	margin: 0;
+}
+
+.titlebox {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+
+	&>* {
+		width: 100%;
+		order: 2;
+	}
+
+	.subscribers,
+	.users-online {
+		order: -1;
+		text-align: center;
+		font-family: $special-font;
+	}
+
+	.subscribers {
+		span {
+			font-size: 24px;
+			color: #fff;
+		}
+
+		span.number:after {
+			content: " Subscribers";
+		}
+	}
+
+	.users-online {
+		font-size: 18px;
+		color: #8bc53f;
+
+		.number {
+			font-style: italic;
+		
+			&:after {
+				content: " In non-Steam game " open-quote "reddit" close-quote;
+			}
+		}
+	}
+
+	.subscribers,
+	.titlebox .fancy-toggle-button a,
+	.users-online {
+		font-weight: 300;
+		font-size: 14px
+	}
+
+	.fancy-toggle-button {
+		display: block;
+		width: auto;
+		margin: 8px auto
+	}
+
+	.subButtons {
+		order: 0;
+		text-align: center;
+		margin-bottom: 8px;
+	}
+
+	input[type=checkbox]+label {
+		line-height: 17px;
+		font-size: 13px;
+		padding-top: 4px;
+		padding-left: 5px;
+		padding-bottom: 4px;
+		display: block;
+		cursor: pointer;
+
+		&:hover {
+			content: "";
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			background: url(%%checkboxes%%);
+			background-position: 0 0;
+			vertical-align: middle;
+			margin-right: 4px;
+
+			&:before {
+				background-color: transparent
+			}
+		}
+	}
+
+	.res-sr-style-toggle input+label::before,
+	input:checked+label::before {
+		content: "";
+		background-position: 0 -16px
+	}
+
+	[for=flair_enabled] {
+		font-size: 0 !important;
+
+		&:after {
+			content: "Display my flair";
+			vertical-align: middle;
+			font-size: 13px;
+		}
+	}
+
+	// Flair section
+	.tagline {
+		display: block;
+		margin: 0 0 2px 0;
+		height: 36px;
+		border-radius: 1px;
+		position: relative;
+		overflow: hidden;
+		padding: 8px 8px 55px 8px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 25px;
+			border: 1px solid rgba(103, 193, 245, 0.1);
+			border-radius: 3px 3px 0 0;			
+		}
+
+		.author {
+			font-size: 13px;
+			font-family: $special-font;
+		}
+
+		.flair {
+			// Force the flair to show fullwidth as a preview.
+			min-width: 600px;
+			font-size: 11px;
+		}
+
+		.flairselectbtn {
+			// This hides the default "edit" wording, to replace with a cool button.
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: 0;
+			font-size: 0;
+
+			&:after {
+				@include sidebarbutton();
+				content: "Edit flair";
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				min-height: 17px;
+				border-radius: 1px;
+				line-height: 17px;
+				font-size: 13px;
+				padding-top: 4px;
+				padding-left: 8px;
+				padding-bottom: 4px;
+
+				&:hover {
+					@include sidebarbutton(hover);
+				}
+
+				&:active {
+					@include sidebarbutton(active);
+				}			
+			}			
+		}
+	}
+}
+
+// Subscription button seperated for character saving.
+.subscribe-button {
+	.add,
+	.remove {
+		width: 190px;
+		height: 40px;
+		line-height: 37px;
+		padding-top: 0;
+		text-align: center;
+		background: linear-gradient(to bottom, #799905 5%, #536904 95%);
+		background-color: #799905;
+		border: none;
+		text-transform: capitalize;
+		border-radius: 2px;
+		color: #D2E885;
+		text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.1);
+
+		&:hover {
+			color: #fff;
+		}		
+	}
+
+	.add {
+		&:hover {
+			background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%);			
+		}
+
+		&.active:active {
+			text-shadow: 0 0 2px #CF9300;
+			box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.15), inset 0 -2px 6px -3px #FFF, inset 0 2px 6px -3px #999, inset 0 15px 30px -15px #EFB300, inset 0 -15px 30px -15px #FFE320 !important;
+		}
+	}
+
+	.remove {
+		box-shadow: none !important;
+		background: none;
+		text-shadow: none;
+		color: rgba(255, 255, 255, 0.6);
+		border: 1px solid rgba(255, 255, 255, 0.6);
+
+		&:hover {
+			border-color: #fff;
+		}
+
+		&.active:active {
+			background: rgba(255, 255, 255, 0.2);
+		}
+	}
+
+	.active {
+		display: inline-block !important;
+	}
+}
+
+.login-form-side {
+	&:before {
+		@include sidebarh3(font-inclusive, null);
+		content: "Login";
+		margin-bottom: 12px;
+		display: block;		
+	}
+
+	input[type=text],
+	input[type=password] {
+		width: 100%;
+		line-height: 26px;
+		margin: 0;
+		margin-bottom: 6px;
+	}
+
+	#remember-me {
+		margin: 0;
+		line-height: 29px;
+	}
+
+	.submit {
+		margin: 0;
+
+		button {
+			min-height: 17px;
+			background: rgba(103, 193, 245, 0.1);
+			color: #67c1f5;
+			border-radius: 3px;
+			margin-bottom: 2px;
+			padding: 0;
+			line-height: 29px;
+			font-size: 13px;
+			padding: 0 15px;
+			text-transform: capitalize;
+			margin: 0;
+			border: none;
+
+			&:hover {
+				text-decoration: none;
+				color: #ffffff;
+				background: #67c1f5;
+				background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+			}
+
+			&:active {
+				background: darken(#67c1f5, 10%);
+				background: linear-gradient(135deg, darken(#67c1f5, 10%) 0%, darken(#417a9b, 10%) 100%)
+			}
+		}
+	}
+}
+
+.linkinfo {
+	display: flex;
+	flex-flow: column;
+	flex-wrap: wrap;
+	border-radius: 0;
+
+	&:before {
+		@include sidebarh3(font-inclusive, null);
+		content: "Post Information";
+		display: block;
+		margin-bottom: 12px;
+	}
+
+	.totalvotes,
+	.score {
+		font-size: 14px;
+		order: 1;
+
+		.number,
+		.word {
+			color: #c6d4df;
+			font-size: 14px;
+		}
+	}
+
+	.totalvotes {
+		order: 1;
+	}
+
+	.score {
+		order: 2;
+	}
+
+	.date {
+		order: 3;
+		margin-top: 8px;
+
+		span {
+			color: #61686d;
+		}
+	}
+
+	.shortlink {
+		order: 4;
+		font-size: 0;
+		margin-top: 8px;
+		border-radius: 0;
+
+		input {
+			width: 100%;
+			line-height: 26px;
+			margin: 0;
+			font-size: 13px;
+		}
+	}
+}
+
+.sidecontentbox {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+
+	.title {
+		order: 1;
+		width: 100%;
+		margin-bottom: 12px;
+
+		h1 {
+			@include sidebarh3(font-inclusive, null);
+
+			text-transform: capitalize;
+		}
+	}
+
+	ul {
+		order: 2;
+		width: 100%;
+	}
+
+	.more {
+		font-size: inherit;
+		text-align: left;
+
+		a {
+			color: $anchor-color;
+
+			&:hover {
+				color: $anchor-hover-color;
+			}
+		}
+	}
+
+	a.helplink {
+		@include outlinebutton();
+
+		order: 3;
+		margin-top: 16px;
+
+		&:hover {
+			@include outlinebutton(hover);
+		}
+
+		&:active {
+			@include outlinebutton(active);
+		}
+	}
+
+	.content {
+		border: 0;
+		padding: 0;
+	}
+
+	&:not(#moderation_tools) .title h1 {
+		font-size: 0;
+
+		&:before {
+			content: "Recently Viewed Links";
+			font-size: 16px;
+		}
+	}
+
+	&:not(#moderation_tools) a+.title h1 {
+		font-size: 0;
+
+		&:before {
+			content: "Moderators";
+			font-size: 16px;
+		}
+	}
+}
+
+.account-activity-box {
+	padding-top: 0;
+	text-align: left;
+
+	a {
+		@include outlinebutton();
+
+		display: inline-block;
+
+		&:hover {
+			@include outlinebutton(hover);
+		}
+
+		&:active {
+			@include outlinebutton(active);
+		}
+	}
+}
+
+// Set the ads to an appropriate width x height
+#ad_main_top.ad300x250,
+#ad_main_top.sponsor-300-250,
+#ad_main,
+#ad_frame {
+	width: 320px;
+	height: 280px;
+	padding: 8px !important;
+
+	&:after {
+		content: "advertisement";
+		text-align: center;
+		display: block;
+		margin-top: -9px;
+		color: rgba(255,255,255, 0.4);
+	}
+}
+
+#ad_main.ad300x250:after {
+	margin-top: -19px;
+}
+
+// Maintain a consistent background on these items.
+#ad-frame,
+#ad_main,
+#ad_main_top.ad300x250,
+#ad_main_top.sponsor-300-250,
+#images,
+#previoussearch #moresearchinfo,
+.comments-page .side .linkinfo,
+.linefield,
+.login-form-side,
+.side .sidecontentbox,
+.side .titlebox,
+.sponsorshipbox,
+.stylesheet-customize-container .pretty-form,
+.submit-page .roundfield,
+.wiki-page .wiki-page-content,
+.account-activity-box {
+	background-color: rgba(0, 0, 0, 0.2);
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 transparent;
+	padding: 16px;
+	border: none;
+	color: #8f98a0
+}

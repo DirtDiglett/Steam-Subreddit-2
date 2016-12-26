@@ -1,10 +1,176 @@
 @import "includes/variables";
 @import "includes/animations";
 
+// This file holds generally the global styling.
 
+// Pseudoelements
+::-moz-selection,
+::selection {
+	background-color: #0564d7;
+	text-shadow: none;
+	color: #fff
+}
+
+:focus {
+	outline: 0!important
+}
+
+*,
+:before,
+:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: url(%%body-bg%%) center ($header-height/2) no-repeat #1b2838;
+	min-width: 960px;
+	overflow-x: hidden;
+	padding-top: $header-height; // This determines the height of the header.
+	position: relative;
+	z-index: 3;
+
+	&:before {
+		// Set a default, override as needed.
+		background-image: url(%%default-header%%);
+		background-size: cover;
+		background-position: 0 0;
+	}
+
+	&:before {
+		background-image: url(%%dota-header%%);
+		background-position: 70% 0;
+		background-size: 1920px;
+		background-color: #171a21;
+		display: block;
+		height: $header-height;
+		min-width: 960px;
+		top: 0;
+	}
+}
+
+body > .content {
+	margin: 20px 352px 64px 16px;
+	padding: 0 !important;
+
+	@if $banner-height != null {
+		margin-top: $banner-height + (20px * 2);
+	} @else {
+		margin-top: 20px;
+	}
+}
+
+.side:before,
+.side:after,
+body:before,
+body:after {
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	z-index: -1
+}
+
+a,
+.md a {
+	color: $anchor-color;
+	text-decoation: none;
+
+	&:hover {
+		color: $anchor-hover-color;
+	}
+}
+
+input[type=text],
+input[type=search],
+input[type=password] {
+	background-color: #316282;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.6);
+	box-shadow: 1px 1px 0px rgba(255,255,255,0.13);
+	color: #fff;
+	outline: none;
+	height: 29px;
+	padding: 4px 8px;
+
+	&:hover,
+	&:focus {
+		border: 1px solid #4c9acc;
+	}
+
+	&::-webkit-input-placeholder,
+	&::-moz-placeholder,
+	&:-ms-input-placeholder,
+	&:-moz-placeholder,
+	&:placeholder {
+		color: #0e1c25;
+		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+		font-style: italic;	
+	}
+}
 
 // Import our specific includes
 @import "includes/header";
+@import "includes/side";
+@import "includes/things"; // Things are links and comments, generally.
+@import "includes/footer";
+
+// Include the 'special' things.
+@import "includes/flairs";
 @import "includes/res";
 
+// This import will be adjusted as new events with new styling requirements appear.
 @import "includes/snow";
+@import "includes/update-banner";
+
+
+// Disable certain elements
+.titlebox .bottom,
+.leavemoderator,
+.morelink .nub,
+.sidebox.create .morelink a,
+.titlebox form.toggle.leavecontributor-button,
+.side .md hr,
+h1.redditname a,
+.comment.collapsed>.midcol,
+.side input[type=checkbox]:not(#rem-login-main):not([name=restrict_sr]),
+div.titlebox span.word,
+.titlelebox .word,
+.titlebox .users-online:before,
+.sidebox.create,
+.debuginfo,
+#hsts_pixel,
+.side .titlebox .tagline .flairselector .flairoptionpane a.author,
+.side .titlebox .tagline .flairselector .status:empty,
+.side .md-container .md table:nth-of-type(1) thead,
+body>.content .link .rank,
+.rank-spacer,
+.thing .tagline .stickied-tagline,
+body.comments-page .thing.morerecursion .tagline,
+body.comments-page .thing.morerecursion .buttons,
+body.comments-page .thing.morerecursion .deepthread:after,
+#header-bottom-right .separator,
+a.author.moderator ~ .userattrs,
+a.author.admin ~ .userattrs,
+a.author.submitter ~ .userattrs,
+.titlebox>h1 {
+	display: none
+}
+
+// A lot of reddit messages have no starting capital, this aims to fix that for consistency.
+#header .tabmenu li a,
+.action-form .reason-prompt:first-letter,
+.action-form li label,
+.commentarea .menuarea span.dropdown-title.lightdrop:first-letter,
+.content .infobar:first-letter,
+.flairselector .error:first-letter,
+.flairselector form .flairselection .flairremove a,
+.flairselector h2,
+.link .entry .tagline:first-letter,
+.side #moderation_tools .title h1,
+.subscribe-button a.add,
+.subscribe-button a.remove,
+.unvotable-message:first-letter {
+	text-transform: capitalize
+}

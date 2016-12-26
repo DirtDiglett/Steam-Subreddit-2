@@ -1,10 +1,116 @@
 // Here we will store every primary variable. Colors, sizing, etc.
-$header-height:			250px !default;
-$sr-header-area-padding:7px !default;
-$sr-header-area-height:	24px + $sr-header-area-padding + $sr-header-area-padding !default; // 24px + padding*2
-$header-tabs-height:	35px !default;
-$header-tabs-margin:	20px !default;
+$header-height:					250px !default;
+$sr-header-area-padding:		7px !default;
+$sr-header-area-height:			24px + ($sr-header-area-padding * 2) !default;
+$header-tabs-height:			35px !default;
+$header-tabs-margin:			20px !default;
 
+// Banner
+$banner-height:					null !default;
+$banner-height:					60px; // Delete this line to hide the banner.
 
-$anchor-color:			#66c0f4 !default;
-$anchor-hover-color:	#fff !default;
+// Colors
+$anchor-color:					#66c0f4 !default;
+$anchor-hover-color:			#fff !default;
+
+// Sizing
+$border-radius-tiny:			1px !default;
+$border-radius-small:			2px !default;
+$border-radius-default:			3px !default;
+
+// Flairs
+$flair-height:					24px !default;
+$flair-width:					100px !default;
+
+// CSS Properties
+$modal-background:				linear-gradient(to bottom, #e3eaef 0%, #c7d5e0 100%) !default;
+$special-font:					"Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, "Calibri Light", Calibri, sans-serif;
+
+@mixin sidebarbutton($state: 'default') {
+	@if $state == 'default' {
+		// Use the default button
+		text-decoration: none;
+		color: #67c1f5;
+		background: rgba(103, 193, 245, 0.2);
+		border-radius: 1px;
+	} @else {
+		// Hover State
+		@if $state == 'hover' {
+			text-decoration: none;
+			color: #fff;
+			background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+		} @else {
+			// Active State
+			text-decoration: none;
+			color: #fff;
+			background: linear-gradient(135deg, darken(#67c1f5,10%) 0%, darken(#417a9b, 10%) 100%);
+		}
+	}
+}
+
+@mixin modal() {
+	background: linear-gradient(100deg, #c6d4df 5%, #e2f4ff 95%);
+	border: 1px solid #fff;
+	border-radius: $border-radius-default;
+	color: #30455a;
+	box-shadow: 0 0 12px #000;
+}
+
+@mixin modal-button($state: 'default') {
+	@if $state == 'default' {
+		margin-bottom: 5px;
+		background-color: rgba(0, 0, 0, 0.1);
+		border-radius: 2px;
+		padding: 4px 8px;
+		line-height: 25px;
+		font-size: 13px;
+		color: #407898;
+		text-align: center;
+		height: auto;
+	}
+
+	@if $state == 'hover' {
+		color: #fff;
+		background: #67c1f5
+	}
+
+	@if $state == 'active' {
+		color: darken(#fff, 10%);
+		background: darken(#67c1f5, 10%);
+	}
+}
+
+@mixin sidebarh3($font-included: 'font-inclusive', $margins-included: 'margin-inclusive') {
+	color: #fff;
+	font-size: 16px;
+	font-weight: normal;
+
+	@if $font-included == 'font-inclusive' {
+		font-family: $special-font;
+	}
+
+	@if $margins-included == 'margin-inclusive' {
+		margin-bottom: 12px;
+		margin-top: 36px;	
+	}
+}
+
+@mixin outlinebutton($state: 'default') {
+	@if $state == 'default' {
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		color: #fff;
+		text-transform: uppercase;
+		padding: 2px 15px;
+		font-size: 12px;
+		border-radius: 2px;
+	} 
+
+	@if $state == 'hover' {
+		border-color: #fff;
+	} 
+
+	@if $state == 'active' {
+		color: darken(#ffffff, 10%);
+		background: rgba(255,255,255,0.15);
+	}
+}
