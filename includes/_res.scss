@@ -1,6 +1,354 @@
 // Everything is nested in .res to ensure specifity and to ensure it doesn't affect non-res users.
 .res {
 	.toggle.res-sr-style-toggle {
-		order: 1
+		order: 1;
+	}
+
+	#RESShortcutsViewport {
+		display: inline;
+	}
+
+	#RESShortcutsEditContainer {
+		display: inline-block;
+		max-height: 24px;
+		background: none;
+		line-height: 14px;
+		height: 24px;
+		position: relative;
+		margin-left: 8px;
+		opacity: 0;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	#sr-header-area:hover #RESShortcutsEditContainer {
+		opacity: 1;
+	}
+
+	#RESShortcutsSort,
+	#RESShortcutsRight,
+	#RESShortcutsLeft,
+	#RESShortcutsAdd,
+	#RESShortcutsEditContainer .res-icon {
+		line-height: 35px;
+		border-radius: 0;
+		min-height: 15px;
+		color: #66c0f4;
+		line-height: 13px;
+		width: 15px;
+		height: 15px;
+		background-color: #36617d;
+		background-position: 4px 4px;
+		border-radius: 3px;
+		background-repeat: no-repeat;
+		box-shadow: 0 0 3px #000;
+		padding: 0;
+		text-align: center;
+		top: 3px;
+		font-size: 11px;
+
+		&:hover {
+			background-color: #67c1f5;
+			color: #fff;
+		}
+	}
+
+	.RESDropdownList {
+		background: linear-gradient(to bottom, #585452 5%, #3b3938 95%);
+		border-radius: 0;
+		border: 1px solid #82807c !important;
+		padding: 6px 0px;
+
+		li {
+			display: block;
+			padding: 5px 12px;
+			color: #e5e4dc;
+			font-size: 13px;
+			font-weight: normal;
+			line-height: normal;
+			text-align: left;
+			border: none;
+
+			&:hover {
+				background: #212d3d;
+				color: #e5e4dc;			
+			}
+		}
+
+		a:hover {
+			background: none;
+			color: #e5e4dc;
+		}
+	}
+
+	.RESDropdownList 
+	#openRESPrefs {
+		width: 27px;
+		height: 24px;
+		display: inline-block;
+		margin: 0;
+		position: relative;
+		top: 6px;
+		margin-right: 4px;
+	}
+
+	#userbarToggle {
+		min-height: 15px;
+		background: rgba(0, 0, 0, 0.5);
+		top: -1px;
+		line-height: 35px;
+		border: none;
+		border-radius: 0;
+		min-height: 15px;
+		color: #66c0f4;
+		top: 10px;
+		line-height: 13px;
+		border: none;
+		border-radius: 0;
+		width: 15px;
+		height: 15px;
+		background-color: #36617d;
+		background-position: 4px 4px;
+		border-radius: 3px;
+		background-repeat: no-repeat;
+		box-shadow: 0 0 3px #000;
+		padding: 0;
+		text-align: center;
+
+		&:hover {
+			background-color: #67c1f5;
+			color: #fff;
+		}
+	}
+
+	#userbarToggle.userbarShow {
+		top: 9px !important;
+		right: 1px
+	}
+
+	#header-bottom-right {
+		border-radius: 0;
+		top: -6px !important
+	}
+
+	.beta-hint a {
+		margin-left: -23px;
+		top: 12px
+	}
+
+	#srList {
+		background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%);
+		border: none;
+		box-shadow: 0 0 12px #000000;
+		padding: 8px 5px 8px 5px;
+		top: 30px;
+
+		tr {
+			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+			color: #000;
+			padding: 4px 6px;
+			background: none;
+
+			a {
+				color: #333;
+			}
+
+			&:hover {
+				color: #fff;
+				background-color: #212d3d;
+				border-bottom: 1px solid #fff;
+
+				a {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	#srDropdown,
+	#srDropdownContainer {
+		width: 23px;
+		height: 23px
+	}
+
+	#sr-header-area #srDropdown {
+		margin: 0
+	}
+
+	#srDropdownContainer a {
+		padding: 0;
+		background-image: none;
+		font-size: 0 !important;
+		position: relative;
+		display: inline-block;
+		height: 23px;
+		width: 23px;
+		background-image: url(%%spritesheet%%);
+		background-position: 0 0;
+		transition: none;
+
+		&:hover {
+			background-position: 0 -23px;
+		}
+	}
+
+	.RESDashboardToggle,
+	.RESshortcutside {
+		background-image: none !important;
+		border: none;
+		color: #66c0f4;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 4px 6px;
+		margin: 0;
+		text-align: center;
+		width: 100px;
+
+		&:hover {
+			background-color: transparent;
+			color: #fff;
+		}
+	}
+
+	.RES-keyNav-activeElement,
+	.RES-keyNav-activeElement .md-container {
+		background: transparent !important;
+		background-color: transparent !important;
+	}
+
+	&.listing-page .RES-keyNav-activeElement {
+		background: transparent !important;
+		background-color: transparent !important;
+		border-right: 3px solid rgba(255, 255, 255, 0.4);
+	
+		.md-container {
+			border: none !important;
+		}
+	}
+
+	.res-showImages-highlightNSFWButton .thing.over18 .expando-button::before {
+		background: none !important;
+	}
+
+	.res-expando-box {
+		padding: 4px;
+		color: #c6d4df;
+
+		.res-title {
+			color: #fff;
+			font-weight: normal;
+			font-family: "Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, "Calibri Light", Calibri, sans-serif;
+			font-size: 16px;
+			margin: 0;
+			margin-bottom: 8px;
+			margin-top: 16px;
+		}
+
+		.res-gallery-title {
+			font-size: 18px;
+			margin-bottom: 12px;
+			margin-top: 0;
+		}
+
+		.res-caption {
+			font-size: 13px;
+			order: initial;
+			margin-bottom: 4px;
+		}
+
+		.res-gallery-position {
+			color: #fff;
+			font-weight: bold
+		}
+	}
+
+	.res-step {
+		height: 32px;
+		width: 32px;
+		line-height: 32px;
+		background: rgba(0, 0, 0, 0.4);
+		color: #67c1f5;
+		border-radius: 3px;
+		padding: 0;
+		text-align: center;
+
+		&:hover {
+			color: #fff;
+			background: rgba(102, 192, 244, 0.4);
+
+			&:after {
+				color: #fff;
+			}
+		}
+
+		&:after {
+			color: #9e9c9b;
+		}
+	}
+
+	.res-gallery .res-gallery-individual-controls {
+		margin: 0;
+		height: 32px;
+	}
+
+	.res-voteEnhancements-highlightScores {
+		span.score {
+			color: rgba(255, 255, 255, 0.7);
+		}
+
+		span.score.likes {
+			color: #a4d007;
+		}
+		
+		span.score.dislikes {
+			color: #bb5150;
+		}
+	}
+
+	.res-commentBoxes .comment {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.res-floater-visibleAfterScroll > ul > li {
+		opacity: 1;
+	}
+
+	#NREMail.havemail {
+		display: none;
+	}
+
+	#NREMail.nohavemail {
+		width: 27px;
+		height: 24px;
+		background-image: url(%%spritesheet%%)!important;
+		background-repeat: no-repeat!important;
+		background-color: #262625;
+		background-position: -23px 0;
+		margin-top: 4px;
+		margin-right: 4px;
+
+		&:hover {
+			background-color: #575451;
+		}
+	}
+
+	#NREMailCount {
+		line-height: 24px;
+		margin-top: 6px;
+	}
+
+	.pageNavigator {
+		width: 32px;
+		height: 32px;
+		position: relative;
+		background-color: rgba(0,0,0,0.4)!important;
+		border-radius: 3px;
+		line-height: 25px;
+		color: #999896;
+
+		&:hover {
+			background-color: rgba(102,192,244,0.4)!important;
+			color: #fff;
+		}
 	}
 }

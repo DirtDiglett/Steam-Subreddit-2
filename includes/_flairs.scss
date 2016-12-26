@@ -1,5 +1,113 @@
+// Reddit default 'flairs' ie: submitter, moderator, administrator
+a.author.moderator,
+a.author.admin,
+a.author.submitter,
+.res .res-userHighlight .tagline .author.moderator,
+.res .res-userHighlight .tagline .author.admin,
+.res .res-userHighlight .tagline .author.submitter {
+	padding: 2px 8px !important;
+	border-radius: 4px 2px 2px 4px !important;
+	padding-left: 0 !important;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+
+	&:before {
+		padding: 2px 6px;
+		margin-right: 6px;
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+		border-radius: 2px 0 0 2px;
+	}
+}
+
+a.author.submitter,
+.res .res-userHighlight .tagline .author.submitter {
+	background-color: #5485b7 !important;
+	box-shadow: inset 0 0 0 1px #5485b7;
+	font-weight: normal !important;
+
+	&:before {
+		background-color: #26384f !important;
+		content: "OP";
+		color: #5485b7;
+		box-shadow: inset 0 0 0 1px #212f43;
+	}
+
+	&:hover {
+		background-color: #789fc6 !important;
+		box-shadow: inset 0 0 0 1px #6692bf;
+
+		&:before {
+			background-color: #375071 !important;
+			box-shadow: inset 0 0 0 1px #293b54;
+		}
+	}
+}
+
+a.author.moderator,
+.res .res-userHighlight .tagline .author.moderator {
+	background-color: #4c6b22 !important;
+	box-shadow: inset 0 0 0 1px #2e4014;
+	font-weight: normal !important;
+
+	&:before {
+		background-color: #34482c !important;
+		content: "Mod";
+		color: rgba(174, 221, 23, 0.5);
+		box-shadow: inset 0 0 0 1px #2e4014;
+	}
+
+	&:hover {
+		background-color: #67922e !important;
+		box-shadow: inset 0 0 0 1px #3c531a;
+		
+		&:before {
+			background-color: #4b683f !important;
+			box-shadow: inset 0 0 0 1px #3c531a
+		}
+	}
+}
+
+a.author.admin,
+.res .res-userHighlight .tagline .author.admin {
+	background-color: #6b2222 !important;
+	box-shadow: inset 0 0 0 1px #c32626;
+	font-weight: normal !important;
+
+	&:before {
+		background-color: #482c2c !important;
+		content: "Admin";
+		color: #c32626;
+		box-shadow: inset 0 0 0 1px #c32626;		
+	}
+
+	&:hover {
+		background-color: #922e2e !important;
+
+		&:before {
+			background-color: #683f3f;
+		}
+	}
+}
+
+
+
+// User Flairs
 .flair {
     width: 75px;
     height: 24px;
     margin-left: 4px;
+    font-size: 0;
+	position: absolute;
+	margin-top: -2px;
+	line-height: 14px;
+}
+
+// Link Flairs
+.linkflairlabel {
+	background: #666;
+	color: #FFF;
+	padding: 2px 8px;
+	border-radius: 40px;
+	margin-bottom: -2px;
+	max-width: none;
+	border: 0px none;
 }

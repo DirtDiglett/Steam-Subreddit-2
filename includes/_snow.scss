@@ -110,6 +110,16 @@
 		top: 111px;
 		left: 423px;
 	}
+
+	[href$="http://store.steampowered.com/#wintersale"] {
+		background-image:url(%%winter-sale-button-final%%);
+		position: absolute;
+		z-index: 5;
+		width: 296px;
+		height: 87px;
+		top: 75px;
+		left: 340px;
+	}
 }
 
 @keyframes sway {
