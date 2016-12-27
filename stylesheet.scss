@@ -85,10 +85,12 @@ a,
 input[type=text],
 input[type=search],
 input[type=password],
+input[type=url],
 textarea,
 .pretty-form input[type=text],
 .pretty-form textarea,
 .pretty-form input[type=password],
+.pretty-form input[type=url],
 .pretty-form input[type=number] {
 	background-color: #316282;
 	border-radius: 3px;
@@ -139,11 +141,13 @@ textarea,
 	input[type=text],
 	input[type=search],
 	input[type=password],
+	input[type=url],
 	textarea,
 	.pretty-form input[type=text],
 	.pretty-form textarea,
 	.pretty-form input[type=password],
-	.pretty-form input[type=number] {
+	.pretty-form input[type=number],
+	.pretty-form input[type=url] {
 		background-color: rgba(0, 0, 0, 0.4);
 		border-radius: 3px;
 		border: 1px solid #000;
@@ -157,46 +161,66 @@ textarea,
 	}
 }
 
-select {
-	background-color: #212f43;
-	border-radius: 3px;
-	border: 1px solid rgba(91, 132, 181, 0.2);
-	box-shadow: 1px 1px 0px #000000;
-	color: #BFBFBF;
+.content select {
+	background-color: #417a9b;
+	background: rgba(103, 193, 245, 0.4);;
+	border: 0;
+	color: #67c1f5;
 	outline: none;
-	padding: 0px;
-	line-height: 27px;
-	height: 27px;
-	font-size: 14px;
+	padding: 8px 15px;
+	padding-right: 31px;
+	line-height: 31px;
+	font-size: 12px;
+	top: -2px;
 
 	&:hover {
-		background-color: lighten(#212f43, 5%);
-		border: 1px solid rgba(91, 132, 181, 0.4);
+		color: #fff;
+	}
+
+	option {
+		background: #417a9b;
+		font-size: 13px;
+		padding: 5px 12px;
+		color: #e5e4dc;
+
+		&:hover {
+			background: #212d3d;
+		}
 	}
 }
 
+.copntent select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+.content select::-ms-expand { /* for IE 11 */
+	display: none;
+}
+
 .content button {
-    border-radius: 2px;
-    border: none;
-    padding: 6px 15px;
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none;
-    color: #67c1f5;
-    background: rgba(0,0,0,0.5);
-    text-transform: capitalize;
-    font-size: 15px;
-    margin: 0;
+	border-radius: 2px;
+	border: none;
+	padding: 6px 15px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	color: #67c1f5;
+	background: rgba(0,0,0,0.5);
+	text-transform: capitalize;
+	font-size: 15px;
+	margin: 0;
 
-    &:hover {
-    	color: #fff;
-    	background: rgba(102,192,244,0.4);
-    }
+	&:hover {
+		color: #fff;
+		background: rgba(102,192,244,0.4);
+	}
 
-    &:active {
-    	color: darken(#fff,10%);
-    	background: darken(rgba(102,192,244,0.4),10%);
-    }
+	&:active {
+		color: darken(#fff,10%);
+		background: darken(rgba(102,192,244,0.4),10%);
+	}
 }
 
 .toggle .error {
@@ -220,10 +244,196 @@ select {
 	background-position: 0 -46px;
 }
 
+.modactionlisting {
+	a[href$="steam_reddit"],
+	a[href$="AutoModerator"],
+	a[href$="SEO_Nuke"],
+	a[href$="FlairAssigner"] {
+		opacity: 0.1;
+	}
+}
+
+.linefield,
+.roundfield {
+	width: auto;
+	background: rgba(84,133,183,0.2);
+	border-radius: 3px;
+	color: #dae3ea;
+	padding: 16px;
+	border: none;
+
+	.title {
+		@include sidebarh3(null, null);
+		margin-bottom: 12px;
+		text-transform: capitalize;
+		display: block;
+    	padding: 0;
+	}
+
+	.title + .gray {
+	    font-size: 12px;
+	}
+
+	.little {
+		font-size: 12px;
+	}
+
+	.gray {
+		color: #dae3ea;
+	}
+
+	textarea {
+		min-height: 80px;
+	}
+
+	span+span {
+		margin-left: 0;
+	}
+}
+
+.linefield .linefield-content,
+.roundfield .roundfield-content {
+	padding: 0;
+}
+
+.linefield.mobile {
+	width: auto;
+	background: rgba(84,133,183,0.2);
+	border-radius: 3px;
+	color: #dae3ea;
+	padding: 16px;
+	border: none;
+}
+
+
+.commentarea .menuarea .spacer .dropdown,
+.search-page .content .dropdown,
+.content > .menuarea .dropdown {
+	background: rgba(103, 193, 245, 0.4);;
+	border: 0;
+	color: #67c1f5;
+	outline: none;
+	padding: 8px 15px;
+	padding-right: 31px;
+	line-height: 31px;
+	font-size: 12px;
+	top: -2px;
+	background-image: url(%%dropdown-arrow%%);
+	background-repeat: no-repeat;
+	background-position: right 0;
+
+	&:hover {
+		color: #fff;
+		background: url(%%dropdown-arrow%%), -webkit-linear-gradient(-60deg, rgb(103, 193, 245) 0%, rgb(65, 122, 155) 100%);
+		background-repeat: no-repeat;
+		background-position: right 0, 0 0;
+
+		.selected {
+			color: #fff;
+		}
+	}
+
+	.selected {
+		font-weight: normal;
+		color: #67c1f5;
+		font-size: 12px;
+		text-decoration: none;
+		padding-right: 0;
+		background: none;
+	}
+}
+
+.commentarea .menuarea .spacer .drop-choices,
+.search-page .content .drop-choices,
+.content > .menuarea .drop-choices {
+	box-shadow: 0 0 12px #000000;
+	background: rgb(65, 122, 155);
+	margin-top: 16px;
+	min-width: 120px;
+	border: 0;
+
+	a {
+		font-size: 13px;
+		padding: 5px 12px;
+		color: rgb(229, 228, 220);
+
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+			background-color: #212d3d;
+		}
+	}
+}
+
+.content > .menuarea {
+	color: #8f98a0;
+    background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
+    padding: 16px;
+    border: none;
+    margin-bottom: 2px;
+
+    .dropdown-title {
+	    color: #fff;
+	    font-size: 16px;
+	    font-weight: normal;
+	    text-transform: capitalize;
+	}
+}
+
+.wiki-page .wikititle,
+.search-page .raisedbox h4,
+.submit-page .content > h1,
+.fancy-settings h1 {
+    font-weight: bold;
+    color: #ffffff!important;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.wiki-page {
+	.wiki-page-content {
+		background: #324b68;
+	    border-radius: 3px;
+	    margin: 0;
+	    margin-top: 16px;
+	}
+
+	.wiki-page-content .wiki>.toc>ul {
+	    background: #324b68;
+	    /* border-radius: 3px; */
+	    border: 0;
+	}
+
+	.wiki-page-content {
+		.toc + h1 {
+		   	margin-top: 0;
+		}
+
+		.wiki>.toc>ul>li:not(.toc_child) {
+		    font-weight: bold;
+		}
+
+		.md h1,
+		.md h6,
+		.md h3 {
+			color: #fff;
+		}
+	}
+}
+
+.modtools-page>div.content {
+    margin: 20px 352px 64px 16px;
+    padding: 0!important;
+    margin-top: 100px;
+}
+
 // Import our specific includes
 @import "includes/header";
 @import "includes/side";
 @import "includes/things"; // Things include both main page links, and comments page stuff.
+@import "includes/submit-page";
+@import "includes/search-page";
 @import "includes/expando";
 @import "includes/footer";
 
@@ -277,7 +487,6 @@ a.author.submitter ~ .userattrs,
 .content .infobar:first-letter,
 .flairselector .error:first-letter,
 .flairselector form .flairselection .flairremove a,
-.flairselector h2,
 .link .entry .tagline:first-letter,
 .side #moderation_tools .title h1,
 .subscribe-button a.add,

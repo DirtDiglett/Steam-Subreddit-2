@@ -33,18 +33,17 @@ $special-font:					"Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, "Cali
 		color: #67c1f5;
 		background: rgba(103, 193, 245, 0.2);
 		border-radius: 1px;
-	} @else {
-		// Hover State
-		@if $state == 'hover' {
-			text-decoration: none;
-			color: #fff;
-			background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
-		} @else {
-			// Active State
-			text-decoration: none;
-			color: #fff;
-			background: linear-gradient(135deg, darken(#67c1f5,10%) 0%, darken(#417a9b, 10%) 100%);
-		}
+	} 
+
+	@if $state == 'hover' {
+		text-decoration: none;
+		color: #fff;
+		background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+	} 
+	@if $state == 'active' {
+		text-decoration: none;
+		color: #fff;
+		background: linear-gradient(135deg, darken(#67c1f5,10%) 0%, darken(#417a9b, 10%) 100%);
 	}
 }
 

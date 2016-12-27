@@ -102,7 +102,7 @@
 
 	[href="#elf"] {
 		background-image:url(%%elf-spritesheet-2%%);
-		animation: elfanimation 10s steps(72) infinite;
+		animation: elfanimation 10s steps(72) 2s infinite;
 		position: absolute;
 		z-index: -1;
 		width: 130px;
@@ -164,5 +164,5 @@
 }
 
 @keyframes elfanimation {
-	35%, 100% { background-position: -9360px; }
+	30%, 100% { background-position: -9360px; }
 }

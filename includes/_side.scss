@@ -88,6 +88,8 @@
 
 		h3 {
 			@include sidebarh3(null, margin-inclusive);		
+
+			border: 0;
 		}
 
 		// Steam Status table, provided by Steamstat.us
@@ -99,6 +101,10 @@
 			td {
 				border: none;
 				padding: 3px 0;
+
+				&:hover {
+					background: none;
+				}
 
 				a,
 				a:hover {
@@ -314,6 +320,7 @@
 						margin-left: 37px;
 						width: 261px;
 						font-size: 13px;
+						text-transform: capitalize;
 
 						&:before {
 							content: "";
@@ -338,6 +345,14 @@
 			li {
 				margin: 0;
 				margin-bottom: 2px;
+			}
+
+			li.selected {
+				a {
+					@include sidebarbutton(active);
+					color: #fff;
+					font-weight: normal;
+				}
 			}
 
 			a:before {
@@ -426,6 +441,10 @@
 			}
 		}
 	}
+}
+
+body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
+    display: none;
 }
 
 .flairselector {
@@ -664,7 +683,7 @@
 		}
 
 		span.number:after {
-			content: " Subscribers";
+			content: " Steam Users";
 		}
 	}
 
@@ -1062,7 +1081,8 @@
 	}
 }
 
-.spacer:nth-of-type(7) {
+// Should target the Moderators
+.spacer:nth-last-of-type(3) {
 	ul.content {
 		overflow: hidden;
 
@@ -1072,7 +1092,7 @@
 			line-height: 24px;
 
 			.flair {
-				margin-top: 0 !important;
+				display: none;
 			}
 		}
 	}
@@ -1171,18 +1191,33 @@
 #images,
 #previoussearch #moresearchinfo,
 .comments-page .side .linkinfo,
-.linefield,
 .login-form-side,
 .side .sidecontentbox,
 .side .titlebox,
 .sponsorshipbox,
 .stylesheet-customize-container .pretty-form,
-.submit-page .roundfield,
-.wiki-page .wiki-page-content,
 .account-activity-box {
 	background-color: rgba(0, 0, 0, 0.2);
 	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 transparent;
 	padding: 16px;
 	border: none;
 	color: #8f98a0
+}
+
+
+
+
+
+
+
+
+
+.side a[href$="surveyhero.com/c/03757ed"] {
+position: absolute;
+    bottom: 228px;
+    left: 695px;
+    background: #00a3e8;
+    padding: 4px 40px;
+    border-radius: 19%;
+    color: #0a3a6d;
 }

@@ -312,87 +312,89 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 	margin: 0 0 0 8px;
 }
 
-// Search area
-#search {
-	background: #316282;
-	border-radius: 3px;
-	border: 1px solid rgba(0, 0, 0, 0.3);
-	box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
-	color: #fff;
-	outline: none;
-	height: 29px;
-	padding: 0;
-	width: 270px;
-	position: absolute;
-	top:($header-height - $header-tabs-height)-$header-tabs-margin + 3px;
-	right: $header-tabs-margin + 4px;
-	z-index: 4;
-
-	&:hover {
-		border: 1px solid #4c9acc;
-		box-shadow: 1px 1px 0px rgba(255, 255, 255, 0);	
-	}
-
-	input[type=text] {
-		border: none;
-		background-color: transparent;
-		width: 100%;
-		line-height: 29px;
+.side {
+	// Search area
+	#search {
+		background: #316282;
+		border-radius: 3px;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.2);
+		color: #fff;
+		outline: none;
+		height: 29px;
 		padding: 0;
-		padding-left: 8px;
-	}
-
-	input[type=submit] {
-		background-image: url(%%spritesheet%%) !important;
-		background-position: -97px -24px;
-		height: 25px;
-		width: 25px;
-		margin-left: -26px;
-		margin-top: -2px;
+		width: 270px;
+		position: absolute;
+		top:($header-height - $header-tabs-height)-$header-tabs-margin + 3px;
+		right: $header-tabs-margin + 4px;
+		z-index: 4;
 
 		&:hover {
-			background-position: -97px -49px;
-		}
-	}
-
-	#searchexpando {
-		background: $modal-background;
-		border: 1px solid #fff;
-		border-radius: 3px;
-		padding: 8px;
-		box-shadow: 0 0 3px #000;
-		margin: 2px 0 0 0;
-
-		input {
-			margin: 0 6px 0 0;
+			border: 1px solid #4c9acc;
+			box-shadow: 1px 1px 0px rgba(255, 255, 255, 0);	
 		}
 
-		label,
-		p a {
-			margin-bottom: 5px;
-			display: block;
-			cursor: pointer;
-			background-color: rgba(0, 0, 0, 0.1);
-			border-radius: 2px;
-			padding: 4px 8px;
-			line-height: 25px;
-			font-size: 11px;
-			color: #407898;
+		input[type=text] {
+			border: none;
+			background-color: transparent;
+			width: 100%;
+			line-height: 29px;
+			padding: 0;
+			padding-left: 8px;
+		}
+
+		input[type=submit] {
+			background-image: url(%%spritesheet%%) !important;
+			background-position: -97px -24px;
+			height: 25px;
+			width: 25px;
+			margin-left: -26px;
+			margin-top: -2px;
 
 			&:hover {
-				color: #fff;
-				background: #67c1f5;
-			}
-
-			&:active {
-				background: rgba(0, 0, 0, 0.06);
+				background-position: -97px -49px;
 			}
 		}
 
-		input, 
-		p,
-		p a {
-			margin-bottom: 0;
+		#searchexpando {
+			background: $modal-background;
+			border: 1px solid #fff;
+			border-radius: 3px;
+			padding: 8px;
+			box-shadow: 0 0 3px #000;
+			margin: 2px 0 0 0;
+
+			input {
+				margin: 0 6px 0 0;
+			}
+
+			label,
+			p a {
+				margin-bottom: 5px;
+				display: block;
+				cursor: pointer;
+				background-color: rgba(0, 0, 0, 0.1);
+				border-radius: 2px;
+				padding: 4px 8px;
+				line-height: 25px;
+				font-size: 11px;
+				color: #407898;
+
+				&:hover {
+					color: #fff;
+					background: #67c1f5;
+				}
+
+				&:active {
+					background: rgba(0, 0, 0, 0.06);
+				}
+			}
+
+			input, 
+			p,
+			p a {
+				margin-bottom: 0;
+			}
 		}
 	}
 }

@@ -91,29 +91,158 @@ a.author.admin,
 
 
 // User Flairs
-.flair {
-	width: 75px;
-	height: 24px;
-	font-size: 10px;
-	position: absolute;
-	margin-top: -2px !important;
-	line-height: 21px;
-	background: rgba(0,0,0,0.4);
-	border: 1px solid rgba(0,0,0,0.4);
-	color: rgba(255,255,255,0.4);
+.link .flair {
+	font-size: 0;
+
+	&:hover {
+		font-size: 11px;
+	}
 }
+
+.flair {
+	position: absolute;
+    margin-top: -2px!important;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    line-height: 24px;
+    padding-left: 75px;
+    font-size: 12px;
+
+    &:hover {
+    	font-size: 12px;
+	    color: red;
+	    background-color: blue;
+    }
+
+	&:before {
+		content: "";
+	    height: 24px;
+	    display: inline-block;
+	    background: rgba(0,0,0,0.4);
+	    border: 1px solid rgba(0,0,0,0.4);
+	    color: rgba(255,255,255,0.4);
+	    position: absolute;
+	    left: 0;
+	}
+}
+
+.flair-small {
+	&:hover {
+		padding: 0 8px 0 34px;
+	}
+
+	&:before {
+		width: 24px;
+		background-color: rgba(255,255,255,0.4);
+	}
+}
+
+.flair-wide {
+	&:hover {
+		padding: 0 8px 0 85px;
+	}
+
+	&:before {
+		width: 75px;
+		background-color: rgba(255,0,0,0.4);
+	}	
+}
+	
 
 .flair ~ .score {
 	margin-left: 85px;
 }
 
+.thing.collapsed .flair ~ .score {
+    margin-left: 0;
+}
+
 // Link Flairs
-.linkflairlabel {
+.linkflairlabel,
+.flairselector .linkflairlabel {
 	background: #666;
 	color: #FFF;
 	padding: 2px 8px;
-	border-radius: 40px;
-	margin-bottom: -2px;
+//	border-radius: 40px;
+	margin: 0;
 	max-width: none;
-	border: 0px none;
+	border: 1px solid #fff;
+	float: right;
+	font-weight: normal;
+}
+
+.flairselector .linkflairlabel {
+	float: none;
+}
+
+.link.linkflair-resolved .linkflairlabel,
+.link .flairselector .linkflair-resolved .linkflairlabel {
+	border-color: #9cc808;
+    background: #4c6b22;
+    color: #9cc808;
+}
+
+.link.linkflair-psa .linkflairlabel,
+.link .flairselector .linkflair-psa .linkflairlabel {
+	border-color: #ce77e4;
+    background: #5c226b;
+    color: #e788ff;
+}
+
+.link.linkflair-question .linkflairlabel,
+.link .flairselector .linkflair-question .linkflairlabel {
+	border-color: #656565;
+    background: #333333;
+    color: #b3b3b3;
+}
+
+.link.linkflair-suggestion .linkflairlabel,
+.link .flairselector .linkflair-suggestion .linkflairlabel {
+	border-color: #7d8198;
+    background: #282a35;
+    color: #abaec1;
+}
+
+.link.linkflair-news .linkflairlabel,
+.link .flairselector .linkflair-news .linkflairlabel {
+	border-color: #fff790;
+    background: #e4d304;
+    color: #333;
+}
+
+.link.linkflair-discussion .linkflairlabel,
+.link .flairselector .linkflair-discussion .linkflairlabel {
+	border-color: #6788ff;
+    background: #0430d0;
+    color: #b6c5ff;
+}
+
+.link.linkflair-error .linkflairlabel,
+.link .flairselector .linkflair-error .linkflairlabel {
+	border-color: #ff8209;
+    background: #d06804;
+    color: #fff;
+}
+
+.link.linkflair-fluff .linkflairlabel,
+.link .flairselector .linkflair-fluff .linkflairlabel {
+	border-color: #fbf6e6;
+    background: #d0c7a6;
+    color: #333;
+}
+
+.link.linkflair-meta .linkflairlabel,
+.link .flairselector .linkflair-meta .linkflairlabel {
+    border-color: #b3dc24;
+    background: #7c9a14;
+    color: #e9ff9b;
+}
+
+.link.linkflair-ugc .linkflairlabel,
+.link .flairselector .linkflair-ugc .linkflairlabel {
+	border-color: #9a6810;
+    background: #654101;
+    color: #f9c468;
 }

@@ -53,34 +53,43 @@
 	}
 
 	.RESDropdownList {
-		background: linear-gradient(to bottom, #585452 5%, #3b3938 95%);
-		border-radius: 0;
-		border: 1px solid #82807c !important;
-		padding: 6px 0px;
+		background: $modal-background;
+		border: 1px solid #fff;
+		border-radius: 3px;
+		padding: 8px;
+		box-shadow: 0 0 3px #000;
+		margin: 2px 0 0 0;
 
 		li {
+			margin-bottom: 5px;
 			display: block;
-			padding: 5px 12px;
-			color: #e5e4dc;
-			font-size: 13px;
+			cursor: pointer;
+			background-color: rgba(0, 0, 0, 0.1);
+			border-radius: 2px;
+			padding: 4px 8px;
+			line-height: 25px;
+			font-size: 11px;
+			color: #407898;
+			text-transform: capitalize;
+			border: 0;
 			font-weight: normal;
-			line-height: normal;
-			text-align: left;
-			border: none;
 
 			&:hover {
-				background: #212d3d;
-				color: #e5e4dc;			
+				color: #fff;
+				background: #67c1f5;
+			}
+
+			&:active {
+				background: rgba(0, 0, 0, 0.06);
 			}
 		}
 
 		a:hover {
+			color: #fff;
 			background: none;
-			color: #e5e4dc;
 		}
 	}
 
-	.RESDropdownList,
 	#openRESPrefs {
 		width: 27px;
 		height: 24px;
@@ -485,110 +494,6 @@
 	    color: #C6D4DF;
 	    border: 1px solid rgba(255,255,255,0.2);
 	    margin-top: 12px;
-
-	    .md {
-		    color: #C6D4DF;
-
-		    h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6 {
-				color: #fff;
-				font-weight: normal;
-				margin: 24px 0 12px 0;
-			}
-
-			h1 {
-				font-size: 22px;
-			}
-
-			h3 {
-				color: #529cde;
-				border-bottom: 1px dotted #666666;
-				font-size: 19px;
-				margin-bottom: 5px;
-			}
-
-			p {
-				margin: 0;
-				margin-bottom: 16px;
-			}
-
-			blockquote {
-				border: 1px solid #56707f;
-				border-radius: 3px;
-				padding: 12px;
-				margin: 8px;
-				font-size: 14px;
-				color: #c6d4df;
-				margin-top: 16px;
-			}
-
-			strong {
-				color: #fff;
-			}
-
-			del {
-				color: #8f98a0;
-			}
-
-			pre {
-				background: none;
-				border: 1px solid #fff;
-				border-radius: 2px;
-				font-size: 13px;
-				color: #fff;
-				margin: 16px 0;
-				padding: 4px;
-				
-				code {
-					margin: 0;
-				}
-			}
-
-			ul,
-			ol {
-				padding-left: 32px;
-				margin: 16px 0;
-				
-				li {
-					font-size: 15px;
-					line-height: 1.8em;
-				}
-			}
-
-			table {
-				margin: 8px 0;
-				font-size: 14px;
-				color: #c6d4df;
-
-				thead th {
-					background: rgba(86, 112, 127, 0.3);
-					color: #fff;
-					font-size: 16px;
-					font-weight: normal;
-					padding: 6px 12px;
-					border: 1px solid #56707f;
-
-					&:hover {
-						background: rgba(86, 112, 127, 0.5);
-					}
-				}
-
-				td {
-					padding: 6px 12px;
-					font-size: 16px;
-					border: 1px solid #56707f;
-
-					&:hover {
-						color: #fff;
-						background: rgba(0, 0, 0, 0.15);
-					}
-				}
-			}
-		}
 	}
 
 	.RESDialogSmall.livePreview > h3 {
@@ -598,5 +503,102 @@
 	    border-bottom: 1px solid rgba(255,255,255,0.1);
 	    padding-bottom: 12px;
 	    height: auto;
+	}
+
+	.markdownEditor {
+		a.edit-btn:not(.btn-macro),
+		a.edit-btn {
+			width: 32px;
+			height: 32px;
+			position: relative;
+			background-image: url(%%spritesheet%%);
+			background-color: rgba(0,0,0,0.4);
+			border-radius: 3px;
+			border: 0;
+
+			&:hover {
+				background-color: rgba(102,192,244,0.4);
+			}
+
+			&.btn-bold {
+				background-position: -194px -24px;
+
+				&:hover {
+					background-position: -226px -24px;
+				}
+			}
+
+			&.btn-italic {
+				background-position: -194px -56px;
+
+				&:hover {
+					background-position: -226px -56px;
+				}
+			}
+
+			&.btn-strike {
+				background-position: -194px -88px;
+
+				&:hover {
+					background-position: -226px -88px;
+				}
+			}
+
+			&.btn-superscript {
+				background-position: -194px -120px;
+
+				&:hover {
+					background-position: -226px -120px;
+				}
+			}
+
+			&.btn-link {
+				background-position: -194px -152px;
+
+				&:hover {
+					background-position: -226px -152px;
+				}
+			}
+
+			&.btn-quote {
+				background-position: -194px -184px;
+
+				&:hover {
+					background-position: -226px -184px;
+				}
+			}
+
+			&.btn-code {
+				background-position: -194px -216px;
+
+				&:hover {
+					background-position: -226px -216px;
+				}
+			}
+
+			&.btn-list-unordered {
+				background-position: -194px -248px;
+
+				&:hover {
+					background-position: -226px -248px;
+				}
+			}
+
+			&.btn-list-ordered {
+				background-position: -194px -280px;
+
+				&:hover {
+					background-position: -226px -280px;
+				}
+			}
+
+			&.btn-table {
+				background-position: -194px -312px;
+
+				&:hover {
+					background-position: -226px -312px;
+				}
+			}
+		}
 	}
 }

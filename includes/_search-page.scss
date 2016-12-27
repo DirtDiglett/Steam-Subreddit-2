@@ -1,0 +1,230 @@
+body.search-page {
+	.searchpane {
+	    margin: 0;
+	    padding: 0;
+	}
+
+	.raisedbox h4 {
+		font-size: 0;
+
+	    &:before {
+	    	font-size: 27px;
+	    	content: "Search Results";
+	    }
+	}
+
+	#search {
+		input[type=text],
+		input[type=search] {
+			background-color: #316282;
+			border-radius: 3px;
+			border: 1px solid rgba(0,0,0,0.6);
+			box-shadow: 1px 1px 0px rgba(255,255,255,0.13);
+			color: #fff;
+			outline: none;
+			height: 29px;
+			padding: 4px 8px;
+
+			&:hover,
+			&:focus {
+				border: 1px solid #4c9acc;
+			}
+
+			&::placeholder {
+				color: #0e1c25;
+				text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+				font-style: italic;	
+			}
+
+			&::-moz-placeholder {
+				color: #0e1c25;
+				text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+				font-style: italic;
+				opacity: 1;
+			}
+
+			&::-ms-input-placeholder {
+				color: #0e1c25;
+				text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+				font-style: italic;			
+			}
+
+			&::-webkit-input-placeholder {
+				color: #0e1c25;
+				text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+				font-style: italic;	
+			}
+		}
+
+		.search-submit-button {
+			background-image: url(%%spritesheet%%) !important;
+			background-position: -97px -24px;
+			height: 25px;
+			width: 25px;
+			margin-left: -27px;
+			padding: 0;
+
+			&:hover {
+				background-position: -97px -49px;
+			}
+
+			span {
+				display: none;
+			}
+		}
+
+		label {
+			color: #fff;
+		}
+	}
+
+	.search-result-group-header {
+		color: #8f98a0;
+	    background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
+	    padding: 16px;
+	    border: none;
+	    margin-bottom: 2px;
+
+	    .search-header-label {
+	    	color: #fff;
+		    font-size: 16px;
+		    font-weight: normal;
+		    text-transform: capitalize;
+	    }
+
+	    .dropdown-title {
+		    color: #fff;
+		    font-size: 16px;
+		    font-weight: normal;
+		    text-transform: capitalize;
+		}
+	}
+
+	.search-result-group {
+		max-width: none;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 18px;
+	}
+
+	.search-result {
+		background: rgba(84, 133, 183, 0.4);
+		border-radius: 3px;
+		padding: 4px;
+		margin: 0;
+		margin-bottom: 4px;
+
+		&:hover {
+			background: rgba(117,204,255,0.25);
+		}
+
+		&.has-thumbnail > .thumbnail {
+		    flex: 0 0 80px;
+		    margin-right: 4px;
+		}
+
+		:link, 
+		:link>mark,
+		a {
+			color: $anchor-color;
+
+			&:hover {
+				color: $anchor-hover-color;
+				text-decoration: none;
+			}
+		}
+
+		:visited, 
+		:visited>mark,
+		a {
+			color: $anchor-color;
+
+			&:hover {
+				color: $anchor-hover-color;
+				text-decoration: none;
+			}
+		}
+
+		.search-title {
+			margin-right: 5px;
+		    font-family: $special-font;
+		    color: #fff!important;
+		    font-weight: normal!important;
+		    margin: 0;
+		    padding: 0;
+		    font-size: 18px;
+		}
+
+		mark {
+		    color: #8a6d3b!important;
+		    background-color: #fcf8e3;
+		    font-weight: normal;
+		    padding: 0 4px;
+		    border-radius: 2px;
+		    line-height: 21px;
+		}
+
+		.search-result-meta {
+		    color: #c6d4df;
+		}
+
+		.search-expando-button {
+		    height: 24px;
+		    margin-top: 6px;
+
+		    &:hover {
+		    	text-decoration: none;
+
+		    	span {
+		    		background: #67c1f5;
+				    color: #fff;
+				    text-decoration: none;
+		    	}
+		    }
+
+		    span {
+		    	margin: 0;
+			    border-radius: 2px;
+			    border: none;
+			    padding: 4px 17px;
+			    cursor: pointer;
+			    text-transform: uppercase;
+			    color: #67c1f5;
+			    background: rgba(103,193,245,0.1);
+			    height: 24px;
+			    font-weight: normal;
+			    text-decoration: none;
+
+			    &:hover {
+			    	background: #67c1f5;
+				    color: #fff;
+				    text-decoration: none;
+			    }
+		    }
+		}
+
+		.search-result-body {
+		    color: #c6d4df;
+		}
+
+		.search-subscribe-button .add {
+		    color: #fff !important;
+		    font-weight: normal;
+		}
+	}
+
+	.nextprev a {
+		@include outlinebutton();
+
+		background: none;
+		font-weight: normal;
+
+		&:hover {
+			@include outlinebutton(hover);
+		}
+	}
+
+	.search-expando.collapsed:before {
+	    background: none;
+	}
+}
