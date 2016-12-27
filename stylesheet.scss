@@ -84,7 +84,12 @@ a,
 
 input[type=text],
 input[type=search],
-input[type=password] {
+input[type=password],
+textarea,
+.pretty-form input[type=text],
+.pretty-form textarea,
+.pretty-form input[type=password],
+.pretty-form input[type=number] {
 	background-color: #316282;
 	border-radius: 3px;
 	border: 1px solid rgba(0,0,0,0.6);
@@ -125,6 +130,75 @@ input[type=password] {
 	}
 }
 
+textarea,
+.pretty-form textarea {
+	height: auto;
+}
+
+.content {
+	input[type=text],
+	input[type=search],
+	input[type=password],
+	textarea,
+	.pretty-form input[type=text],
+	.pretty-form textarea,
+	.pretty-form input[type=password],
+	.pretty-form input[type=number] {
+		background-color: rgba(0, 0, 0, 0.4);
+		border-radius: 3px;
+		border: 1px solid #000;
+		box-shadow: 1px 1px 0 0 rgba(91, 132, 181, 0.2);
+		color: #C6D4DF;
+
+		&:hover,
+		&:focus {
+			border: 1px solid #4c9acc;
+		}
+	}
+}
+
+select {
+	background-color: #212f43;
+	border-radius: 3px;
+	border: 1px solid rgba(91, 132, 181, 0.2);
+	box-shadow: 1px 1px 0px #000000;
+	color: #BFBFBF;
+	outline: none;
+	padding: 0px;
+	line-height: 27px;
+	height: 27px;
+	font-size: 14px;
+
+	&:hover {
+		background-color: lighten(#212f43, 5%);
+		border: 1px solid rgba(91, 132, 181, 0.4);
+	}
+}
+
+.content button {
+    border-radius: 2px;
+    border: none;
+    padding: 6px 15px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #67c1f5;
+    background: rgba(0,0,0,0.5);
+    text-transform: capitalize;
+    font-size: 15px;
+    margin: 0;
+
+    &:hover {
+    	color: #fff;
+    	background: rgba(102,192,244,0.4);
+    }
+
+    &:active {
+    	color: darken(#fff,10%);
+    	background: darken(rgba(102,192,244,0.4),10%);
+    }
+}
+
 .toggle .error {
 	font-size: 13px;
 	color: #e1c48a;
@@ -138,12 +212,12 @@ input[type=password] {
 }
 
 .approval-checkmark {
-    height: 0;
-    padding-right: 23px;
-    padding-bottom: 23px;
-    margin-bottom: -6px;
-    background-image: url(%%spritesheet%%);
-    background-position: 0 -46px;
+	height: 0;
+	padding-right: 23px;
+	padding-bottom: 23px;
+	margin-bottom: -6px;
+	background-image: url(%%spritesheet%%);
+	background-position: 0 -46px;
 }
 
 // Import our specific includes

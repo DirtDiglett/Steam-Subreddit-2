@@ -225,87 +225,87 @@ body:not(.loggedin) #header-bottom-right {
 }
 
 .message-count {
-    background-color: #5c7e10;
-    position: relative;
-    top: -2px;
-    color: #fff!important;
-    margin-left: -4px;
-    height: 24px;
-    font-size: 11px;
-    line-height: 24px;
-    border-radius: 0;
-    margin-right: 4px;
-    margin-left: -31px;
-    background-image: url(%%messages-icons%%);
-    background-repeat: no-repeat;
-    background-position: 0 -34px;
-    padding-left: 27px;
-    text-indent: -4px;
-    padding-right: 7px;
+	background-color: #5c7e10;
+	position: relative;
+	top: -2px;
+	color: #fff!important;
+	margin-left: -4px;
+	height: 24px;
+	font-size: 11px;
+	line-height: 24px;
+	border-radius: 0;
+	margin-right: 4px;
+	margin-left: -31px;
+	background-image: url(%%messages-icons%%);
+	background-repeat: no-repeat;
+	background-position: 0 -34px;
+	padding-left: 27px;
+	text-indent: -4px;
+	padding-right: 7px;
 
-    &:hover {
-        background-color: #7ea64b;
-    }
+	&:hover {
+		background-color: #7ea64b;
+	}
 }
 #mail.havemail:before {
-    position: fixed;
-    padding-left: 34px;
-    bottom: 34px;
-    z-index: 100;
-    background-color: #5c7e10;
-    border-radius: 2px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
-    color: #fff;
-    width: 300px;
-    height: 34px;
-    left: 34px;
-    content: "You have new messages";
-    text-indent: 0;
-    font-size: 14px;
-    line-height: 34px;
-    -webkit-transform: translateY(112px);
-    transform: translateY(112px);
-    transition: background-color .25s ease, box-shadow .25s ease;
-    background-image: url(%%messages-icons%%);
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    font-family: "Segoe UI",Segoe,Roboto,"Helvetica Neue",Helvetica,"Calibri Light",Calibri,sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
+	position: fixed;
+	padding-left: 34px;
+	bottom: 34px;
+	z-index: 100;
+	background-color: #5c7e10;
+	border-radius: 2px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
+	color: #fff;
+	width: 300px;
+	height: 34px;
+	left: 34px;
+	content: "You have new messages";
+	text-indent: 0;
+	font-size: 14px;
+	line-height: 34px;
+	-webkit-transform: translateY(112px);
+	transform: translateY(112px);
+	transition: background-color .25s ease, box-shadow .25s ease;
+	background-image: url(%%messages-icons%%);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	font-family: "Segoe UI",Segoe,Roboto,"Helvetica Neue",Helvetica,"Calibri Light",Calibri,sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
 
-    animation-name: toast;
-    animation-duration: 10s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
+	animation-name: toast;
+	animation-duration: 10s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
 }
 
 #mail.havemail:hover:before {
-    background-color: #7ea64b;
-    color: #fff;
-    animation-play-state: paused
+	background-color: #7ea64b;
+	color: #fff;
+	animation-play-state: paused
 }
 
 #header-bottom-right a.pref-lang,
 .loggedin .logout a {
-    background-position: -77px 0;
-    background-image: url(%%spritesheet%%);
-    background-color: #262625;
-    width: 27px;
-    height: 24px;
-    display: inline-block;
-    text-indent: -9999px;
-    margin: 0;
-    position: relative;
-    top: -2px;
-    margin-right: 4px;
+	background-position: -77px 0;
+	background-image: url(%%spritesheet%%);
+	background-color: #262625;
+	width: 27px;
+	height: 24px;
+	display: inline-block;
+	text-indent: -9999px;
+	margin: 0;
+	position: relative;
+	top: -2px;
+	margin-right: 4px;
 
-    &:hover {
-        background-color: #575451;
-    }
+	&:hover {
+		background-color: #575451;
+	}
 }
 .loggedin .logout a {
-    margin-right: 0;
-    background-position: -104px 0;
+	margin-right: 0;
+	background-position: -104px 0;
 }
 
 body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
@@ -324,8 +324,8 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 	padding: 0;
 	width: 270px;
 	position: absolute;
-    top:($header-height - $header-tabs-height)-$header-tabs-margin + 3px;
-    right: $header-tabs-margin + 4px;
+	top:($header-height - $header-tabs-height)-$header-tabs-margin + 3px;
+	right: $header-tabs-margin + 4px;
 	z-index: 4;
 
 	&:hover {
@@ -403,99 +403,99 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 
 
 #header .redditname a {
-    position: absolute;
-    left: -4px;
-    bottom: 67px;
-    width: 250px;
-    height: 100px;
-    display: block;
-    font-size: 0;
-    background-image: url(%%logo%%);
-    background-position: 0 0;
+	position: absolute;
+	left: -4px;
+	bottom: 67px;
+	width: 250px;
+	height: 100px;
+	display: block;
+	font-size: 0;
+	background-image: url(%%logo%%);
+	background-position: 0 0;
 
-    &:hover {
-        background-position: 0 -100px;
-    }
+	&:hover {
+		background-position: 0 -100px;
+	}
 }
 
 #header-img,
 #header-img.default-header {
-    position: absolute;
-    width: 74px;
-    height: $header-tabs-height;
-    margin: 0;
-    background-image: url(%%spritesheet%%);
-    background-position: -23px -24px;
-    border-right: 1px solid rgba(16, 21, 25, 0.3);
+	position: absolute;
+	width: 74px;
+	height: $header-tabs-height;
+	margin: 0;
+	background-image: url(%%spritesheet%%);
+	background-position: -23px -24px;
+	border-right: 1px solid rgba(16, 21, 25, 0.3);
 
-    &:hover {
-        background: url(%%spritesheet%%), linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
-        background-position: -23px -59px, 0 0;
-    }
+	&:hover {
+		background: url(%%spritesheet%%), linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
+		background-position: -23px -59px, 0 0;
+	}
 }
 
 #header-bottom-left {
-    position: absolute;
-    min-width: 960px;
-    margin: 0 $header-tabs-margin 0 $header-tabs-margin !important;
-    bottom: 0;
-    top: ($header-height - $header-tabs-height)-$header-tabs-margin;
-    height: $header-tabs-height;
-    left: 0;
-    right: 0;
-    background: rgba(62, 126, 167, 0.8);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+	position: absolute;
+	min-width: 960px;
+	margin: 0 $header-tabs-margin 0 $header-tabs-margin !important;
+	bottom: 0;
+	top: ($header-height - $header-tabs-height)-$header-tabs-margin;
+	height: $header-tabs-height;
+	left: 0;
+	right: 0;
+	background: rgba(62, 126, 167, 0.8);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
 #header .tabmenu {
-    display: inline-block;
-    line-height: $header-tabs-height;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0 0 0 74px;
-    height: $header-tabs-height;
+	display: inline-block;
+	line-height: $header-tabs-height;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0 0 0 74px;
+	height: $header-tabs-height;
 
-    li {
-        margin: 0;
-    }
+	li {
+		margin: 0;
+	}
 }
 
 #header .tabmenu li a {
-    background: none !important;
-    padding: 0 15px;
-    font-weight: 400;
-    line-height: 34px;
-    height: $header-tabs-height;
-    display: inline-block;
-    color: #d9dadd;
-    font-size: 13px;
-    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.25 );
-    position: relative;
-    border: none;
-    border-right: 1px solid rgba(16, 21, 25, 0.3);
+	background: none !important;
+	padding: 0 15px;
+	font-weight: 400;
+	line-height: 34px;
+	height: $header-tabs-height;
+	display: inline-block;
+	color: #d9dadd;
+	font-size: 13px;
+	text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.25 );
+	position: relative;
+	border: none;
+	border-right: 1px solid rgba(16, 21, 25, 0.3);
 
-    &:hover {
-        background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%) !important;
-        color: #000;
-        text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.25);
-    }
+	&:hover {
+		background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%) !important;
+		color: #000;
+		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.25);
+	}
 }
 
 #header .tabmenu li.selected a {
-    background: linear-gradient(to bottom,#f8fafb 5%,#dfe8ef 95%) !important;
-    color: #000;
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.25);
+	background: linear-gradient(to bottom,#f8fafb 5%,#dfe8ef 95%) !important;
+	color: #000;
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.25);
 }
 
 #header .tabmenu li:first-of-type a {
-    margin-left: 0
+	margin-left: 0
 }
 
 #header .tabmenu:not(:hover) li.selected a::before {
-    visibility: visible!important
+	visibility: visible!important
 }
 
 .link:not(.sponsored) .domain {
-    visibility: hidden;
+	visibility: hidden;
 }

@@ -280,11 +280,63 @@ body:not(.subscriber) .arrow.down {
 
 		li {
 			opacity: 0;
+
+			// b handles the little notices
+			b {
+				line-height: 24px;
+				font-weight: normal;
+				font-size: 13px;
+				color: #e1c48a;
+				background: #827251;
+				padding: 6px 8px;
+				height: 24px;
+				border-radius: 1px;
+				text-transform: capitalize;
+			}
 		}
 
 		li:first-child,
 		li.first {
 			opacity: 1;
+		}
+
+		.big-mod-buttons {
+			height: 24px;
+			margin-top: 1px;
+			margin-right: 4px;
+
+			.pretty-button {
+				line-height: 16px;
+				margin: 0;
+				border-radius: 2px;
+				border: none;
+				padding: 4px 17px;
+				display: inline-block;
+				cursor: pointer;
+				text-transform: uppercase;
+				color: #fff;
+				background-color: rgba(103,193,245,0.1);
+				height: 24px;
+				font-weight: normal;
+
+				&.positive {
+					background-image: none;
+					background-color: #4c6b22;
+					color: #aedd08;
+				}
+			}
+
+			.status-msg {
+				line-height: 24px;
+				font-weight: normal;
+				font-size: 13px;
+				color: #e1c48a;
+				background: #827251;
+				padding: 6px 8px;
+				height: 24px;
+				border-radius: 1px;
+				text-transform: capitalize;
+			}
 		}
 	}
 
@@ -537,7 +589,7 @@ body.comments-page {
 		border: 1px solid rgba(0,0,0,0.4);
 		background: rgba(0,0,0,0.4);
 		margin-top: 18px;
-    	margin-bottom: 8px;
+		margin-bottom: 8px;
 
 		&:hover {
 			background: rgba(0,0,0,0.4);
@@ -566,7 +618,7 @@ body.comments-page {
 			&:active {
 				text-decoration: none;
 				color: #e6e6e6;
-    			background: rgba(255,255,255,0.15);
+				background: rgba(255,255,255,0.15);
 			}
 		}
 	}
@@ -767,4 +819,242 @@ body.comments-page .link.stickied:before {
 	background-position: 12px center;
 	margin-left: -4px;
 	margin-right: -4px;
+}
+
+body.comments-page .menuarea ~ .sitetable {
+	margin-top: 24px;
+}
+
+.commentarea {
+	margin-top: 48px;
+
+	.panestack-title,
+	.menuarea,
+	&>.usertext,
+	.rounded.gold-accent.comment-visits-box {
+		margin: 0;
+		background-color: rgba(0,0,0,0.2);
+		background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
+		padding: 16px;
+		border: none;
+	}
+
+	.panestack-title {
+		@include sidebarh3(null,null);
+
+		margin: 0;
+		padding-bottom: 0;
+		text-transform: capitalize;
+		display: block;
+	}
+
+	.menuarea {
+		color: #8f98a0;
+
+		.spacer {
+			height: 24px;
+			display: inline-block;
+			line-height: 24px;
+			margin: 0;
+			text-transform: capitalize;
+			margin-bottom: 16px;
+
+			.dropdown {
+				background-color: #212f43;
+				border-radius: 3px;
+				border: 1px solid rgba(91, 132, 181, 0.2);
+				box-shadow: 1px 1px 0px #000000;
+				color: #BFBFBF;
+				outline: none;
+				padding: 4px 8px;
+				padding-right: 0;
+				line-height: 27px;
+				height: 27px;
+				font-size: 14px;
+
+				.selected {
+					font-weight: normal;
+					color: #BFBFBF;
+					font-size: 14px;
+					text-decoration: none;
+					padding-right: 38px;
+				}
+
+				&:hover {
+					background-color: lighten(#212f43, 5%);
+					border: 1px solid rgba(91, 132, 181, 0.4);
+				}
+			}
+
+			.drop-choices {
+				margin-top: 10px;
+				background-color: #212f43;
+				border: 1px solid rgba(91, 132, 181, 0.2);
+				min-width: 120px;
+
+				a {
+					font-size: 14px;
+					padding: 3px 6px;
+					color: #BFBFBF;
+
+					&:hover {
+						color: #fff;
+						background-color: #66c0f4;
+					}
+				}
+			}
+
+			form.toggle a {
+				margin: 0;
+				border-radius: 2px;
+				border: none;
+				padding: 4px 17px;
+				display: inline-block;
+				cursor: pointer;
+				text-transform: uppercase;
+				color: #67c1f5;
+				background: rgba(103, 193, 245, 0.1);
+				height: 24px;
+				font-weight: normal;
+				line-height: 17px;
+
+				&:hover {
+					background: #67c1f5;
+					color: #fff;
+					text-decoration: none;
+				}		
+			}
+
+
+			.help-hoverable {
+				display: none;
+			}
+		}
+	}
+
+	&>.usertext {
+		color: #8f98a0;
+	}
+
+	.rounded.gold-accent.comment-visits-box {
+		display: block;
+		max-width: none;
+		border-radius: 0;
+		padding-top: 0;
+
+		.title {
+			font-weight: normal;
+			border: 1px solid #a55b13;
+			padding: 8px;
+			border-radius: 3px;
+			color: #ff8209;
+		}
+	}
+
+	.markdownEditor {
+		a.edit-btn:not(.btn-macro),
+		a.edit-btn {
+			width: 32px;
+			height: 32px;
+			position: relative;
+			background-image: url(%%spritesheet%%);
+			background-color: rgba(0,0,0,0.4);
+			border-radius: 3px;
+			border: 0;
+
+			&:hover {
+				background-color: rgba(102,192,244,0.4);
+			}
+
+			&.btn-bold {
+				background-position: -194px -24px;
+
+				&:hover {
+					background-position: -226px -24px;
+				}
+			}
+
+			&.btn-italic {
+				background-position: -194px -56px;
+
+				&:hover {
+					background-position: -226px -56px;
+				}
+			}
+
+			&.btn-strike {
+				background-position: -194px -88px;
+
+				&:hover {
+					background-position: -226px -88px;
+				}
+			}
+
+			&.btn-superscript {
+				background-position: -194px -120px;
+
+				&:hover {
+					background-position: -226px -120px;
+				}
+			}
+
+			&.btn-link {
+				background-position: -194px -152px;
+
+				&:hover {
+					background-position: -226px -152px;
+				}
+			}
+
+			&.btn-quote {
+				background-position: -194px -184px;
+
+				&:hover {
+					background-position: -226px -184px;
+				}
+			}
+
+			&.btn-code {
+				background-position: -194px -216px;
+
+				&:hover {
+					background-position: -226px -216px;
+				}
+			}
+
+			&.btn-list-unordered {
+				background-position: -194px -248px;
+
+				&:hover {
+					background-position: -226px -248px;
+				}
+			}
+
+			&.btn-list-ordered {
+				background-position: -194px -280px;
+
+				&:hover {
+					background-position: -226px -280px;
+				}
+			}
+
+			&.btn-table {
+				background-position: -194px -312px;
+
+				&:hover {
+					background-position: -226px -312px;
+				}
+			}
+		}
+	}
+}
+
+.usertext .help-toggle,
+.usertext a.reddiquette {
+	display: inline-block;
+    height: 29px;
+    line-height: 29px;
+    margin: 0;
+    margin-right: 12px;
+    text-transform: uppercase;
 }

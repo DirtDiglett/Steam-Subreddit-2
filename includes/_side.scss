@@ -295,37 +295,41 @@
 			border-top: 1px solid #333;
 			padding: 0;
 
-			li ul {
-				border: none;
-				padding: 10px;
-				margin: 0;
+			li {
+				height: auto;
 
-				li a {
-					@include sidebarbutton();
+				ul {
+					border: none;
+					padding: 10px;
+					margin: 0;
 
-					min-height: 26px;
-					padding-top: 4px;
-					padding-left: 8px;
-					line-height: 19px;
-					display: inline-block;
-					margin-left: 37px;
-					width: 261px;
-					font-size: 13px;
+					li a {
+						@include sidebarbutton();
 
-					&:before {
-						content: "";
-						background-color: rgba(0, 0, 0, 0.2);
-						position: absolute;
-						width: 36px;
 						min-height: 26px;
-						margin-left: -45px;
-						margin-top: -4px;
-						background-image: url(%%spritesheet%%);						
-					}	
-					
-					&:hover {
-						@include sidebarbutton(hover);
-					}			
+						padding-top: 4px;
+						padding-left: 8px;
+						line-height: 19px;
+						display: inline-block;
+						margin-left: 37px;
+						width: 261px;
+						font-size: 13px;
+
+						&:before {
+							content: "";
+							background-color: rgba(0, 0, 0, 0.2);
+							position: absolute;
+							width: 36px;
+							min-height: 26px;
+							margin-left: -45px;
+							margin-top: -4px;
+							background-image: url(%%spritesheet%%);						
+						}	
+						
+						&:hover {
+							@include sidebarbutton(hover);
+						}			
+					}
 				}
 			}
 		}
@@ -883,7 +887,7 @@
 		&:hover,
 		&:focus {
 			border: 1px solid #4c9acc;
-    		box-shadow: 1px 1px 0px rgba(255,255,255,0);
+			box-shadow: 1px 1px 0px rgba(255,255,255,0);
 		}
 	}
 
@@ -1054,6 +1058,22 @@
 		&:before {
 			content: "Moderators";
 			font-size: 16px;
+		}
+	}
+}
+
+.spacer:nth-of-type(7) {
+	ul.content {
+		overflow: hidden;
+
+		li {
+			height: 24px;
+			overflow: hidden;
+			line-height: 24px;
+
+			.flair {
+				margin-top: 0 !important;
+			}
 		}
 	}
 }
