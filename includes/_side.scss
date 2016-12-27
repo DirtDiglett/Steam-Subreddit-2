@@ -1,5 +1,5 @@
 .side {
-	margin: 150px 16px 108px 0;
+	margin: 130px 16px 108px 0;
 	padding: 0;
 	background: none;
 	width: 320px;
@@ -87,7 +87,7 @@
 		}
 
 		h3 {
-			@include sidebarh3(font-inclusive, margins-inclusive);		
+			@include sidebarh3(null, margin-inclusive);		
 		}
 
 		// Steam Status table, provided by Steamstat.us
@@ -219,7 +219,7 @@
 		}
 
 		// The Subreddit Friends section (Makes the /r/ less visible)
-		ul:nth-of-type(3) li a em {
+		ul li a em {
 			color: rgba(255, 255, 255, 0.4);
 			font-style: normal;
 		}
@@ -336,6 +336,10 @@
 				margin-bottom: 2px;
 			}
 
+			a:before {
+				background-position: -158px -24px
+			}
+
 			.reddit-edit:before {
 				background-position: -158px -24px
 			}
@@ -403,6 +407,19 @@
 			.reddit-unmoderated:before {
 				background-position: -158px -456px
 			}
+
+			.tb-un-manager img,
+			.toolbox-edit img {
+				display: none;
+			}
+
+			.tb-un-manager:before {
+				background-position: -158px -484px
+			}
+
+			.toolbox-edit:before {
+				background-position: -158px -512px
+			}
 		}
 	}
 }
@@ -430,15 +447,13 @@
 	}
 
 	.flairoptionpane {
-		max-height: none;
 		margin-bottom: 24px;
 	}
 
 	.flair {
-		min-width: 0;
+		min-width: 0 !important;
 		position: relative;
-		margin-right: 0;
-		margin-top: 0;
+		margin: 0;
 	}
 
 	ul {
@@ -455,10 +470,12 @@
 
 			&:hover {
 				background: rgba(0,0,0,0.1);
+				border: none;
 			}
 
 			&.selected {
 				background: #212c3d;
+				border: none;
 			}
 		}
 	}
@@ -541,6 +558,10 @@
 			font-size: 15px;
 			line-height: 30px;
 		}
+	}
+
+	&.drop-choices.active {
+		border: 1px solid #fff;
 	}
 }
 
@@ -647,9 +668,7 @@
 		font-size: 18px;
 		color: #8bc53f;
 
-		.number {
-			font-style: italic;
-		
+		.number {		
 			&:after {
 				content: " In non-Steam game " open-quote "reddit" close-quote;
 			}
@@ -660,13 +679,17 @@
 	.titlebox .fancy-toggle-button a,
 	.users-online {
 		font-weight: 300;
-		font-size: 14px
 	}
 
 	.fancy-toggle-button {
 		display: block;
 		width: auto;
-		margin: 8px auto
+		margin: 8px auto;
+
+		a {
+			font-weight: 300;
+			font-size: 14px;
+		}
 	}
 
 	.subButtons {
@@ -684,7 +707,7 @@
 		display: block;
 		cursor: pointer;
 
-		&:hover {
+		&:before {
 			content: "";
 			display: inline-block;
 			width: 16px;
@@ -693,10 +716,6 @@
 			background-position: 0 0;
 			vertical-align: middle;
 			margin-right: 4px;
-
-			&:before {
-				background-color: transparent
-			}
 		}
 	}
 
@@ -725,6 +744,7 @@
 		position: relative;
 		overflow: hidden;
 		padding: 8px 8px 55px 8px;
+		font-size: 0;
 
 		&:before {
 			content: "";
@@ -772,14 +792,20 @@
 				padding-left: 8px;
 				padding-bottom: 4px;
 
-				&:hover {
+				
+
+							
+			}
+
+			&:hover {
+				&:after {
 					@include sidebarbutton(hover);
 				}
 
 				&:active {
 					@include sidebarbutton(active);
-				}			
-			}			
+				}				
+			}		
 		}
 	}
 }
@@ -840,7 +866,7 @@
 
 .login-form-side {
 	&:before {
-		@include sidebarh3(font-inclusive, null);
+		@include sidebarh3(null,null);
 		content: "Login";
 		margin-bottom: 12px;
 		display: block;		
@@ -852,6 +878,13 @@
 		line-height: 26px;
 		margin: 0;
 		margin-bottom: 6px;
+		border: 1px solid rgba(0,0,0,0.3);
+
+		&:hover,
+		&:focus {
+			border: 1px solid #4c9acc;
+    		box-shadow: 1px 1px 0px rgba(255,255,255,0);
+		}
 	}
 
 	#remember-me {
@@ -898,7 +931,8 @@
 	border-radius: 0;
 
 	&:before {
-		@include sidebarh3(font-inclusive, null);
+		@include sidebarh3(null,null);
+
 		content: "Post Information";
 		display: block;
 		margin-bottom: 12px;
@@ -944,6 +978,8 @@
 			line-height: 26px;
 			margin: 0;
 			font-size: 13px;
+			border: 1px solid rgba(0,0,0,0.3);
+			padding: 4px 8px;
 		}
 	}
 }
@@ -959,7 +995,7 @@
 		margin-bottom: 12px;
 
 		h1 {
-			@include sidebarh3(font-inclusive, null);
+			@include sidebarh3();
 
 			text-transform: capitalize;
 		}
@@ -1033,6 +1069,17 @@
 	}
 
 	.thing {
+		background: rgba(84, 133, 183, 0.4);
+		border-radius: 3px;
+		padding: 4px;
+		margin: 0;
+		margin-bottom: 2px;
+		transition: background 0.1s ease-in-out;
+
+		&:hover {
+			background: rgba(117, 204, 255, 0.25);
+		}
+
 		.score {
 			color: rgba(255, 255, 255, 0.7);
 			line-height: 16px;

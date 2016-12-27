@@ -80,7 +80,7 @@
 		}
 	}
 
-	.RESDropdownList 
+	.RESDropdownList,
 	#openRESPrefs {
 		width: 27px;
 		height: 24px;
@@ -305,8 +305,7 @@
 	}
 
 	.res-commentBoxes .comment {
-		margin: 0 !important;
-		padding: 0 !important;
+		margin-left: 0 !important;
 	}
 
 	.res-floater-visibleAfterScroll > ul > li {
@@ -350,5 +349,50 @@
 			background-color: rgba(102,192,244,0.4)!important;
 			color: #fff;
 		}
+	}
+
+	.res-commentBoxes .comment {
+		background-color: #324b68 !important;
+		border: 1px solid rgba(0,0,0,0.4)!important;
+	}
+	
+	.res-commentBoxes .comment .comment {
+		background-color: #273b52 !important;
+		border: 1px solid rgba(0,0,0,0.2)!important;
+	}
+	
+	.res-commentBoxes .comment .comment .comment {
+		background-color: #324b68 !important;
+		border: 1px solid rgba(0,0,0,0.4)!important;
+	}
+	
+	.res-commentBoxes .comment .comment .comment .comment {
+		background-color: #273b52 !important;
+		border: 1px solid rgba(0,0,0,0.2)!important;
+	}
+	
+	.res-commentBoxes .comment .comment .comment .comment .comment {
+		background-color: #324b68 !important;
+		border: 1px solid rgba(0,0,0,0.4)!important;
+	}
+	
+	.res-commentBoxes .comment .comment .comment .comment .comment .comment {
+		background-color: #273b52 !important;
+		border: 1px solid rgba(0,0,0,0.2)!important;
+	}
+	
+	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment {
+		background-color: #324b68 !important;
+		border: 1px solid rgba(0,0,0,0.4)!important;
+	}
+	
+	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment {
+		background-color: #273b52 !important;
+		border: 1px solid rgba(0,0,0,0.2)!important;
+	}
+	
+	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+		background-color: #324b68 !important;
+		border: 1px solid rgba(0,0,0,0.4)!important;
 	}
 }

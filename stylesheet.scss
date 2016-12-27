@@ -39,7 +39,7 @@ body {
 	}
 
 	&:before {
-		background-image: url(%%dota-header%%);
+		background-image: url(%%winter-sale-header-final%%);
 		background-position: 70% 0;
 		background-size: 1920px;
 		background-color: #171a21;
@@ -75,7 +75,7 @@ body:after {
 a,
 .md a {
 	color: $anchor-color;
-	text-decoation: none;
+	text-decoration: none;
 
 	&:hover {
 		color: $anchor-hover-color;
@@ -99,11 +99,26 @@ input[type=password] {
 		border: 1px solid #4c9acc;
 	}
 
-	&::-webkit-input-placeholder,
-	&::-moz-placeholder,
-	&:-ms-input-placeholder,
-	&:-moz-placeholder,
-	&:placeholder {
+	&::placeholder {
+		color: #0e1c25;
+		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+		font-style: italic;	
+	}
+
+	&::-moz-placeholder {
+		color: #0e1c25;
+		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+		font-style: italic;
+		opacity: 1;
+	}
+
+	&::-ms-input-placeholder {
+		color: #0e1c25;
+		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+		font-style: italic;			
+	}
+
+	&::-webkit-input-placeholder {
 		color: #0e1c25;
 		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
 		font-style: italic;	
@@ -120,6 +135,15 @@ input[type=password] {
 	margin: 0;
 	border-radius: 2px;
 	text-transform: uppercase;	
+}
+
+.approval-checkmark {
+    height: 0;
+    padding-right: 23px;
+    padding-bottom: 23px;
+    margin-bottom: -6px;
+    background-image: url(%%spritesheet%%);
+    background-position: 0 -46px;
 }
 
 // Import our specific includes

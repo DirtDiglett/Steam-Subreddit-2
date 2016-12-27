@@ -92,13 +92,19 @@ a.author.admin,
 
 // User Flairs
 .flair {
-    width: 75px;
-    height: 24px;
-    margin-left: 4px;
-    font-size: 0;
+	width: 75px;
+	height: 24px;
+	font-size: 10px;
 	position: absolute;
-	margin-top: -2px;
-	line-height: 14px;
+	margin-top: -2px !important;
+	line-height: 21px;
+	background: rgba(0,0,0,0.4);
+	border: 1px solid rgba(0,0,0,0.4);
+	color: rgba(255,255,255,0.4);
+}
+
+.flair ~ .score {
+	margin-left: 85px;
 }
 
 // Link Flairs
