@@ -32,14 +32,7 @@ body {
 	z-index: 3;
 
 	&:before {
-		// Set a default, override as needed.
-		background-image: url(%%default-header%%);
-		background-size: cover;
-		background-position: 0 0;
-	}
-
-	&:before {
-		background-image: url(%%winter-sale-header-final%%);
+		background-image: url(%%winter-sale-header%%);
 		background-position: 70% 0;
 		background-size: 1920px;
 		background-color: #171a21;
@@ -240,7 +233,7 @@ textarea,
 	padding-right: 23px;
 	padding-bottom: 23px;
 	margin-bottom: -6px;
-	background-image: url(%%spritesheet%%);
+	background-image: url(%%sprite%%);
 	background-position: 0 -46px;
 }
 
@@ -258,11 +251,11 @@ textarea,
 		margin-bottom: 12px;
 		text-transform: capitalize;
 		display: block;
-    	padding: 0;
+		padding: 0;
 	}
 
 	.title + .gray {
-	    font-size: 12px;
+		font-size: 12px;
 	}
 
 	.little {
@@ -358,16 +351,16 @@ textarea,
 
 .content > .menuarea {
 	color: #8f98a0;
-    background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
-    padding: 16px;
-    border: none;
-    margin-bottom: 2px;
+	background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
+	padding: 16px;
+	border: none;
+	margin-bottom: 2px;
 
-    .dropdown-title {
-	    color: #fff;
-	    font-size: 16px;
-	    font-weight: normal;
-	    text-transform: capitalize;
+	.dropdown-title {
+		color: #fff;
+		font-size: 16px;
+		font-weight: normal;
+		text-transform: capitalize;
 	}
 }
 
@@ -375,34 +368,34 @@ textarea,
 .search-page .raisedbox h4,
 .submit-page .content > h1,
 .fancy-settings h1 {
-    font-weight: bold;
-    color: #ffffff!important;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    padding: 0;
+	font-weight: bold;
+	color: #ffffff!important;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	padding: 0;
 }
 
 .wiki-page {
 	.wiki-page-content {
 		background: #324b68;
-	    border-radius: 3px;
-	    margin: 0;
-	    margin-top: 16px;
+		border-radius: 3px;
+		margin: 0;
+		margin-top: 16px;
 	}
 
 	.wiki-page-content .wiki>.toc>ul {
-	    background: #324b68;
-	    /* border-radius: 3px; */
-	    border: 0;
+		background: #324b68;
+		/* border-radius: 3px; */
+		border: 0;
 	}
 
 	.wiki-page-content {
 		.toc + h1 {
-		   	margin-top: 0;
+			margin-top: 0;
 		}
 
 		.wiki>.toc>ul>li:not(.toc_child) {
-		    font-weight: bold;
+			font-weight: bold;
 		}
 
 		.md h1,
@@ -414,47 +407,130 @@ textarea,
 }
 
 .modtools-page>div.content {
-    margin: 20px 352px 64px 16px;
-    padding: 0!important;
-    margin-top: 100px;
+	margin: 20px 352px 64px 16px;
+	padding: 0!important;
+	margin-top: 100px;
 }
 
 body.comments-page .usertext-edit textarea {
 	background-image: url(%%comment-bg%%);
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: background 0.2s ease-in-out;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: background 0.2s ease-in-out;
 
-    &:focus {
-    	background-position: center -55px; //55px is the height of the image.
-    }
+	&:focus {
+		background-position: center -55px; //55px is the height of the image.
+	}
 }
 
 ul.report-reasons {
-    width: auto;
-    margin-top: 10px;
-    border: 1px solid #ff8209;
-    background: rgba(255, 130, 9, 0.2);
-    color: #fff;
-    border-radius: 1px;
-    padding: 16px;
+	width: auto;
+	margin-top: 10px;
+	border: 1px solid #ff8209;
+	background: rgba(255, 130, 9, 0.2);
+	color: #fff;
+	border-radius: 1px;
+	padding: 16px;
 
-    li {
-    	opacity: 1 !important;
-    }
+	li {
+		opacity: 1 !important;
+	}
 
-    .report-reason-title {
-    	color: #fff;
-    	font-size: 16px;
-	    font-weight: normal;
-	    text-transform: capitalize;
-	    padding: 0;
-    }
+	.report-reason-title {
+		color: #fff;
+		font-size: 16px;
+		font-weight: normal;
+		text-transform: capitalize;
+		padding: 0;
+	}
 
-    li.report-reason {
-    	font-size: 13px;
-    	margin-bottom: 4px;
-    }
+	li.report-reason {
+		font-size: 13px;
+		margin-bottom: 4px;
+	}
+}
+
+
+.sitetable .nav-buttons {
+	background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
+	padding: 16px;
+	border: none;
+	margin: 0;
+	text-align: left;
+	margin-bottom: 2px;
+	border-radius: 0;
+
+	.nextprev {
+		color: #fff;
+		font-size: 16px;
+		font-weight: normal;
+		text-transform: capitalize;
+
+		.next-button a,
+		.prev-button a{
+			@include outlinebutton();
+
+			background: none;
+			font-weight: normal;
+			padding: 4px 15px;
+
+			&:hover {
+				@include outlinebutton(hover);
+			}
+
+			&:active {
+				@include outlinebutton(active);
+			}
+		}
+	}
+}
+
+.flair-settings.fancy-settings {
+	margin-bottom: 0;
+
+	&:after {
+		content: "DO NOT set Unique/Special flairs in the flair template section. You must manually assign the CSS Classes to users for these.";
+		font-size: 15px;
+		margin: 12px;
+		display: block;
+		border-radius: 4px 4px 0 0;
+		color: #ffa500;
+		min-height: 55px;
+		padding-left: 40px;
+		background: url(%%info%%);
+		background-repeat: no-repeat;
+		background-position: 12px center;
+		background-color: rgba(27,27,27,0.36);
+		border: 1px solid #ffa500;
+		line-height: 55px;
+		border-bottom: 0;
+		margin-bottom: 0;
+		margin-top: 48px;
+	}
+}
+
+.flair-settings.fancy-settings + .tabmenu {
+	margin-top: 0;
+	display: block;
+}
+
+.flair-settings.fancy-settings + .tabmenu:before {
+	content: "The css Classes: 'special valve', 'special steammod', 'special steamdeveloper', 'special steamtranslator', 'special submod', 'special discordmod'";
+	font-size: 15px;
+	margin: 12px;
+	display: block;
+	border-radius: 0 0 4px 4px;
+	color: #ffffff;
+	min-height: 36px;
+	padding-left: 40px;
+	background-repeat: no-repeat;
+	background-position: 12px center;
+	background-color: rgba(27,27,27,0.36);
+	border: 1px solid #ffa500;
+	line-height: 14px;
+	border-top: 0;
+	margin-top: 0;
+	margin-bottom: 32px;
 }
 
 // Import our specific includes
@@ -469,6 +545,7 @@ ul.report-reasons {
 // Include the 'special' things.
 @import "includes/flairs";
 @import "includes/res";
+@import "includes/toolbox";
 
 // This import will be adjusted as new events with new styling requirements appear.
 @import "includes/snow";

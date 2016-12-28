@@ -42,7 +42,7 @@
 		&:after {
 			position: absolute;
 			content: "";
-			background-image: url(%%spritesheet%%);
+			background-image: url(%%sprite%%);
 			background-position: 0 0;
 			width: 23px;
 			height: 23px;            
@@ -155,7 +155,7 @@ body:not(.loggedin) #header-bottom-right {
 #openRESPrefs .gearIcon {
 	width: 27px;
 	height: 24px;
-	background-image: url(%%spritesheet%%)!important;
+	background-image: url(%%sprite%%)!important;
 	background-repeat: no-repeat!important;
 	background-color: transparent;
 }
@@ -288,7 +288,7 @@ body:not(.loggedin) #header-bottom-right {
 #header-bottom-right a.pref-lang,
 .loggedin .logout a {
 	background-position: -77px 0;
-	background-image: url(%%spritesheet%%);
+	background-image: url(%%sprite%%);
 	background-color: #262625;
 	width: 27px;
 	height: 24px;
@@ -344,7 +344,7 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 		}
 
 		input[type=submit] {
-			background-image: url(%%spritesheet%%) !important;
+			background-image: url(%%sprite%%) !important;
 			background-position: -97px -24px;
 			height: 25px;
 			width: 25px;
@@ -426,12 +426,12 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 	width: 74px;
 	height: $header-tabs-height;
 	margin: 0;
-	background-image: url(%%spritesheet%%);
+	background-image: url(%%sprite%%);
 	background-position: -23px -24px;
 	border-right: 1px solid rgba(16, 21, 25, 0.3);
 
 	&:hover {
-		background: url(%%spritesheet%%), linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
+		background: url(%%sprite%%), linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
 		background-position: -23px -59px, 0 0;
 	}
 }

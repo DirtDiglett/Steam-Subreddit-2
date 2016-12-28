@@ -1,5 +1,5 @@
 .side .md {
-	a[href$="/ideas_and_such"] {
+	a[href$="comments/5krnce/rsteam_has_a_new_theme/"] {
 		position: absolute;
 		display: block;
 		top: $header-height + 20px;
@@ -16,7 +16,7 @@
 		background-color: #d1dae1;
 
 		&:before {
-			content: "/r/steam has been updated with a new yet familiar style";
+			content: "/r/steam has been updated with a new theme";
 			left: 8px;
 			height: $banner-height;
 			line-height: $banner-height - 1px;

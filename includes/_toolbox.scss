@@ -1,0 +1,17 @@
+body.mod-toolbox {
+	.thing .tagline .flair-small ~ .tb-bracket-button {
+	    margin-left: $flair-small-width + 4px ;
+	}
+
+	.thing .tagline .flair-year ~ .tb-bracket-button {
+	    margin-left: $flair-small-width + 4px ;
+	}
+
+	.thing .tagline .flair-game ~ .tb-bracket-button {
+	    margin-left: $flair-small-width + 4px ;
+	}
+
+	.thing .tagline .flair-special ~ .tb-bracket-button {
+	    margin-left: $flair-special-width + 4px ;
+	}
+}

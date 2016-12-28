@@ -1,16 +1,16 @@
 body.search-page {
 	.searchpane {
-	    margin: 0;
-	    padding: 0;
+		margin: 0;
+		padding: 0;
 	}
 
 	.raisedbox h4 {
 		font-size: 0;
 
-	    &:before {
-	    	font-size: 27px;
-	    	content: "Search Results";
-	    }
+		&:before {
+			font-size: 27px;
+			content: "Search Results";
+		}
 	}
 
 	#search {
@@ -57,7 +57,7 @@ body.search-page {
 		}
 
 		.search-submit-button {
-			background-image: url(%%spritesheet%%) !important;
+			background-image: url(%%sprite%%) !important;
 			background-position: -97px -24px;
 			height: 25px;
 			width: 25px;
@@ -80,23 +80,23 @@ body.search-page {
 
 	.search-result-group-header {
 		color: #8f98a0;
-	    background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
-	    padding: 16px;
-	    border: none;
-	    margin-bottom: 2px;
+		background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
+		padding: 16px;
+		border: none;
+		margin-bottom: 2px;
 
-	    .search-header-label {
-	    	color: #fff;
-		    font-size: 16px;
-		    font-weight: normal;
-		    text-transform: capitalize;
-	    }
+		.search-header-label {
+			color: #fff;
+			font-size: 16px;
+			font-weight: normal;
+			text-transform: capitalize;
+		}
 
-	    .dropdown-title {
-		    color: #fff;
-		    font-size: 16px;
-		    font-weight: normal;
-		    text-transform: capitalize;
+		.dropdown-title {
+			color: #fff;
+			font-size: 16px;
+			font-weight: normal;
+			text-transform: capitalize;
 		}
 	}
 
@@ -119,8 +119,8 @@ body.search-page {
 		}
 
 		&.has-thumbnail > .thumbnail {
-		    flex: 0 0 80px;
-		    margin-right: 4px;
+			flex: 0 0 80px;
+			margin-right: 4px;
 		}
 
 		:link, 
@@ -147,69 +147,69 @@ body.search-page {
 
 		.search-title {
 			margin-right: 5px;
-		    font-family: $special-font;
-		    color: #fff!important;
-		    font-weight: normal!important;
-		    margin: 0;
-		    padding: 0;
-		    font-size: 18px;
+			font-family: $special-font;
+			color: #fff!important;
+			font-weight: normal!important;
+			margin: 0;
+			padding: 0;
+			font-size: 18px;
 		}
 
 		mark {
-		    color: #8a6d3b!important;
-		    background-color: #fcf8e3;
-		    font-weight: normal;
-		    padding: 0 4px;
-		    border-radius: 2px;
-		    line-height: 21px;
+			color: #8a6d3b!important;
+			background-color: #fcf8e3;
+			font-weight: normal;
+			padding: 0 4px;
+			border-radius: 2px;
+			line-height: 21px;
 		}
 
 		.search-result-meta {
-		    color: #c6d4df;
+			color: #c6d4df;
 		}
 
 		.search-expando-button {
-		    height: 24px;
-		    margin-top: 6px;
+			height: 24px;
+			margin-top: 6px;
 
-		    &:hover {
-		    	text-decoration: none;
+			&:hover {
+				text-decoration: none;
 
-		    	span {
-		    		background: #67c1f5;
-				    color: #fff;
-				    text-decoration: none;
-		    	}
-		    }
+				span {
+					background: #67c1f5;
+					color: #fff;
+					text-decoration: none;
+				}
+			}
 
-		    span {
-		    	margin: 0;
-			    border-radius: 2px;
-			    border: none;
-			    padding: 4px 17px;
-			    cursor: pointer;
-			    text-transform: uppercase;
-			    color: #67c1f5;
-			    background: rgba(103,193,245,0.1);
-			    height: 24px;
-			    font-weight: normal;
-			    text-decoration: none;
+			span {
+				margin: 0;
+				border-radius: 2px;
+				border: none;
+				padding: 4px 17px;
+				cursor: pointer;
+				text-transform: uppercase;
+				color: #67c1f5;
+				background: rgba(103,193,245,0.1);
+				height: 24px;
+				font-weight: normal;
+				text-decoration: none;
 
-			    &:hover {
-			    	background: #67c1f5;
-				    color: #fff;
-				    text-decoration: none;
-			    }
-		    }
+				&:hover {
+					background: #67c1f5;
+					color: #fff;
+					text-decoration: none;
+				}
+			}
 		}
 
 		.search-result-body {
-		    color: #c6d4df;
+			color: #c6d4df;
 		}
 
 		.search-subscribe-button .add {
-		    color: #fff !important;
-		    font-weight: normal;
+			color: #fff !important;
+			font-weight: normal;
 		}
 	}
 
@@ -225,6 +225,6 @@ body.search-page {
 	}
 
 	.search-expando.collapsed:before {
-	    background: none;
+		background: none;
 	}
 }

@@ -100,19 +100,19 @@
 		}
 	}
 
-	[href="#elf"] {
-		background-image:url(%%elf-spritesheet-2%%);
-		animation: elfanimation 10s steps(72) 2s infinite;
-		position: absolute;
-		z-index: -1;
-		width: 130px;
-		height: 110px;
-		top: 111px;
-		left: 270px;
-	}
+//	[href="#elf"] {
+//		background-image:url(%%elf%%);
+//		animation: elfanimation 10s steps(72) 2s infinite;
+//		position: absolute;
+//		z-index: -1;
+//		width: 130px;
+//		height: 110px;
+//		top: 111px;
+//		left: 270px;
+//	}
 
 	[href$="http://store.steampowered.com/#wintersale"] {
-		background-image:url(%%winter-sale-button-final%%);
+		background-image:url(%%winter-sale-button%%);
 		position: absolute;
 		z-index: 5;
 		width: 296px;
@@ -163,6 +163,6 @@
 	}
 }
 
-@keyframes elfanimation {
-	30%, 100% { background-position: -9360px; }
-}
+//@keyframes elfanimation {
+//	30%, 100% { background-position: -9360px; }
+//}

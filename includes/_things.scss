@@ -20,7 +20,7 @@
 		position: absolute;
 		width: 32px;
 		height: 32px;
-		background-image: url(%%spritesheet%%);
+		background-image: url(%%sprite%%);
 		background-position: 0 -94px; // This sets the default to the upvote.
 		pointer-events: none;
 	}
@@ -254,64 +254,64 @@ body:not(.subscriber) .arrow.down {
 				}
 
 				&.report-button a {
-				    color: #ffa955;
-				    background: rgba(165, 91, 19, 0.2);
+					color: #ffa955;
+					background: rgba(165, 91, 19, 0.2);
 
-				    &:hover {
-				    	color: #fff;
-   						background: #ff8209;
-				    }
+					&:hover {
+						color: #fff;
+						background: #ff8209;
+					}
 				}
 
 				&.save-button a {
 					background: rgba(176, 218, 29, 0.4);
-    				color: #9bd944;
+					color: #9bd944;
 
-    				&:hover {
-				    	background: #9bd944;
-    					color: #333;
-				    }
+					&:hover {
+						background: #9bd944;
+						color: #333;
+					}
 				}
 
 				.del-button a,
 				.remove-button a {
-				    color: #ff4141;
-				    background: rgba(204, 13, 13, 0.4);
+					color: #ff4141;
+					background: rgba(204, 13, 13, 0.4);
 
-				    &:hover {
-				    	color: #fff;
-				    	background: rgba(204, 13, 13, 1);
-				    }
+					&:hover {
+						color: #fff;
+						background: rgba(204, 13, 13, 1);
+					}
 				}
 
 				.marknsfw-button a {
 					background: rgba(209, 150, 160, 0.4);
-    				color: #e8bcc4;
+					color: #e8bcc4;
 
-				    &:hover {
-				    	color: #fff;
-				    	background: #d196a0;
-				    }
+					&:hover {
+						color: #fff;
+						background: #d196a0;
+					}
 				}
 
 				.approve-button a {
 					color: #a4d007;
-    				background: rgba(76, 107, 34, 0.6);
+					background: rgba(76, 107, 34, 0.6);
 
-    				&:hover {
-				    	color: #c8f333;
-    					background: #5c802d;
-				    }
+					&:hover {
+						color: #c8f333;
+						background: #5c802d;
+					}
 				}
 			}
 
 			li.give-gold-button a {
-			    color: #caa02d;
-			    background: rgba(154, 125, 46, 0.2);
+				color: #caa02d;
+				background: rgba(154, 125, 46, 0.2);
 
 				&:hover {
 					color: #fff;
-    				background: #9a7d2e;
+					background: #9a7d2e;
 				}
 			}
 		}
@@ -382,8 +382,8 @@ body:not(.subscriber) .arrow.down {
 			font-weight: normal;
 			margin-right: 4px;
 			color: #fff;
-    		background: #ff8209;
-    		opacity: 1;
+			background: #ff8209;
+			opacity: 1;
 		}
 
 		.flairselector a.title {
@@ -418,28 +418,28 @@ body:not(.subscriber) .arrow.down {
 
 				&:hover {
 					background: #67c1f5;
-				    color: #fff;
-				    text-decoration: none;
+					color: #fff;
+					text-decoration: none;
 				}
 
 				&.positive {
 					color: #a4d007;
-    				background: rgba(76,107,34,0.6);
+					background: rgba(76,107,34,0.6);
 
-    				&:hover {
-    					color: #b2dc1e;
-    					background: #4c6b22;
-    				}
+					&:hover {
+						color: #b2dc1e;
+						background: #4c6b22;
+					}
 				}
 
 				&.negative {
 					color: #ff4141;
-    				background: rgba(204,13,13,0.4);
+					background: rgba(204,13,13,0.4);
 
-    				&:hover {
-    					color: #fff;
-    					background: #cc0d0d;
-    				}
+					&:hover {
+						color: #fff;
+						background: #cc0d0d;
+					}
 				}
 			}
 
@@ -504,7 +504,7 @@ body:not(.subscriber) .arrow.down {
 	border-radius: 2px;
 	margin: 0;
 	margin-right: 8px;
-	background-image: url(%%spritesheet%%) !important;
+	background-image: url(%%sprite%%) !important;
 	background-position: 0 -238px;
 
 	img {
@@ -1214,13 +1214,13 @@ body.comments-page .menuarea ~ .sitetable {
 	color: transparent;
 
 	a {
-	    color: rgba(255,255,255,0.3);
-	    font-weight: normal;
-	    margin-top: -4px;
+		color: rgba(255,255,255,0.3);
+		font-weight: normal;
+		margin-top: -4px;
 
-	    &:hover {
-	    	text-decoration: none;
-    		color: #fff;
-	    }
+		&:hover {
+			text-decoration: none;
+			color: #fff;
+		}
 	}
 }

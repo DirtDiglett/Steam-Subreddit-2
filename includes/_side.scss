@@ -197,7 +197,7 @@
 
 				&:before {
 					content: "";
-					background-image: url(%%spritesheet%%);
+					background-image: url(%%sprite%%);
 					background-color: rgba(0, 0, 0, 0.2);
 					position: absolute;
 					width: 36px;
@@ -330,7 +330,7 @@
 							min-height: 26px;
 							margin-left: -45px;
 							margin-top: -4px;
-							background-image: url(%%spritesheet%%);						
+							background-image: url(%%sprite%%);						
 						}	
 						
 						&:hover {
@@ -383,7 +383,7 @@
 }
 
 body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
-    display: none;
+	display: none;
 }
 
 .flairselector {
@@ -623,6 +623,10 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		left: 0;
 		bottom: 0;
 	}
+}
+
+.submit-text .morelink {
+	margin-left: 152px;
 
 	&:after {
 		content: "Submit content";
@@ -636,12 +640,10 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		letter-spacing: 1px;
 		font-family: $special-font;
 		width: 300px;
-		text-align: left;		
-	}
-}
+		text-align: left;
 
-.submit-text .morelink {
-	margin-left: 152px;
+		margin-left: -152px;	
+	}
 }
 
 .infobar.newsletterbar {
@@ -1212,26 +1214,26 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	// /r/steam Feedback
 	a[href$="surveyhero.com/c/922b7f1"] {
 		background: none!important;
-	    padding: 0 15px;
-	    font-weight: 400;
-	    line-height: 34px;
-	    height: 35px;
-	    display: inline-block;
-	    color: #d9dadd;
-	    font-size: 13px;
-	    text-shadow: -1px -1px 0px rgba(0,0,0,0.25);
-	    position: absolute;
-	    border: none;
-	    border-right: 1px solid rgba(16,21,25,0.3);
-	    top: 195px;
-	    right: 297px;
-	    border-left: 1px solid rgba(16,21,25,0.3);
+		padding: 0 15px;
+		font-weight: 400;
+		line-height: 34px;
+		height: 35px;
+		display: inline-block;
+		color: #d9dadd;
+		font-size: 13px;
+		text-shadow: -1px -1px 0px rgba(0,0,0,0.25);
+		position: absolute;
+		border: none;
+		border-right: 1px solid rgba(16,21,25,0.3);
+		top: 195px;
+		right: 297px;
+		border-left: 1px solid rgba(16,21,25,0.3);
 
-	    &:hover {
-	    	background: linear-gradient(to bottom,#e3eaef 5%,#c7d5e0 95%)!important;
-		    color: #000;
-		    text-shadow: 1px 1px 0px rgba(255,255,255,0.25);
-	    }
+		&:hover {
+			background: linear-gradient(to bottom,#e3eaef 5%,#c7d5e0 95%)!important;
+			color: #000;
+			text-shadow: 1px 1px 0px rgba(255,255,255,0.25);
+		}
 	}
 
 	// /r/steam Design Feedback

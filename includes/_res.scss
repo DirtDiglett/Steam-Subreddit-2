@@ -191,7 +191,7 @@
 		display: inline-block;
 		height: 23px;
 		width: 23px;
-		background-image: url(%%spritesheet%%);
+		background-image: url(%%sprite%%);
 		background-position: 0 0;
 		transition: none;
 
@@ -328,7 +328,7 @@
 	#NREMail.nohavemail {
 		width: 27px;
 		height: 24px;
-		background-image: url(%%spritesheet%%)!important;
+		background-image: url(%%sprite%%)!important;
 		background-repeat: no-repeat!important;
 		background-color: #262625;
 		background-position: -23px 0;
@@ -490,19 +490,19 @@
 	}
 
 	.res-commentPreview-draftStyle .livePreview {
-	    background: rgba(255,255,255,0.1);
-	    color: #C6D4DF;
-	    border: 1px solid rgba(255,255,255,0.2);
-	    margin-top: 12px;
+		background: rgba(255,255,255,0.1);
+		color: #C6D4DF;
+		border: 1px solid rgba(255,255,255,0.2);
+		margin-top: 12px;
 	}
 
 	.RESDialogSmall.livePreview > h3 {
-	    font-weight: normal;
-	    color: #fff;
-	    background: rgba(255,255,255,0.1);
-	    border-bottom: 1px solid rgba(255,255,255,0.1);
-	    padding-bottom: 12px;
-	    height: auto;
+		font-weight: normal;
+		color: #fff;
+		background: rgba(255,255,255,0.1);
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+		padding-bottom: 12px;
+		height: auto;
 	}
 
 	.markdownEditor {
@@ -510,7 +510,7 @@
 			width: 32px;
 			height: $markdown-button-height;
 			position: relative;
-			background-image: url(%%spritesheet%%);
+			background-image: url(%%sprite%%);
 			background-color: rgba(0,0,0,0.4);
 			border-radius: 3px;
 			border: 0;
@@ -537,48 +537,39 @@
 		}
 	}
 
-	.NERPageMarker {
+	.NERPageMarker,
+	#NERFail,
+	#progressIndicator {
 		background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
-	    padding: 16px;
-	    border: none;
-	    margin: 0;
-	    text-align: left;
-	    margin-bottom: 2px;
-	    border-radius: 0;
-	    color: #fff;
-	    font-size: 16px;
-	    font-weight: normal;
-	    text-transform: capitalize;
+		padding: 16px;
+		border: none;
+		margin: 0;
+		text-align: left;
+		margin-bottom: 2px;
+		border-radius: 0;
+		color: #fff;
+		font-size: 16px;
+		font-weight: normal;
+		text-transform: capitalize;
 	}
 
-	.RESThrobber, .RESThrobber:before, .RESThrobber:after {
-	    font-size: 0;
-	    position: relative;
-	    display: inline-block;
-	    background: red;
-	    height: 30px;
-	    width: 30px;
-	    border-radius: 50%;
-	    box-shadow: inset 0 0 5px 1px #222;
-	    -webkit-animation: RESThrobber 1400ms 400ms infinite linear;
-	    animation: RESThrobber 1400ms 400ms infinite linear;
+	#NERFail {
+		background: rgba(204,13,13,0.4) repeat scroll 0 0 transparent;
 	}
-	.RESThrobber {
-	    margin: 0 35px -7.5px;
-	}
-	.RESThrobber:before {
-	    left: -115%;
-	    -webkit-animation-delay: 200ms;
-	    animation-delay: 200ms;
-	}
-	.RESThrobber:after {
-	    left: 115%;
-	    -webkit-animation-delay: 600ms;
-	    animation-delay: 600ms;
-	}
-	.RESThrobber:before, .RESThrobber:after {
-	    content: '';
-	    position: absolute;
-	    top: 0;
+
+	#progressIndicator {
+		height: auto;
+		display: block;
+
+		h2 {
+			color: #fff;
+			font-size: 16px;
+			font-weight: normal;
+			text-transform: capitalize;
+		}
+
+		p {
+			font-size: 13px;
+		}
 	}
 }
