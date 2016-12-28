@@ -506,99 +506,79 @@
 	}
 
 	.markdownEditor {
-		a.edit-btn:not(.btn-macro),
 		a.edit-btn {
 			width: 32px;
-			height: 32px;
+			height: $markdown-button-height;
 			position: relative;
 			background-image: url(%%spritesheet%%);
 			background-color: rgba(0,0,0,0.4);
 			border-radius: 3px;
 			border: 0;
+			background-position-x: -194px !important;
 
 			&:hover {
 				background-color: rgba(102,192,244,0.4);
+				background-position-x: -226px !important;
 			}
 
-			&.btn-bold {
-				background-position: -194px -24px;
+			// Loops for the background positions
+			// Generates the appropriate background positioning for the spritesheet
+			$offset: -24px;
 
-				&:hover {
-					background-position: -226px -24px;
+			@each $button in $markdown-button-list {
+				$i: index($markdown-button-list, $button)-1;
+
+				&.#{$button} {
+					background-position-y: $offset !important;
 				}
-			}
 
-			&.btn-italic {
-				background-position: -194px -56px;
-
-				&:hover {
-					background-position: -226px -56px;
-				}
-			}
-
-			&.btn-strike {
-				background-position: -194px -88px;
-
-				&:hover {
-					background-position: -226px -88px;
-				}
-			}
-
-			&.btn-superscript {
-				background-position: -194px -120px;
-
-				&:hover {
-					background-position: -226px -120px;
-				}
-			}
-
-			&.btn-link {
-				background-position: -194px -152px;
-
-				&:hover {
-					background-position: -226px -152px;
-				}
-			}
-
-			&.btn-quote {
-				background-position: -194px -184px;
-
-				&:hover {
-					background-position: -226px -184px;
-				}
-			}
-
-			&.btn-code {
-				background-position: -194px -216px;
-
-				&:hover {
-					background-position: -226px -216px;
-				}
-			}
-
-			&.btn-list-unordered {
-				background-position: -194px -248px;
-
-				&:hover {
-					background-position: -226px -248px;
-				}
-			}
-
-			&.btn-list-ordered {
-				background-position: -194px -280px;
-
-				&:hover {
-					background-position: -226px -280px;
-				}
-			}
-
-			&.btn-table {
-				background-position: -194px -312px;
-
-				&:hover {
-					background-position: -226px -312px;
-				}
+				$offset: $offset - $markdown-button-height;
 			}
 		}
+	}
+
+	.NERPageMarker {
+		background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
+	    padding: 16px;
+	    border: none;
+	    margin: 0;
+	    text-align: left;
+	    margin-bottom: 2px;
+	    border-radius: 0;
+	    color: #fff;
+	    font-size: 16px;
+	    font-weight: normal;
+	    text-transform: capitalize;
+	}
+
+	.RESThrobber, .RESThrobber:before, .RESThrobber:after {
+	    font-size: 0;
+	    position: relative;
+	    display: inline-block;
+	    background: red;
+	    height: 30px;
+	    width: 30px;
+	    border-radius: 50%;
+	    box-shadow: inset 0 0 5px 1px #222;
+	    -webkit-animation: RESThrobber 1400ms 400ms infinite linear;
+	    animation: RESThrobber 1400ms 400ms infinite linear;
+	}
+	.RESThrobber {
+	    margin: 0 35px -7.5px;
+	}
+	.RESThrobber:before {
+	    left: -115%;
+	    -webkit-animation-delay: 200ms;
+	    animation-delay: 200ms;
+	}
+	.RESThrobber:after {
+	    left: 115%;
+	    -webkit-animation-delay: 600ms;
+	    animation-delay: 600ms;
+	}
+	.RESThrobber:before, .RESThrobber:after {
+	    content: '';
+	    position: absolute;
+	    top: 0;
 	}
 }

@@ -136,6 +136,12 @@
 		width: 100%;
 	}
 
+	textarea.title {
+		text-transform: none;
+		padding: 4px;
+		min-height: 0;
+	}
+
 	#newlink-with-image-upload {
 		.image-upload-drop-target {
 			background: rgba(255,255,255,0.2);

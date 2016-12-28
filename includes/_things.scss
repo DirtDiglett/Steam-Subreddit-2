@@ -299,8 +299,8 @@ body:not(.subscriber) .arrow.down {
     				background: rgba(76, 107, 34, 0.6);
 
     				&:hover {
-				    	color: #b2dc1e;
-    					background: #4c6b22;
+				    	color: #c8f333;
+    					background: #5c802d;
 				    }
 				}
 			}
@@ -367,6 +367,23 @@ body:not(.subscriber) .arrow.down {
 				border-radius: 1px;
 				text-transform: capitalize;
 			}
+		}
+
+		li.reported-stamp.has-reasons {
+			line-height: 16px;
+			margin: 0;
+			border-radius: 2px;
+			border: none !important;
+			padding: 4px 17px;
+			display: inline-block;
+			cursor: pointer;
+			text-transform: uppercase;
+			height: 24px;
+			font-weight: normal;
+			margin-right: 4px;
+			color: #fff;
+    		background: #ff8209;
+    		opacity: 1;
 		}
 
 		.flairselector a.title {
@@ -1191,4 +1208,19 @@ body.comments-page .menuarea ~ .sitetable {
 
 .usertext-buttons button {
 	margin-right: 8px;
+}
+
+.link .domain {
+	color: transparent;
+
+	a {
+	    color: rgba(255,255,255,0.3);
+	    font-weight: normal;
+	    margin-top: -4px;
+
+	    &:hover {
+	    	text-decoration: none;
+    		color: #fff;
+	    }
+	}
 }

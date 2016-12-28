@@ -356,90 +356,29 @@
 			}
 
 			a:before {
-				background-position: -158px -24px
-			}
-
-			.reddit-edit:before {
-				background-position: -158px -24px
-			}
-
-			.edit-stylesheet:before {
-				background-position: -158px -50px
-			}
-
-			.community-rules:before {
-				background-position: -158px -78px
-			}
-
-			.moderator-mail:before {
-				background-position: -158px -105px
-			}
-
-			.reddit-moderators:before {
-				background-position: -158px -132px
-			}
-
-			.reddit-contributors:before {
-				background-position: -158px -159px
-			}
-
-			.reddit-traffic:before {
-				background-position: -158px -186px
-			}
-
-			.reddit-modqueue:before {
-				background-position: -158px -214px
-			}
-
-			.reddit-reported:before {
-				background-position: -158px -241px
-			}
-
-			.reddit-spam:before {
-				background-position: -158px -268px
-			}
-
-			.reddit-edited:before {
-				background-position: -158px -295px
-			}
-
-			.reddit-ban:before {
-				background-position: -158px -322px
-			}
-
-			.reddit-mute:before {
-				background-position: -158px -349px
-			}
-
-			.reddit-flair:before {
-				background-position: -158px -376px
-			}
-
-			.reddit-automod:before {
-				background-position: -158px -402px
-			}
-
-			.reddit-moderationlog:before {
-				background-position: -158px -430px
-			}
-
-			.reddit-unmoderated:before {
-				background-position: -158px -456px
-			}
-
-			.tb-un-manager img,
-			.toolbox-edit img {
-				display: none;
-			}
-
-			.tb-un-manager:before {
-				background-position: -158px -484px
-			}
-
-			.toolbox-edit:before {
-				background-position: -158px -512px
+				background-position-x: -158px;
 			}
 		}
+	}
+}
+
+.side .icon-menu {
+
+	// Loop through the icons in the menu list.
+	// Generates the appropriate background positioning for the spritesheet
+	$offset: -24px;
+	@each $icon in $icon-menu-list {
+		$i: index($icon-menu-list, $icon);
+		.#{$icon}:before {
+			background-position-y: $offset;
+		}
+
+		$offset: $offset - 27px;
+	}
+
+	.tb-un-manager img,
+	.toolbox-edit img {
+		display: none;
 	}
 }
 
@@ -469,15 +408,57 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		text-transform: uppercase;					
 	}
 
-	.flairoptionpane {
-		margin-bottom: 24px;
-	}
-
 	.flair {
 		min-width: 0 !important;
 		position: relative;
 		margin: 0;
+		height: $flair-height;
 	}
+
+	.flairoptionpane {
+		margin-bottom: 24px;
+
+		.flair {
+			background-color: transparent !important;
+			padding: 0;
+
+			&:hover {
+				background-color: transparent !important;
+			}
+		}
+
+		.flair-small {
+			padding-left: $flair-small-width !important;
+
+			&:hover {
+				padding-left: $flair-small-width !important;
+			}
+		}
+
+		.flair-year {
+			padding-left: $flair-year-width !important;
+
+			&:hover {
+				padding-left: $flair-year-width !important;
+			}
+		}
+
+		.flair-game {
+			padding-left: $flair-game-width !important;
+
+			&:hover {
+				padding-left: $flair-game-width !important;
+			}
+		}
+
+		.flair-special {
+			padding-left: $flair-special-width !important;
+
+			&:hover {
+				padding-left: $flair-special-width !important;
+			}
+		}
+	}	
 
 	ul {
 		width: 86px !important;
@@ -519,7 +500,11 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 				content: "Flair Preview";
 				color: #fff;
 				display: block;				
-			}		
+			}	
+
+			.flair {
+				margin-bottom: -8px;
+			}	
 		}
 
 		input[type=text] {
@@ -580,6 +565,10 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 			content: "Remove Flair";
 			font-size: 15px;
 			line-height: 30px;
+		}
+
+		a {
+			display: none!important
 		}
 	}
 
@@ -789,6 +778,24 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 			// Force the flair to show fullwidth as a preview.
 			min-width: 600px;
 			font-size: 11px;
+			color: #fff;
+			background-color: rgba(0,0,0,0.8);
+		}
+
+		.flair-small {
+			padding-left: ($flair-small-width + 8px);
+		}
+
+		.flair-year {
+			padding-left: ($flair-year-width + 8px);
+		}
+
+		.flair-game {
+			padding-left: ($flair-game-width + 8px);
+		}
+
+		.flair-special {
+			padding-left: ($flair-special-width + 8px);
 		}
 
 		.flairselectbtn {
@@ -823,11 +830,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 			&:hover {
 				&:after {
 					@include sidebarbutton(hover);
-				}
-
-				&:active {
-					@include sidebarbutton(active);
-				}				
+				}			
 			}		
 		}
 	}
@@ -1032,6 +1035,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	.more {
 		font-size: inherit;
 		text-align: left;
+		margin-top: 16px;
 
 		a {
 			color: $anchor-color;
@@ -1091,8 +1095,8 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 			overflow: hidden;
 			line-height: 24px;
 
-			.flair {
-				display: none;
+			.flair:hover {
+				width: 800px; // Should prevent layout breakage and just throw it off the screen.
 			}
 		}
 	}
@@ -1204,20 +1208,46 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	color: #8f98a0
 }
 
+.side {
+	// /r/steam Feedback
+	a[href$="surveyhero.com/c/922b7f1"] {
+		background: none!important;
+	    padding: 0 15px;
+	    font-weight: 400;
+	    line-height: 34px;
+	    height: 35px;
+	    display: inline-block;
+	    color: #d9dadd;
+	    font-size: 13px;
+	    text-shadow: -1px -1px 0px rgba(0,0,0,0.25);
+	    position: absolute;
+	    border: none;
+	    border-right: 1px solid rgba(16,21,25,0.3);
+	    top: 195px;
+	    right: 297px;
+	    border-left: 1px solid rgba(16,21,25,0.3);
 
+	    &:hover {
+	    	background: linear-gradient(to bottom,#e3eaef 5%,#c7d5e0 95%)!important;
+		    color: #000;
+		    text-shadow: 1px 1px 0px rgba(255,255,255,0.25);
+	    }
+	}
 
+	// /r/steam Design Feedback
+	a[href$="surveyhero.com/c/80f982f"] {
+		@include outlinebutton();
 
+		display: block;
+		text-align: center;
+		margin-top: 16px;
 
+		&:hover {
+			@include outlinebutton(hover);
+		}
 
-
-
-
-.side a[href$="surveyhero.com/c/03757ed"] {
-position: absolute;
-    bottom: 228px;
-    left: 695px;
-    background: #00a3e8;
-    padding: 4px 40px;
-    border-radius: 19%;
-    color: #0a3a6d;
+		&:active {
+			@include outlinebutton(active);
+		}
+	}
 }

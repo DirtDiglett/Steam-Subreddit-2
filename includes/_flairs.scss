@@ -88,8 +88,6 @@ a.author.admin,
 	}
 }
 
-
-
 // User Flairs
 .link .flair {
 	font-size: 0;
@@ -101,148 +99,222 @@ a.author.admin,
 
 .flair {
 	position: absolute;
-    margin-top: -2px!important;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    line-height: 24px;
-    padding-left: 75px;
-    font-size: 12px;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	margin-top: -2px;
+	line-height: $flair-height;
+	font-size: 0;
 
-    &:hover {
-    	font-size: 12px;
-	    color: red;
-	    background-color: blue;
-    }
+	&:hover {
+		font-size: 12px;
+		color: #fff;
+		background-color: rgba(0,0,0,0.8);
+	}
 
 	&:before {
 		content: "";
-	    height: 24px;
-	    display: inline-block;
-	    background: rgba(0,0,0,0.4);
-	    border: 1px solid rgba(0,0,0,0.4);
-	    color: rgba(255,255,255,0.4);
-	    position: absolute;
-	    left: 0;
+		height: $flair-height;
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		background-image:url(%%flairs%%);
+		background-position: 0 0;
 	}
 }
 
 .flair-small {
+	padding-left: $flair-small-width;
+
 	&:hover {
-		padding: 0 8px 0 34px;
+		padding: 0 8px 0 ($flair-small-width + 8px);
 	}
 
 	&:before {
-		width: 24px;
-		background-color: rgba(255,255,255,0.4);
+		width: $flair-small-width;
 	}
 }
 
-.flair-wide {
+.flair-year {
+	padding-left: $flair-year-width;
+
 	&:hover {
-		padding: 0 8px 0 85px;
+		padding: 0 8px 0 ($flair-year-width + 8px);
 	}
 
 	&:before {
-		width: 75px;
-		background-color: rgba(255,0,0,0.4);
+		width: $flair-year-width;
+		background-position-x: -$flair-small-width;
+		box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
+	}
+}
+
+.flair-game {
+	padding-left: $flair-game-width;
+
+	&:hover {
+		padding: 0 8px 0 ($flair-game-width + 8px);
+	}
+
+	&:before {
+		width: $flair-game-width;
+		background-position-x: -($flair-small-width + $flair-year-width);
+		box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+		border-radius: 2px;
+	}
+}
+
+.flair-special {
+	padding-left: $flair-special-width;
+	
+	&:hover {
+		padding: 0 8px 0 ($flair-special-width + 8px);
+	}
+
+	&:before {
+		width: $flair-special-width;
+		background-position-x: -($flair-small-width + $flair-year-width + $flair-game-width);
+		border-radius: 2px;
 	}	
 }
-	
 
-.flair ~ .score {
-	margin-left: 85px;
+// Loops for the background positions
+// Generates the appropriate background positioning for the spritesheet
+@each $flair in $flair-small-list {
+	$i: index($flair-small-list, $flair)-1;
+	.flair-#{$flair}:before {
+		background-position-y: $flair-height * -$i;
+	}
+}
+
+@each $flair in $flair-year-list {
+	$i: index($flair-year-list, $flair)-1;
+	.flair-#{$flair}:before {
+		background-position-y: $flair-height * -$i;
+	}
+}
+
+@each $flair in $flair-game-list {
+	$i: index($flair-game-list, $flair)-1;
+	.flair-#{$flair}:before {
+		background-position-y: $flair-height * -$i;
+	}
+}
+
+@each $flair in $flair-special-list {
+	$i: index($flair-special-list, $flair)-1;
+	.flair-#{$flair}:before {
+		background-position-y: $flair-height * -$i;
+	}
+}
+
+
+.flair-small ~ .score {
+	margin-left: ($flair-small-width + 4px);
+}
+
+.flair-year ~ .score {
+	margin-left: ($flair-year-width + 4px);
+}
+
+.flair-game ~ .score {
+	margin-left: ($flair-game-width + 4px);
+}
+
+.flair-special ~ .score {
+	margin-left: ($flair-special-width + 4px);
 }
 
 .thing.collapsed .flair ~ .score {
-    margin-left: 0;
+	margin-left: 0;
 }
 
 // Link Flairs
 .linkflairlabel,
 .flairselector .linkflairlabel {
-	background: #666;
+	background: rgba(0,0,0,0.2);
 	color: #FFF;
 	padding: 2px 8px;
-//	border-radius: 40px;
 	margin: 0;
 	max-width: none;
-	border: 1px solid #fff;
+	border: 1px solid rgba(255,255,255,0.3);
 	float: right;
 	font-weight: normal;
 }
 
 .flairselector .linkflairlabel {
 	float: none;
+	height: 24px;
+	line-height: 18px;
 }
 
 .link.linkflair-resolved .linkflairlabel,
 .link .flairselector .linkflair-resolved .linkflairlabel {
 	border-color: #9cc808;
-    background: #4c6b22;
-    color: #9cc808;
+	background: #4c6b22;
+	color: #9cc808;
 }
 
 .link.linkflair-psa .linkflairlabel,
 .link .flairselector .linkflair-psa .linkflairlabel {
 	border-color: #ce77e4;
-    background: #5c226b;
-    color: #e788ff;
+	background: #5c226b;
+	color: #e788ff;
 }
 
 .link.linkflair-question .linkflairlabel,
 .link .flairselector .linkflair-question .linkflairlabel {
 	border-color: #656565;
-    background: #333333;
-    color: #b3b3b3;
+	background: #333333;
+	color: #b3b3b3;
 }
 
 .link.linkflair-suggestion .linkflairlabel,
 .link .flairselector .linkflair-suggestion .linkflairlabel {
 	border-color: #7d8198;
-    background: #282a35;
-    color: #abaec1;
+	background: #282a35;
+	color: #abaec1;
 }
 
 .link.linkflair-news .linkflairlabel,
 .link .flairselector .linkflair-news .linkflairlabel {
 	border-color: #fff790;
-    background: #e4d304;
-    color: #333;
+	background: #e4d304;
+	color: #333;
 }
 
 .link.linkflair-discussion .linkflairlabel,
 .link .flairselector .linkflair-discussion .linkflairlabel {
 	border-color: #6788ff;
-    background: #0430d0;
-    color: #b6c5ff;
+	background: #0430d0;
+	color: #b6c5ff;
 }
 
 .link.linkflair-error .linkflairlabel,
 .link .flairselector .linkflair-error .linkflairlabel {
 	border-color: #ff8209;
-    background: #d06804;
-    color: #fff;
+	background: #d06804;
+	color: #fff;
 }
 
 .link.linkflair-fluff .linkflairlabel,
 .link .flairselector .linkflair-fluff .linkflairlabel {
 	border-color: #fbf6e6;
-    background: #d0c7a6;
-    color: #333;
+	background: #d0c7a6;
+	color: #333;
 }
 
 .link.linkflair-meta .linkflairlabel,
 .link .flairselector .linkflair-meta .linkflairlabel {
-    border-color: #b3dc24;
-    background: #7c9a14;
-    color: #e9ff9b;
+	border-color: #b3dc24;
+	background: #7c9a14;
+	color: #e9ff9b;
 }
 
 .link.linkflair-ugc .linkflairlabel,
 .link .flairselector .linkflair-ugc .linkflairlabel {
 	border-color: #9a6810;
-    background: #654101;
-    color: #f9c468;
+	background: #654101;
+	color: #f9c468;
 }

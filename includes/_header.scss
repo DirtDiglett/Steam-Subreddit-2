@@ -497,7 +497,3 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 #header .tabmenu:not(:hover) li.selected a::before {
 	visibility: visible!important
 }
-
-.link:not(.sponsored) .domain {
-	visibility: hidden;
-}

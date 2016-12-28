@@ -244,15 +244,6 @@ textarea,
 	background-position: 0 -46px;
 }
 
-.modactionlisting {
-	a[href$="steam_reddit"],
-	a[href$="AutoModerator"],
-	a[href$="SEO_Nuke"],
-	a[href$="FlairAssigner"] {
-		opacity: 0.1;
-	}
-}
-
 .linefield,
 .roundfield {
 	width: auto;
@@ -426,6 +417,44 @@ textarea,
     margin: 20px 352px 64px 16px;
     padding: 0!important;
     margin-top: 100px;
+}
+
+body.comments-page .usertext-edit textarea {
+	background-image: url(%%comment-bg%%);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background 0.2s ease-in-out;
+
+    &:focus {
+    	background-position: center -55px; //55px is the height of the image.
+    }
+}
+
+ul.report-reasons {
+    width: auto;
+    margin-top: 10px;
+    border: 1px solid #ff8209;
+    background: rgba(255, 130, 9, 0.2);
+    color: #fff;
+    border-radius: 1px;
+    padding: 16px;
+
+    li {
+    	opacity: 1 !important;
+    }
+
+    .report-reason-title {
+    	color: #fff;
+    	font-size: 16px;
+	    font-weight: normal;
+	    text-transform: capitalize;
+	    padding: 0;
+    }
+
+    li.report-reason {
+    	font-size: 13px;
+    	margin-bottom: 4px;
+    }
 }
 
 // Import our specific includes

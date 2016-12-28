@@ -18,9 +18,25 @@ $border-radius-tiny:			1px !default;
 $border-radius-small:			2px !default;
 $border-radius-default:			3px !default;
 
+// Lists
+$icon-menu-list: "reddit-edit", "edit-stylesheet", "community-rules", "moderator-mail", "reddit-moderators", "reddit-contributors", "reddit-traffic", "reddit-modqueue", "reddit-reported", "reddit-spam", "reddit-edited", "reddit-ban", "reddit-mute", "reddit-flair", "reddit-automod", "reddit-moderationlog", "reddit-unmoderated", "tb-un-manager", "toolbox-edit";
+$expando-list: "selftext.collapsed", "image.collapsedExpando", "video.collapsed", "image.gallery.collapsedExpando", "video-muted.collapsed";
+$expando-height:				24px !default;
+$markdown-button-list: "btn-bold", "btn-italic", "btn-strike", "btn-superscript", "btn-link", "btn-quote", "btn-code", "btn-list-unordered", "btn-list-ordered", "btn-table";
+$markdown-button-height:		32px !default;
+
 // Flairs
 $flair-height:					24px !default;
 $flair-width:					100px !default;
+$flair-small-width:				24px !default;
+$flair-year-width:				25px !default;
+$flair-game-width:				36px !default;
+$flair-special-width:			80px !default;
+
+$flair-small-list: "steamlogo", "lambda", "hl2", "blackmesa", "combine", "aperturelogo", "portal2logo", "tf2logo", "csgologo", "dota2logo", "gmodlogo", "skyrimlogo", "left4deadlogo", "portallogo", "borderlands", "frozensynapse", "blackops2", "isaac", "gtav", "dishonored", "fallout", "thedivision", "witcher3";
+$flair-year-list: "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13";
+$flair-game-list: "1", "5", "10", "25", "50", "100", "250", "500", "1000", "2000", "3000", "4000", "5000";
+$flair-special-list: "valve", "steammod", "steammod1", "steamdeveloper", "steamtranslator", "submod", "sourcefilm", "steamdb", "es", "gauge", "pressure";
 
 // CSS Properties
 $modal-background:				linear-gradient(to bottom, #e3eaef 0%, #c7d5e0 100%) !default;
