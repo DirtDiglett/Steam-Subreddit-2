@@ -572,4 +572,27 @@
 			font-size: 13px;
 		}
 	}
+
+	a.voteWeight {
+	    background: none !important;
+	}
+}
+
+
+// For a fixed-bar SR header.
+body.res.pinHeader-sub,
+body.res.pinHeader-subanduser {
+	#sr-header-area {
+    	top: 0;
+   	}
+
+    #header-bottom-right {
+	    z-index: 10001;
+	    position: fixed;
+	}
+}
+
+.pinHeader-subanduser #header-bottom-right.res-floating-userbar {
+    top: -6px!important;
+    opacity: 1;
 }

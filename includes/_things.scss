@@ -130,11 +130,12 @@ body:not(.subscriber) .arrow.down {
 	.title {
 		font-family: $special-font;
 		color: #fff;
-		font-weight: bold;
+		font-weight: 500;
 		margin: 0;
 		padding: 0;
 		font-size: 18px;
-		height: 24px;
+		min-height: 24px;
+		height: auto;
 
 		&:hover {
 			color: #fff;
@@ -196,6 +197,13 @@ body:not(.subscriber) .arrow.down {
 			background-color: rgba(209,150,160,0.35);
 		}
 	}
+}
+
+.link.promoted.new-ad-style-blue,
+.link.promotedlink.promoted,
+.link.promotedlink.external {
+    background: rgba(239, 247, 255, 0.2);
+    border: 1px solid rgba(239, 247, 255, 0.4);
 }
 
 // Things apply to both Links and Comments.
@@ -332,6 +340,10 @@ body:not(.subscriber) .arrow.down {
 			&:hover {
 				color: $anchor-hover-color;
 			}
+		}
+
+		a[href$="/gilded"] {
+			z-index: 0;
 		}
 
 		.edited-timestamp {
@@ -486,6 +498,7 @@ body:not(.subscriber) .arrow.down {
 
 	&.comment .usertext-body .md {
 		padding-left: 32px;
+		max-width: none;
 	}
 }
 
@@ -1075,6 +1088,10 @@ body.comments-page .menuarea ~ .sitetable {
 		code {
 			margin: 0;
 		}
+	}
+
+	code {
+		background: transparent!important;
 	}
 
 	ul,

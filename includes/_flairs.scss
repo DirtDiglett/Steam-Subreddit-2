@@ -106,6 +106,7 @@ a.author.admin,
 	margin-top: -2px;
 	line-height: $flair-height;
 	font-size: 0;
+	z-index: 2;
 
 	&:hover {
 		font-size: 12px;
@@ -210,23 +211,33 @@ a.author.admin,
 }
 
 
-.flair-small ~ .score {
+.flair-small ~ .score,
+.flair-small ~ .score-hidden,
+.flair-small ~ a[href$="/gilded"] {
 	margin-left: ($flair-small-width + 4px);
 }
 
-.flair-year ~ .score {
+.flair-year ~ .score,
+.flair-year ~ .score-hidden,
+.flair-year ~ a[href$="/gilded"] {
 	margin-left: ($flair-year-width + 4px);
 }
 
-.flair-game ~ .score {
+.flair-game ~ .score,
+.flair-game ~ .score-hidden,
+.flair-game ~ a[href$="/gilded"] {
 	margin-left: ($flair-game-width + 4px);
 }
 
-.flair-special ~ .score {
+.flair-special ~ .score,
+.flair-special ~ .score-hidden,
+.flair-special ~ a[href$="/gilded"] {
 	margin-left: ($flair-special-width + 4px);
 }
 
-.thing.collapsed .flair ~ .score {
+.thing.collapsed .flair ~ .score,
+.thing.collapsed .flair ~ .score-hidden,
+.thing.collapsed .flair ~ a[href$="/gilded"] {
 	margin-left: 0;
 }
 

@@ -1,4 +1,4 @@
-.side {
+html:not(:lang(na)) .side {
 	.md>blockquote:nth-last-of-type(2) {
 		top: 208px;
 		height: 44px;
@@ -55,6 +55,7 @@
 		animation: sf1 7.5s linear infinite;
 		position: absolute;
 		overflow: hidden;
+		will-change: translate3d;
 
 		&:nth-child(1),
 		&:nth-child(2) {
@@ -100,26 +101,57 @@
 		}
 	}
 
-//	[href="#elf"] {
-//		background-image:url(%%elf%%);
-//		animation: elfanimation 10s steps(72) 2s infinite;
-//		position: absolute;
-//		z-index: -1;
-//		width: 130px;
-//		height: 110px;
-//		top: 111px;
-//		left: 270px;
-//	}
 
-	[href$="http://store.steampowered.com/#wintersale"] {
-		background-image:url(%%winter-sale-button%%);
-		position: absolute;
-		z-index: 5;
-		width: 296px;
-		height: 87px;
-		top: 75px;
-		left: 340px;
+}
+
+html:not(:lang(na)) {
+	a[href="https://reddit.com/r/steam"] {
+		display: none;
 	}
+
+	a[href="https://na.reddit.com/r/steam"] {
+		@include sidebarbutton();
+		display: block;
+		padding-top: 4px;
+		padding-left: 8px;
+		padding-bottom: 4px;
+
+		&:hover {
+			@include sidebarbutton(hover);
+		}
+	}
+}
+
+html:lang(na) {
+	a[href="https://reddit.com/r/steam"] {
+		@include sidebarbutton();
+		display: block;
+		padding-top: 4px;
+		padding-left: 8px;
+		padding-bottom: 4px;
+
+		&:hover {
+			@include sidebarbutton(hover);
+		}
+	}
+
+	a[href="https://na.reddit.com/r/steam"] {
+		display: none;
+	}
+
+	.md>blockquote:nth-last-of-type(2) {
+		display: none;
+	}
+}
+
+.side [href$="http://store.steampowered.com/#wintersale"] {
+	background-image:url(%%winter-sale-button%%);
+	position: absolute;
+	z-index: 5;
+	width: 296px;
+	height: 87px;
+	top: 75px;
+	left: 340px;
 }
 
 @keyframes sway {
