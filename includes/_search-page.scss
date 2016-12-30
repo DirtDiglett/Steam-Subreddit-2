@@ -15,57 +15,12 @@ body.search-page {
 
 	#search {
 		input[type=text] {
-			background-color: #316282;
-			border-radius: 3px;
-			border: 1px solid rgba(0,0,0,0.6);
-			box-shadow: 1px 1px 0 rgba(255,255,255,0.13);
-			color: #fff;
-			outline: none;
-			height: 29px;
 			padding: 4px 8px;
-
-			&:hover,
-			&:focus {
-				border: 1px solid #4c9acc;
-			}
-
-			&::placeholder {
-				color: #0e1c25;
-				text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
-				font-style: italic;	
-			}
-
-			&::-moz-placeholder {
-				color: #0e1c25;
-				text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
-				font-style: italic;
-				opacity: 1;
-			}
-
-			&::-ms-input-placeholder {
-				color: #0e1c25;
-				text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
-				font-style: italic;			
-			}
-
-			&::-webkit-input-placeholder {
-				color: #0e1c25;
-				text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
-				font-style: italic;	
-			}
 		}
 
 		.search-submit-button {
-			background-image: url(%%sprite%%) !important;
-			background-position: -97px -24px;
-			height: 25px;
-			width: 25px;
 			margin-left: -27px;
 			padding: 0;
-
-			&:hover {
-				background-position: -97px -49px;
-			}
 
 			span {
 				display: none;

@@ -792,6 +792,11 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 			padding-left: ($flair-special-width + 8px);
 		}
 
+		.flair-level {
+			background: none;
+			font-size: 0;
+		}
+
 		.flairselectbtn {
 			// This hides the default "edit" wording, to replace with a cool button.
 			position: absolute;

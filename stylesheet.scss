@@ -120,13 +120,12 @@ textarea,
 }
 
 .content select {
-	background-color: #417a9b;
-	background: rgba(103, 193, 245, 0.4);;
+	background: rgba(103, 193, 245, 0.4) url(%%dropdown-arrow%%) no-repeat right 0;
 	border: 0;
 	color: #67c1f5;
 	outline: none;
-	padding: 8px 15px;
-	padding-right: 31px;
+	padding: 0 31px 0 15px;
+	height: 31px;
 	line-height: 31px;
 	font-size: 12px;
 	top: -2px;
@@ -136,6 +135,9 @@ textarea,
 
 	&:hover {
 		color: #fff;
+		background: url(%%dropdown-arrow%%), linear-gradient(-60deg, rgb(103, 193, 245) 0%, rgb(65, 122, 155) 100%);
+		background-repeat: no-repeat;
+		background-position: right -31px, 0 0;
 	}
 
 	option {
@@ -255,24 +257,21 @@ textarea,
 .commentarea .menuarea .spacer .dropdown,
 .search-page .content .dropdown,
 .content > .menuarea .dropdown {
-	background: rgba(103, 193, 245, 0.4);;
 	border: 0;
 	color: #67c1f5;
 	outline: none;
-	padding: 8px 15px;
-	padding-right: 31px;
+	padding: 0 31px 0 15px;
 	line-height: 31px;
 	font-size: 12px;
 	top: -2px;
-	background-image: url(%%dropdown-arrow%%);
-	background-repeat: no-repeat;
-	background-position: right 0;
+	height: 31px;
+	background: rgba(103, 193, 245, 0.4) url(%%dropdown-arrow%%) no-repeat right 0;
 
 	&:hover {
 		color: #fff;
 		background: url(%%dropdown-arrow%%), linear-gradient(-60deg, rgb(103, 193, 245) 0%, rgb(65, 122, 155) 100%);
 		background-repeat: no-repeat;
-		background-position: right 0, 0 0;
+		background-position: right -31px, 0 0;
 
 		.selected {
 			color: #fff;
@@ -493,6 +492,58 @@ ul.report-reasons {
 	border-top: 0;
 	margin-top: 0;
 	margin-bottom: 32px;
+}
+
+body.search-page #search input[type=text],
+.side #search input[type=text] {
+	background: #316282 !important;
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.3) !important;
+	box-shadow: 1px 1px 0 rgba(255,255,255,0.13) !important;
+	color: #fff !important;
+	height: 29px;
+
+	&:hover,
+	&:focus {
+		border: 1px solid #4c9acc !important;
+		box-shadow: 1px 1px 0 rgba(255, 255, 255, 0) !important;	
+	}
+
+	&::placeholder {
+		color: #0e1c25;
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+		font-style: italic;	
+	}
+
+	&::-moz-placeholder {
+		color: #0e1c25;
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+		font-style: italic;
+		opacity: 1;
+	}
+
+	&::-ms-input-placeholder {
+		color: #0e1c25;
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+		font-style: italic;			
+	}
+
+	&::-webkit-input-placeholder {
+		color: #0e1c25;
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+		font-style: italic;	
+	}
+}
+
+body.search-page #search .search-submit-button,
+.side #search input[type=submit] {
+	background: url(%%sprite%%) -97px -24px !important;
+	height: 25px;
+	width: 25px;
+	
+	&:hover {
+		background-position-y: -49px !important;
+	}
 }
 
 // Import our specific includes
