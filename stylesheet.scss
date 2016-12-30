@@ -257,6 +257,7 @@ textarea,
 .commentarea .menuarea .spacer .dropdown,
 .search-page .content .dropdown,
 .content > .menuarea .dropdown {
+	display: inline-block;
 	border: 0;
 	color: #67c1f5;
 	outline: none;
@@ -346,7 +347,6 @@ textarea,
 
 	.wiki-page-content .wiki>.toc>ul {
 		background: #324b68;
-		/* border-radius: 3px; */
 		border: 0;
 	}
 
@@ -367,16 +367,14 @@ textarea,
 	}
 }
 
+// The "Rules" page.
 .modtools-page>div.content {
-	margin: 20px 352px 64px 16px;
+	margin: 100px 352px 64px 16px;
 	padding: 0!important;
-	margin-top: 100px;
 }
 
 body.comments-page .usertext-edit textarea {
-	background-image: url(%%comment-bg%%);
-	background-repeat: no-repeat;
-	background-position: center;
+	background-image: url(%%comment-bg%%) no-repeat center;
 	transition: background 0.2s ease-in-out;
 
 	&:focus {
