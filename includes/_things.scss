@@ -48,7 +48,7 @@
 
 	&.down {
 		&:before {
-			background-position: 0px -126px;
+			background-position: 0 -126px;
 		}
 
 		&:hover:not(:active):before {
@@ -124,7 +124,7 @@ body:not(.subscriber) .arrow.down {
 		line-height: 16px;
 		font-size: 11px;
 		text-align: center;
-		margin: 0px -100%;
+		margin: 0 -100%;
 	}
 
 	.title {
@@ -481,7 +481,7 @@ body:not(.subscriber) .arrow.down {
 
 	.stamp {
 		height: 24px;
-		padding: 0px 8px;
+		padding: 0 8px;
 		line-height: 22px;	
 		
 		&.nsfw-stamp {
@@ -510,7 +510,7 @@ body:not(.subscriber) .arrow.down {
 	&.gilded {
 		box-shadow: inset 0 0 0 2px #fff088;
 
-		a.author {
+		& > a.author {
 			color: #fff088;
 
 			&:hover {
@@ -523,11 +523,8 @@ body:not(.subscriber) .arrow.down {
 .thumbnail {
 	margin-top: 0;
 	display: flex;
-	-webkit-display: flex;
 	justify-content: center;
-	-webkit-justify-content: center;
 	align-items: center;
-	-webkit-align-items: center;
 	background-size: auto !important;
 	height: 80px !important;
 	width: 80px !important;
@@ -551,13 +548,13 @@ body:not(.subscriber) .arrow.down {
 
 	&.nsfw {
 		background-position: 0 -318px;
-		box-shadow: inset 0 0 0px 1px #d196a0;
+		box-shadow: inset 0 0 0 1px #d196a0;
 		background-color: rgba(209, 150, 160, 0.25)	;
 	}
 
 	&.spoiler {
 		background-position: 0 -398px;
-		box-shadow: inset 0 0 0px 1px #fff;
+		box-shadow: inset 0 0 0 1px #fff;
 		background-color: rgba(255, 255, 255, 0.15);		
 	}
 }
@@ -816,7 +813,7 @@ body.comments-page .comment {
 	}
 
 	&.new-comment {
-		box-shadow: inset 0 0 0px 2px #67c1f5;
+		box-shadow: inset 0 0 0 2px #67c1f5;
 
 		.usertext-body {
 			border: none;
@@ -1027,7 +1024,7 @@ body.comments-page .menuarea ~ .sitetable {
 .usertext .markhelp {
 	border: none;
 	padding: 0;
-	margin: 18px 0px 0px 0;
+	margin: 18px 0 0 0;
 	color: #8f98a0;
 
 	table {
@@ -1205,7 +1202,7 @@ body.comments-page .menuarea ~ .sitetable {
 
 				&:hover {
 					color: #fff;
-					background: url(%%dropdown-arrow%%), -webkit-linear-gradient(-60deg, rgb(103, 193, 245) 0%, rgb(65, 122, 155) 100%);
+					background: url(%%dropdown-arrow%%), linear-gradient(-60deg, rgb(103, 193, 245) 0%, rgb(65, 122, 155) 100%);
 					background-repeat: no-repeat;
 					background-position: right 0, 0 0;
 

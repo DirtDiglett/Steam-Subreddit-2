@@ -138,7 +138,7 @@
 				position: relative;
 				display: block;
 				padding: 4px 6px;
-				margin: 6px 0px;
+				margin: 6px 0;
 				background: rgba(103, 193, 245, 0.1);
 				color: #c6d4df;
 				border-radius: 1px;
@@ -845,7 +845,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		text-transform: capitalize;
 		border-radius: 2px;
 		color: #D2E885;
-		text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.1);
+		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
 
 		&:hover {
 			color: #fff;
@@ -903,7 +903,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		&:hover,
 		&:focus {
 			border: 1px solid #4c9acc;
-			box-shadow: 1px 1px 0px rgba(255,255,255,0);
+			box-shadow: 1px 1px 0 rgba(255,255,255,0);
 		}
 	}
 
@@ -1213,7 +1213,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		display: inline-block;
 		color: #d9dadd;
 		font-size: 13px;
-		text-shadow: -1px -1px 0px rgba(0,0,0,0.25);
+		text-shadow: -1px -1px 0 rgba(0,0,0,0.25);
 		position: absolute;
 		border: none;
 		border-right: 1px solid rgba(16,21,25,0.3);
@@ -1224,7 +1224,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		&:hover {
 			background: linear-gradient(to bottom,#e3eaef 5%,#c7d5e0 95%)!important;
 			color: #000;
-			text-shadow: 1px 1px 0px rgba(255,255,255,0.25);
+			text-shadow: 1px 1px 0 rgba(255,255,255,0.25);
 		}
 	}
 

@@ -2759,9 +2759,7 @@ h1.redditname::before {
     display: none!important
 }
 .commentarea {
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: column;
     flex-flow: column
 }
 .commentarea .md {
@@ -2817,11 +2815,8 @@ h1.redditname::before {
 .thumbnail {
     margin-top: 0;
     display: flex;
-    -webkit-display: flex;
     justify-content: center;
-    -webkit-justify-content: center;
     align-items: center;
-    -webkit-align-items: center;
     background-size: auto!important
 }
 .flat-list .flairselector form .flairselection .flairremove::before,
