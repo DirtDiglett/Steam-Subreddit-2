@@ -1,8 +1,6 @@
 @import "includes/variables";
 @import "includes/animations";
 
-// This file holds generally the global styling.
-
 // Pseudoelements
 ::-moz-selection,
 ::selection {
@@ -32,10 +30,8 @@ body {
 	z-index: 3;
 
 	&:before {
-		background-image: url(%%winter-sale-header%%);
-		background-position: 70% 0;
-		background-size: 1920px;
-		background-color: #171a21;
+		@include header(winter-sale);
+
 		display: block;
 		height: $header-height;
 		min-width: 960px;

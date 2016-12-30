@@ -1,0 +1,35 @@
+lakinwecker			:	special gauge
+jshackles			:	special es
+xPaw				:	special steamdb
+marlamin			:	special steamdb
+
+// VALVe Employees
+FletcherDunn			:	special valve
+smeehrrr			:	special valve
+ErikatValve			:	special valve
+BurtonJ_			:	special valve
+GoodGuySteam			:	special valve
+afarnsworth_valve		:	special valve
+tomb_valve			:	special valve
+martinovalve			:	special valve
+GabeNewellBellevue		:	special valve
+HenryG_Valve			:	special valve
+Valve_Anti-Cheat		:	special valve
+jacobu_valve			:	special valve
+Drunken_F00l			:	special valve
+
+// STEAM Moderators
+ultio				:	special steammod
+ianskate			:	special steammod
+titoshivan			:	special steammod
+Darth_Wound			:	special steammod
+Better-Off-Bob			:	special steammod
+KillahInstinct			:	special steammod
+FrazerJC			:	special steammod
+
+// SUBREDDIT Moderators
+
+
+// DISCORD Moderators
+electric91				: special discordmod
+zock123454321			: special discordmod

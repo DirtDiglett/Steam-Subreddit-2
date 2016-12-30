@@ -1,0 +1,79 @@
+.flair-level.flair-100 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_hexagons.png' );
+}
+
+.flair-level.flair-200 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shields.png' );
+}
+
+.flair-level.flair-300 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_books.png' );
+}
+
+.flair-level.flair-400 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_chevrons.png' );
+}
+
+.flair-level.flair-500 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_circle2.png' );
+}
+
+.flair-level.flair-600 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_angle.png' );
+}
+
+.flair-level.flair-700 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_flag.png' );
+}
+
+.flair-level.flair-800 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_wings.png' );
+}
+
+.flair-level.flair-900 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_arrows.png' );
+}
+
+.flair-level.flair-1000 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_crystals.png' );
+}
+
+.flair-level.flair-1100 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_space.png' );
+}
+
+.flair-level.flair-1200 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_waterelement.png' );
+}
+
+.flair-level.flair-1300 {
+	background-image: url( 'http://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_fireelement.png' );
+}
+
+.flair-level.flair-plus_10 {
+	background-position: 0 -32px;
+}
+.flair-level.flair-plus_20 {
+	background-position: 0 -64px;
+}
+.flair-level.flair-plus_30 {
+	background-position: 0 -96px;
+}
+.flair-level.flair-plus_40 {
+	background-position: 0 -128px;
+}
+.flair-level.flair-plus_50 {
+	background-position: 0 -160px;
+}
+.flair-level.flair-plus_60 {
+	background-position: 0 -192px;
+}
+.flair-level.flair-plus_70 {
+	background-position: 0 -224px;
+}
+.flair-level.flair-plus_80 {
+	background-position: 0 -256px;
+}
+.flair-level.flair-plus_90 {
+	background-position: 0 -288px;
+}

@@ -1,5 +1,6 @@
 // Here we will store every primary variable. Colors, sizing, etc.
 $header-height:					250px !default;
+$header-image-width:			6468px;
 $sr-header-area-padding:		7px !default;
 $sr-header-area-height:			24px + ($sr-header-area-padding * 2) !default;
 $header-tabs-height:			35px !default;
@@ -32,11 +33,15 @@ $flair-small-width:				24px !default;
 $flair-year-width:				25px !default;
 $flair-game-width:				36px !default;
 $flair-special-width:			80px !default;
+$flair-level-width:				24px !default;
 
-$flair-small-list: "steamlogo", "lambda", "hl2", "blackmesa", "combine", "aperturelogo", "portal2logo", "tf2logo", "csgologo", "dota2logo", "gmodlogo", "skyrimlogo", "left4deadlogo", "portallogo", "borderlands", "frozensynapse", "blackops2", "isaac", "gtav", "dishonored", "fallout", "thedivision", "witcher3";
+$flair-small-list: "steamlogo", "lambda", "hl2", "blackmesa", "combine", "aperturelogo", "portal2logo", "tf2logo", "csgologo", "dota2logo", "gmodlogo", "skyrimlogo", "left4deadlogo", "portallogo", "borderlands", "frozensynapse", "blackops2", "isaac", "gtav", "dishonored", "fallout", "thedivision", "witcher3", "rocketleague", "batman", "assassinscreed", "vive", "oculus";
 $flair-year-list: "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13";
 $flair-game-list: "1", "5", "10", "25", "50", "100", "250", "500", "1000", "2000", "3000", "4000", "5000";
 $flair-special-list: "valve", "steammod", "steammod1", "steamdeveloper", "steamtranslator", "submod", "sourcefilm", "steamdb", "es", "gauge", "pressure", "discordmod";
+
+$flair-level-bignumber-list: "0","100","200","300","400","500","600","700","800","900","1000","1100","1200","1300";
+$flair-level-smallnumber-list: "10","20","30","40","50","60","70","80","90";
 
 // CSS Properties
 $modal-background:				linear-gradient(to bottom, #e3eaef 0%, #c7d5e0 100%) !default;
@@ -127,5 +132,23 @@ $special-font:					"Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, "Cali
 	@if $state == 'active' {
 		color: darken(#ffffff, 10%);
 		background: rgba(255,255,255,0.15);
+	}
+}
+
+@mixin header($update-name: null) {
+	@if $update-name == null {
+		background-image: url(%%header-default-scroller%%);
+		background-position: 0 0;
+	    background-color: #171a21;
+	    transform: translate3d(0,0,0);
+	    background-size: auto 250px;
+	    animation: animatedHeader 160s linear infinite;
+	}
+
+	@if $update-name == 'winter-sale' {
+		background-image: url(%%winter-sale-header%%);
+		background-position: 70% 0;
+		background-size: 1920px;
+		background-color: #171a21;
 	}
 }

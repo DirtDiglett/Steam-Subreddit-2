@@ -210,6 +210,47 @@ a.author.admin,
 	}
 }
 
+// Steam Level Flairs
+.flair-level {
+	padding-left: $flair-level-width;
+	font-size: 0;
+
+	&:hover {
+		font-size: 0 !important;
+		color: #fff;
+		background-color: transparent;
+	}
+
+	&:before {
+		content: attr(title);
+		height: $flair-height;
+		width: $flair-level-width;
+		line-height: $flair-level-width;
+		text-align: center;
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		background-image:url(%%flairs-level%%);
+		background-position: 0 0;
+		color: #9b9b9b;
+		text-shadow: 1px 1px #1a1a1a;
+		font-size: 11px;
+	}
+}
+
+@each $flair in $flair-level-bignumber-list {
+	$i: index($flair-level-bignumber-list, $flair)-1;
+	.flair-level.flair-#{$flair}:before {
+		background-position-x: $flair-level-width * -$i;
+	}
+}
+
+@each $flair in $flair-level-smallnumber-list {
+	$i: index($flair-level-smallnumber-list, $flair)-1;
+	.flair-level.flair-#{$flair}:before {
+		background-position-y: $flair-height * -$i;
+	}
+}
 
 .flair-small ~ .score,
 .flair-small ~ .score-hidden,
@@ -233,6 +274,12 @@ a.author.admin,
 .flair-special ~ .score-hidden,
 .flair-special ~ a[href$="/gilded"] {
 	margin-left: ($flair-special-width + 4px);
+}
+
+.flair-level ~ .score,
+.flair-level ~ .score-hidden,
+.flair-level ~ a[href$="/gilded"] {
+	margin-left: ($flair-level-width + 4px);
 }
 
 .thing.collapsed .flair ~ .score,

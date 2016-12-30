@@ -1,37 +1,39 @@
 @keyframes toast {
 	0% {
 		transform: translateY(76px);
-		-webkit-transform: translateY(76px);
 		opacity: 0
 	}
 	20% {
 		transform: translateY(76px);
-		-webkit-transform: translateY(76px);
 		opacity: 0
 	}
 	25% {
 		transform: translateY(-8px);
-		-webkit-transform: translateY(-8px);
 		opacity: 1
 	}
 	27% {
 		transform: translateY(0);
-		-webkit-transform: translateY(0);
 		opacity: 1
 	}
 	92% {
 		transform: translateY(0);
-		-webkit-transform: translateY(0);
 		opacity: 1
 	}
 	97% {
 		transform: translateY(16px);
-		-webkit-transform: translateY(16px);
 		opacity: 1
 	}
 	100% {
 		transform: translateY(76px);
-		-webkit-transform: translateY(76px);
 		opacity: 0
+	}
+}
+
+@keyframes animatedBackground {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: -$header-image-width 0; // The header image width
 	}
 }

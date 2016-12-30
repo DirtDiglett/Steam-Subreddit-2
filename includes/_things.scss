@@ -111,7 +111,7 @@ body:not(.subscriber) .arrow.down {
 	transition: background 0.1s ease-in-out;
 
 	&:hover {
-		background: rgba(117, 204, 255, 0.25);
+		background: rgba(117,204,255,0.37);
 	}
 
 	.newComments {
@@ -142,7 +142,7 @@ body:not(.subscriber) .arrow.down {
 		}
 
 		&:visited {
-			color: #ebebeb;
+			color: #818e98;
 			font-weight: normal;
 		}
 	}
@@ -156,7 +156,7 @@ body:not(.subscriber) .arrow.down {
 
 		.title {
 			font-weight: normal;
-			color: #ebebeb;
+			color: #818e98;
 		}
 	}
 
@@ -453,6 +453,12 @@ body:not(.subscriber) .arrow.down {
 						background: #cc0d0d;
 					}
 				}
+
+				&.pressed {
+					background: #fff !important;
+					color: #333 !important;
+					font-weight: bold;
+				}
 			}
 
 			.status-msg {
@@ -499,6 +505,18 @@ body:not(.subscriber) .arrow.down {
 	&.comment .usertext-body .md {
 		padding-left: 32px;
 		max-width: none;
+	}
+
+	&.gilded {
+		box-shadow: inset 0 0 0 2px #fff088;
+
+		a.author {
+			color: #fff088;
+
+			&:hover {
+				color: #fff;
+			}
+		}
 	}
 }
 
@@ -602,7 +620,8 @@ body.comments-page {
 		}	
 	}
 
-	.morerecursion {
+	.morerecursion,
+	.morechildren {
 		padding: 10px;
 		border-radius: 3px;
 		border: 1px solid rgba(0,0,0,0.4);
@@ -640,6 +659,15 @@ body.comments-page {
 				background: rgba(255,255,255,0.15);
 			}
 		}
+	}
+
+	.morechildren a {
+		padding: 6px 15px;
+	}
+
+	.morechildren .tagline,
+	.morechildren .flat-list {
+		display: none !important;
 	}
 
 	.child {
@@ -1240,4 +1268,8 @@ body.comments-page .menuarea ~ .sitetable {
 			color: #fff;
 		}
 	}
+}
+
+.usertext.grayed .usertext-body {
+	background: transparent !important;
 }
