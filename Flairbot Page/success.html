@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<title>/r/Steam Flair Assigner</title>
+		<!-- Using Steam's Stylesheets as these are served by their CDN and is likely already cached by our users -->
+		<link href="http://store.akamai.steamstatic.com/public/shared/css/motiva_sans.css?v=Sd0odMs2NjL1" rel="stylesheet">
+		<link href="http://store.akamai.steamstatic.com/public/css/v6/store.css?v=WMjWukom2M23" rel="stylesheet">
+		<link href="http://store.akamai.steamstatic.com/public/css/v6/home.css?v=ThkmElB48x7u" rel="stylesheet">
+		<link href="http://steamcommunity-a.akamaihd.net/public/css/skin_1/badges.css?v=HCtD4YkJo5Sa" rel="stylesheet">
+		<link href="http://steamcommunity-a.akamaihd.net/public/shared/css/shared_global.css?v=qUauRjAB6F_h" rel="stylesheet">
+		<style>
+		      body.v6 {
+		         background-position: center -100px;
+		      }
+
+		      body.v6 h2 {
+		         font-size: 27px;
+		         font-weight: bold;
+		      }
+
+		      body.v6 .MainBlock {
+		         margin-top: 48px;
+
+		         text-align: center;
+		         max-width: 954px;
+		         margin: 0 auto;
+		         padding: 48px 0 0 0;
+		      }
+
+		      .badges_sheet {
+		       margin-top: 48px;
+		      }
+
+		      .badge_row {
+		           width: 280px;
+		           float: left;
+		           margin-right: 8px;
+		       }
+
+		       .badge_current {
+		           width: auto;
+		           float: none;
+		       }
+
+		       .badge_info_image {
+		           margin: 0 auto;
+		           display: block;
+		           float: none;
+		           line-height: 80px;
+		       }
+
+		       button[type=submit] {
+		           display: block;
+		           margin: 0 auto;
+		           line-height: 40px;
+		           height: 40px;
+		           padding: 0px 16px;
+		           margin-top: 12px;
+		       }
+
+		       .flair-text {
+
+		       }
+		</style>
+		<script>
+		      history.replaceState("", "", "/");
+		</script>
+	</head>
+	<body class="v6">
+		<form action="http://give.me.flair.in.r.steam.pm/setflair.php" method="post" class="home_page_content MainBlock">
+			<h2>Done!</h2>
+			<p>Your flair has successfully been set.</p>
+			<p><strong>Redirecting you to /r/Steam in 5 seconds...</strong></p>
+				
+			<script>setTimeout(function() { location.href = "https://www.reddit.com/r/Steam"; }, 5000);</script>
+		</form>
+	</body>
+</html>

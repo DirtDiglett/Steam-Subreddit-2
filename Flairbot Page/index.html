@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<title>/r/Steam Flair Assigner</title>
+		<!-- Using Steam's Stylesheets as these are served by their CDN and is likely already cached by our users -->
+		<link href="http://store.akamai.steamstatic.com/public/shared/css/motiva_sans.css?v=Sd0odMs2NjL1" rel="stylesheet">
+		<link href="http://store.akamai.steamstatic.com/public/css/v6/store.css?v=WMjWukom2M23" rel="stylesheet">
+		<link href="http://store.akamai.steamstatic.com/public/css/v6/home.css?v=ThkmElB48x7u" rel="stylesheet">
+		<link href="http://steamcommunity-a.akamaihd.net/public/css/skin_1/badges.css?v=HCtD4YkJo5Sa" rel="stylesheet">
+		<link href="http://steamcommunity-a.akamaihd.net/public/shared/css/shared_global.css?v=qUauRjAB6F_h" rel="stylesheet">
+		<style>
+			  body.v6 {
+				 background-position: center -100px;
+			  }
+
+			  body.v6 h2 {
+				 font-size: 27px;
+				 font-weight: bold;
+			  }
+
+			  body.v6 .MainBlock {
+				 margin-top: 48px;
+
+				 text-align: center;
+				 max-width: 954px;
+				 margin: 0 auto;
+				 padding: 48px 0 0 0;
+			  }
+
+			  .badges_sheet {
+			   margin-top: 48px;
+			  }
+
+			  .badge_row {
+				   width: 280px;
+				   float: left;
+				   margin-right: 8px;
+				   margin-bottom: 8px;
+			   }
+
+			   .badge_current {
+				   width: auto;
+				   float: none;
+			   }
+
+			   .badge_info_image {
+				   margin: 0 auto;
+				   display: block;
+				   float: none;
+				   line-height: 80px;
+			   }
+
+			   button[type=submit] {
+				   display: block;
+				   margin: 0 auto;
+				   line-height: 40px;
+				   height: 40px;
+				   padding: 0px 16px;
+				   margin-top: 12px;
+			   }
+
+			   .flair-text {
+					margin-bottom:12px;
+			   }
+
+			   .badge_info_image img {
+					width: 80px;
+				}
+		</style>
+		<script>
+			  history.replaceState("", "", "/");
+		</script>
+	</head>
+	<body class="v6">
+		<form action="http://give.me.flair.in.r.steam.pm/setflair.php" method="post" class="home_page_content MainBlock">
+			<h2>Pick your Flair</h2>
+			<p>Pick a badge that you want to display in your flair on /r/Steam.</p>
+			<p><strong>Note: Flair won't update automatically. You'll need to re-assign your flair whenever you get a new badge.</strong></p>
+			
+			<div class="badges_sheet">
+				<div class="flair-text">
+					<label for="flair_text">Flair Text:</label><input type="text" placeholder="http://steam.pm/[ID]" name="flair_text" class="searchbox" maxlength="64" />
+				</div>
+				<div class="badge_row">
+					<div class="badge_row_inner">
+						<div class="badge_title_row">
+							<div class="badge_title">Steam Level <small>(No Flair Text)</small></div>
+						</div>
+						<div class="badge_title_rule"></div>
+						<div class="badge_content">
+							<div class="badge_current">
+								<div class="badge_info">
+									<div class="badge_info_image"><span class="friendPlayerLevel lvl_70"><span class="friendPlayerLevelNum">76</span></span></div><button class="badge_craft_button" name="badge" type="submit" value="sfm">Use This One</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="badge_row">
+					<div class="badge_row_inner">
+						<div class="badge_title_row">
+							<div class="badge_title">Game Mechanic</div>
+						</div>
+						<div class="badge_title_rule"></div>
+						<div class="badge_content">
+							<div class="badge_current">
+								<div class="badge_info">
+									<div class="badge_info_image"><img class="badge_icon" id="delayedimage_badge_images_badge_13_0" src="http://steamcommunity-a.akamaihd.net/public/images/badges/13_gamecollector/250.png?v=2"></div><button class="badge_craft_button" name="badge" type="submit" value="sfm">Use This One</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="badge_row">
+					<div class="badge_row_inner">
+						<div class="badge_title_row">
+							<div class="badge_title">Years of Service</div>
+						</div>
+						<div class="badge_title_rule"></div>
+						<div class="badge_content">
+							<div class="badge_current">
+								<div class="badge_info">
+									<div class="badge_info_image"><img class="badge_icon" src="http://steamcommunity-a.akamaihd.net/public/images/badges/02_years/steamyears802_80.png"></div><button class="badge_craft_button" name="badge" type="submit" value="sfm">Use This One</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="badge_row">
+					<div class="badge_row_inner">
+						<div class="badge_title_row">
+							<div class="badge_title">Steam Moderator</div>
+						</div>
+						<div class="badge_title_rule"></div>
+						<div class="badge_content">
+							<div class="badge_current">
+								<div class="badge_info">
+									<div class="badge_info_image"><img class="badge_icon" src="https://steamcommunity-a.akamaihd.net/public/images/badges/generic/CommunityModerator_80.png"></div><button class="badge_craft_button" name="badge" type="submit" value="sfm">Use This One</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="badge_row">
+					<div class="badge_row_inner">
+						<div class="badge_title_row">
+							<div class="badge_title">Source Filmmaker</div>
+						</div>
+						<div class="badge_title_rule"></div>
+						<div class="badge_content">
+							<div class="badge_current">
+								<div class="badge_info">
+									<div class="badge_info_image"><img class="badge_icon" src="http://www.sourcefilmmaker.com/images/sfm_logo.png"></div><button class="badge_craft_button" name="badge" type="submit" value="sfm">Use This One</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="badge_row">
+					<div class="badge_row_inner">
+						<div class="badge_title_row">
+							<div class="badge_title">Steam Translator</div>
+						</div>
+						<div class="badge_title_rule"></div>
+						<div class="badge_content">
+							<div class="badge_current">
+								<div class="badge_info">
+									<div class="badge_info_image"><img class="badge_icon" src="https://steamcommunity-a.akamaihd.net/public/images/badges/09_communitytranslator/translator_level4_80.png"></div><button class="badge_craft_button" name="badge" type="submit" value="sfm">Use This One</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="badge_row">
+					<div class="badge_row_inner">
+						<div class="badge_title_row">
+							<div class="badge_title">Steamworks Developer</div>
+						</div>
+						<div class="badge_title_rule"></div>
+						<div class="badge_content">
+							<div class="badge_current">
+								<div class="badge_info">
+									<div class="badge_info_image"><img class="badge_icon" src="https://steamcommunity-a.akamaihd.net/public/images/badges/generic/GameDeveloper_80.png"></div><button class="badge_craft_button" name="badge" type="submit" value="sfm">Use This One</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+			<!-- This is the basic template for each badge flair -->
+			<div class="badge_row">
+				<div class="badge_row_inner">
+					<div class="badge_title_row">
+						<div class="badge_title">[Template for Badges]</div>
+					</div>
+					<div class="badge_title_rule"></div>
+					<div class="badge_content">
+						<div class="badge_current">
+							<div class="badge_info">
+								<div class="badge_info_image">
+									<img class="badge_icon" src="http://steamcommunity-a.akamaihd.net/public/images/badges/13_gamecollector/250.png?v=2">
+								</div>
+								<button class="badge_craft_button" name="badge" type="submit" value="[value]">Use This One</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end of badge template -->
+
+			<style>
+			/*
+These are the classes that determine the image background that the steam level uses (for this page, not the classes to use for the flairs themselves)
+They are here for reference. It's done the same way I did it for the flairs, class="friendPlayerLevel lvl_X lvl_plus_Y"
+
+.friendPlayerLevel.lvl_0
+.friendPlayerLevel.lvl_10
+.friendPlayerLevel.lvl_20
+.friendPlayerLevel.lvl_30
+.friendPlayerLevel.lvl_40
+.friendPlayerLevel.lvl_50
+.friendPlayerLevel.lvl_60
+.friendPlayerLevel.lvl_70
+.friendPlayerLevel.lvl_80
+.friendPlayerLevel.lvl_90
+.friendPlayerLevel.lvl_100
+.friendPlayerLevel.lvl_200
+.friendPlayerLevel.lvl_300
+.friendPlayerLevel.lvl_400
+.friendPlayerLevel.lvl_500
+.friendPlayerLevel.lvl_600
+.friendPlayerLevel.lvl_700
+.friendPlayerLevel.lvl_800
+.friendPlayerLevel.lvl_900
+.friendPlayerLevel.lvl_1000
+.friendPlayerLevel.lvl_1100
+.friendPlayerLevel.lvl_1200
+.friendPlayerLevel.lvl_1300
+
+.friendPlayerLevel.lvl_plus_10
+.friendPlayerLevel.lvl_plus_20
+.friendPlayerLevel.lvl_plus_30
+.friendPlayerLevel.lvl_plus_40
+.friendPlayerLevel.lvl_plus_50
+.friendPlayerLevel.lvl_plus_60
+.friendPlayerLevel.lvl_plus_70
+.friendPlayerLevel.lvl_plus_80
+.friendPlayerLevel.lvl_plus_90
+*/
+			</style>
+		</form>
+	</body>
+</html>
