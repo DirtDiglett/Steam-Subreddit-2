@@ -17,24 +17,20 @@
 
 		li {
 			a {
-				position: relative;
-				width: 136px;
-				height: 58px;
-				display: inline-block;
-				font-size: 18px;
-				font-weight: 400;
-				line-height: 56px;
-				color: #66c0f4;
-				text-align: center;
-				background-image: url(%%spotlight-bg%%);
-				background-position-y: -105px;
+				background: url(%%spotlight-bg%%) 0 -105px;
 				border-radius: 3px;
-				box-shadow: 0 0 4px #000;
-				font-family: $special-font;
 				border: 0;
-				text-transform: capitalize;
+				box-shadow: 0 0 4px #000;
+				color: #66c0f4;
+				display: inline-block;
+				font: 400 19px/56px $special-font;
+				height: 58px;
 				margin-right: 8px;
 				opacity: 0.7;
+				position: relative;
+				text-align: center;
+				text-transform: capitalize;
+				width: 136px;
 
 				&:hover {
 					background-position-y: -142px;
@@ -46,20 +42,20 @@
 			&.selected a {
 				background-position-y: -142px;
 				color: #fff;
+				font-size: 18px;
 				font-weight: bold;
 				opacity: 1;
-				font-size: 18px;
 			}
 		}
 	}
 
 	.formtabs-content {
-		width: 100%;
+		border: 0;
 		display: flex;
 		flex-flow: column;
 		flex-wrap: wrap;
 		padding: 0;
-		border: 0;
+		width: 100%;
 
 		& > * {
 			order: 4;
@@ -69,7 +65,8 @@
 			display: none;
 		}
 
-		& > div:nth-of-type(5) {
+		// Puts the info notice at the top.
+		& > div:nth-of-type(4) {
 			order: 1;
 			margin: 0;
 		}
@@ -94,26 +91,21 @@
 	}
 
 	.submit_text.enabled {
-		order: 1;
+		background: rgba(27,27,27,0.36) url(%%info%%) no-repeat 12px center;
+		border-radius: 3px;
+		border: 1px solid #ffa500;
+		color: #ffa500;
 		display: block;
 		margin: 16px 0;
-		background-color: transparent;
-		border-radius: 3px;
-		color: #ffa500;
 		min-height: 55px;
+		order: 1;
 		padding-left: 40px;
-		background: url(%%info%%);
-		background-repeat: no-repeat;
-		background-position: 12px center;
-		background-color: rgba(27,27,27,0.36);
-		border: 1px solid #ffa500;
 
 		h1 {
 			@include sidebarh3(null, null);
 
-			margin: 0;
-			margin-bottom: 8px;
 			color: #fff;
+			margin: 0 0 8px 0;
 			text-transform: capitalize;
 		}
 
@@ -141,26 +133,24 @@
 	}
 
 	textarea.title {
-		text-transform: none;
-		padding: 4px;
 		min-height: 0;
+		padding: 4px;
+		text-transform: none;
 	}
 
 	#newlink-with-image-upload {
 		.image-upload-drop-target {
 			background: rgba(255,255,255,0.2);
+			color: #fff;
 			font-size: 16px;
 			font-weight: normal;
-			margin: 0;
-			margin-bottom: 8px;
-			color: #fff;
+			margin: 0 0 8px 0;
 			text-transform: capitalize;
 		}
 
 		.file-drop-label-icon {
-			background-image: url(%%image-icon%%);
-			background-position: 0 0;
-			transform: 0;
+			background: url(%%image-icon%%) 0 0;
+			transform: none;
 		}
 
 		.file-drop-label {
@@ -172,11 +162,10 @@
 		}
 
 		.new-link-preview-title {
+			color: #fff;
 			font-size: 16px;
 			font-weight: normal;
-			margin: 0;
-			margin-bottom: 8px;
-			color: #fff;
+			margin: 0 0 8px 0;
 		}
 
 		#new-link-preview {
@@ -200,17 +189,14 @@
 	}
 
 	.info-notice {
-		margin: 16px 0;
+		background: rgba(27,27,27,0.36) url(%%info%%) no-repeat 12px center !important;
 		border-radius: 3px;
+		border: 1px solid #5F99CF;
 		color: #dae3ea;
+		line-height: 55px;
+		margin: 16px 0;
 		min-height: 55px;
 		padding-left: 40px !important;
-		background: url(%%info%%);
-		background-repeat: no-repeat;
-		background-position: 12px center;
-		background-color: rgba(27,27,27,0.36) !important;
-		border: 1px solid #5F99CF;
-		line-height: 55px;
 	}
 
 	#items-required {
@@ -224,23 +210,20 @@
 	}
 
 	input[type=checkbox]+label {
-		line-height: 17px;
-		font-size: 13px;
-		padding-top: 4px;
-		padding-left: 5px;
-		padding-bottom: 4px;
-		display: block;
 		cursor: pointer;
+		display: block;
+		font-size: 13px;
+		line-height: 17px;
+		padding: 4px 0 4px 5px;
 
 		&:before {
+			background: url(%%checkboxes%%) 0 0;
 			content: "";
 			display: inline-block;
-			width: 16px;
 			height: 16px;
-			background: url(%%checkboxes%%);
-			background-position: 0 0;
-			vertical-align: middle;
 			margin-right: 4px;
+			vertical-align: middle;
+			width: 16px;
 		}
 	}
 

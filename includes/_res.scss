@@ -9,14 +9,14 @@
 	}
 
 	#RESShortcutsEditContainer {
-		display: inline-block;
-		max-height: 24px;
 		background: none;
-		line-height: 14px;
+		display: inline-block;
 		height: 24px;
-		position: relative;
+		line-height: 14px;
 		margin-left: 8px;
+		max-height: 24px;
 		opacity: 0;
+		position: relative;
 		transition: opacity 0.2s ease-in-out;
 	}
 
@@ -29,22 +29,18 @@
 	#RESShortcutsLeft,
 	#RESShortcutsAdd,
 	#RESShortcutsEditContainer .res-icon {
-		line-height: 35px;
-		border-radius: 0;
-		min-height: 15px;
-		color: #66c0f4;
-		line-height: 13px;
-		width: 15px;
-		height: 15px;
-		background-color: #36617d;
-		background-position: 4px 4px;
+		background: #36617d no-repeat 4px 4px;
 		border-radius: 3px;
-		background-repeat: no-repeat;
 		box-shadow: 0 0 3px #000;
+		color: #66c0f4;
+		font-size: 11px;
+		height: 15px;
+		line-height: 13px;
+		min-height: 15px;
 		padding: 0;
 		text-align: center;
 		top: 3px;
-		font-size: 11px;
+		width: 15px;
 
 		&:hover {
 			background-color: #67c1f5;
@@ -54,25 +50,25 @@
 
 	.RESDropdownList {
 		background: $modal-background;
-		border: 1px solid #fff;
 		border-radius: 3px;
-		padding: 8px;
+		border: 1px solid #fff;
 		box-shadow: 0 0 3px #000;
 		margin: 2px 0 0 0;
+		padding: 8px;
 
 		li {
-			margin-bottom: 5px;
-			display: block;
-			cursor: pointer;
 			background-color: rgba(0, 0, 0, 0.1);
 			border-radius: 2px;
-			padding: 4px 8px;
-			line-height: 25px;
-			font-size: 11px;
-			color: #407898;
-			text-transform: capitalize;
 			border: 0;
+			color: #407898;
+			cursor: pointer;
+			display: block;
+			font-size: 11px;
 			font-weight: normal;
+			line-height: 25px;
+			margin-bottom: 5px;
+			padding: 4px 8px;
+			text-transform: capitalize;
 
 			&:hover {
 				color: #fff;
@@ -91,37 +87,27 @@
 	}
 
 	#openRESPrefs {
-		width: 27px;
-		height: 24px;
 		display: inline-block;
-		margin: 0;
+		height: 24px;
+		margin: 0 4px 0 0;
 		position: relative;
 		top: 6px;
-		margin-right: 4px;
+		width: 27px;
 	}
 
 	#userbarToggle {
-		min-height: 15px;
-		background: rgba(0, 0, 0, 0.5);
-		top: -1px;
-		line-height: 35px;
-		border: none;
-		border-radius: 0;
-		min-height: 15px;
-		color: #66c0f4;
-		top: 10px;
-		line-height: 13px;
-		border: none;
-		border-radius: 0;
-		width: 15px;
-		height: 15px;
-		background-color: #36617d;
-		background-position: 4px 4px;
+		background: #36617d;
 		border-radius: 3px;
-		background-repeat: no-repeat;
+		border: none;
 		box-shadow: 0 0 3px #000;
+		color: #66c0f4;
+		height: 15px;
+		line-height: 13px;
+		min-height: 15px;
 		padding: 0;
 		text-align: center;
+		top: 10px;
+		width: 15px;
 
 		&:hover {
 			background-color: #67c1f5;
@@ -130,8 +116,8 @@
 	}
 
 	#userbarToggle.userbarShow {
+		right: 1px;
 		top: 9px !important;
-		right: 1px
 	}
 
 	#header-bottom-right {
@@ -152,19 +138,19 @@
 		top: 30px;
 
 		tr {
+			background: none;
 			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 			color: #000;
 			padding: 4px 6px;
-			background: none;
 
 			a {
 				color: #333;
 			}
 
 			&:hover {
-				color: #fff;
 				background-color: #212d3d;
 				border-bottom: 1px solid #fff;
+				color: #fff;
 
 				a {
 					color: #fff;
@@ -175,8 +161,8 @@
 
 	#srDropdown,
 	#srDropdownContainer {
+		height: 23px;
 		width: 23px;
-		height: 23px
 	}
 
 	#sr-header-area #srDropdown {
@@ -184,16 +170,14 @@
 	}
 
 	#srDropdownContainer a {
-		padding: 0;
-		background-image: none;
-		font-size: 0 !important;
-		position: relative;
+		background: url(%%sprite%%) 0 0;
 		display: inline-block;
+		font-size: 0 !important;
 		height: 23px;
-		width: 23px;
-		background-image: url(%%sprite%%);
-		background-position: 0 0;
+		padding: 0;
+		position: relative;
 		transition: none;
+		width: 23px;
 
 		&:hover {
 			background-position: 0 -23px;
@@ -205,11 +189,11 @@
 		background-image: none !important;
 		border: none;
 		color: #66c0f4;
-		text-transform: uppercase;
-		text-decoration: none;
-		padding: 4px 6px;
 		margin: 0;
+		padding: 4px 6px;
 		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
 		width: 100px;
 
 		&:hover {
@@ -225,8 +209,8 @@
 	}
 
 	&.listing-page .RES-keyNav-activeElement {
-		background: transparent !important;
 		background-color: transparent !important;
+		background: transparent !important;
 		border-right: 3px solid rgba(255, 255, 255, 0.4);
 	
 		.md-container {
@@ -244,24 +228,21 @@
 
 		.res-title {
 			color: #fff;
-			font-weight: normal;
 			font-family: "Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, "Calibri Light", Calibri, sans-serif;
 			font-size: 16px;
-			margin: 0;
-			margin-bottom: 8px;
-			margin-top: 16px;
+			font-weight: normal;
+			margin: 16px 0 8px 0;
 		}
 
 		.res-gallery-title {
 			font-size: 18px;
-			margin-bottom: 12px;
-			margin-top: 0;
+			margin: 0 0 12px 0;
 		}
 
 		.res-caption {
 			font-size: 13px;
-			order: initial;
 			margin-bottom: 4px;
+			order: initial;
 		}
 
 		.res-gallery-position {
@@ -271,18 +252,18 @@
 	}
 
 	.res-step {
-		height: 32px;
-		width: 32px;
-		line-height: 32px;
 		background: rgba(0, 0, 0, 0.4);
-		color: #67c1f5;
 		border-radius: 3px;
+		color: #67c1f5;
+		height: 32px;
+		line-height: 32px;
 		padding: 0;
 		text-align: center;
+		width: 32px;
 
 		&:hover {
-			color: #fff;
 			background: rgba(102, 192, 244, 0.4);
+			color: #fff;
 
 			&:after {
 				color: #fff;
@@ -295,8 +276,8 @@
 	}
 
 	.res-gallery .res-gallery-individual-controls {
-		margin: 0;
 		height: 32px;
+		margin: 0;
 	}
 
 	.res-voteEnhancements-highlightScores {
@@ -326,14 +307,13 @@
 	}
 
 	#NREMail.nohavemail {
-		width: 27px;
-		height: 24px;
-		background-image: url(%%sprite%%)!important;
-		background-repeat: no-repeat!important;
 		background-color: #262625;
+		background-image: url(%%sprite%%)!important;
 		background-position: -23px 0;
-		margin-top: 4px;
-		margin-right: 4px;
+		background-repeat: no-repeat!important;
+		height: 24px;
+		margin: 4px 4px 0 0;
+		width: 27px;
 
 		&:hover {
 			background-color: #575451;
@@ -346,13 +326,13 @@
 	}
 
 	.pageNavigator {
-		width: 32px;
-		height: 32px;
-		position: relative;
 		background-color: rgba(0,0,0,0.4)!important;
 		border-radius: 3px;
-		line-height: 25px;
 		color: #999896;
+		height: 32px;
+		line-height: 25px;
+		position: relative;
+		width: 32px;
 
 		&:hover {
 			background-color: rgba(102,192,244,0.4)!important;
@@ -408,23 +388,22 @@
 
 	.commentarea {
 		.RESSubscriptionButton {
+			background: #799905 linear-gradient(to bottom,#799905 5%,#536904 95%);
+			border-radius: 2px;
+			border: none;
+			color: #D2E885;
 			padding: 8px 16px;
 			text-align: center;
-			background: linear-gradient(to bottom,#799905 5%,#536904 95%);
-			background-color: #799905;
-			border: none;
-			text-transform: capitalize;
-			border-radius: 2px;
-			color: #D2E885;
 			text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
+			text-transform: capitalize;
 
 			&:hover {
 				background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%);
 			}
 
 			&:active {
-				text-shadow: 0 0 2px #CF9300;
 				box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.15), inset 0 -2px 6px -3px #FFF, inset 0 2px 6px -3px #999, inset 0 15px 30px -15px #EFB300, inset 0 -15px 30px -15px #FFE320 !important;
+				text-shadow: 0 0 2px #CF9300;
 			}
 
 			.res-icon {
@@ -432,11 +411,11 @@
 			}
 
 			&.unsubscribe {
-				box-shadow: none !important;
 				background: none;
-				text-shadow: none;
-				color: rgba(255, 255, 255, 0.6);
 				border: 1px solid rgba(255, 255, 255, 0.6);
+				box-shadow: none !important;
+				color: rgba(255, 255, 255, 0.6);
+				text-shadow: none;
 
 				&:hover {
 					border-color: #fff;
@@ -458,6 +437,7 @@
 
 		#REScommentNavToggle {
 			text-transform: capitalize;
+			padding-top: 16px;
 
 			span:first-child {
 				margin-right: 4px;
@@ -465,11 +445,11 @@
 		}
 
 		.commentNavSortType {
-			color: $anchor-color;
 			border: none;
-			text-transform: uppercase;
-			font-weight: normal;
+			color: $anchor-color;
 			font-size: 11px;
+			font-weight: normal;
+			text-transform: uppercase;
 
 			&:hover {
 				color: $anchor-hover-color;
@@ -483,38 +463,37 @@
 	}
 
 	span.RESCharCounter {
-		height: 35px;
-		display: inline-block;
-		line-height: 35px;
 		color: #8f98a0;
+		display: inline-block;
+		height: 35px;
+		line-height: 35px;
 	}
 
 	.res-commentPreview-draftStyle .livePreview {
 		background: rgba(255,255,255,0.1);
-		color: #C6D4DF;
 		border: 1px solid rgba(255,255,255,0.2);
+		color: #C6D4DF;
 		margin-top: 12px;
 	}
 
 	.RESDialogSmall.livePreview > h3 {
-		font-weight: normal;
-		color: #fff;
 		background: rgba(255,255,255,0.1);
 		border-bottom: 1px solid rgba(255,255,255,0.1);
-		padding-bottom: 12px;
+		color: #fff;
+		font-weight: normal;
 		height: auto;
+		padding-bottom: 12px;
 	}
 
 	.markdownEditor {
 		a.edit-btn {
-			width: 32px;
-			height: $markdown-button-height;
-			position: relative;
-			background-image: url(%%sprite%%);
-			background-color: rgba(0,0,0,0.4);
+			background: rgba(0,0,0,0.4) url(%%sprite%%);
+			background-position-x: -194px !important;
 			border-radius: 3px;
 			border: 0;
-			background-position-x: -194px !important;
+			height: $markdown-button-height;
+			position: relative;
+			width: 32px;
 
 			&:hover {
 				background-color: rgba(102,192,244,0.4);
@@ -541,15 +520,14 @@
 	#NERFail,
 	#progressIndicator {
 		background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
-		padding: 16px;
-		border: none;
-		margin: 0;
-		text-align: left;
-		margin-bottom: 2px;
 		border-radius: 0;
+		border: none;
 		color: #fff;
 		font-size: 16px;
 		font-weight: normal;
+		margin: 0 0 2px 0;
+		padding: 16px;
+		text-align: left;
 		text-transform: capitalize;
 	}
 
@@ -595,4 +573,13 @@ body.res.pinHeader-subanduser {
 .pinHeader-subanduser #header-bottom-right.res-floating-userbar {
     top: -6px!important;
     opacity: 1;
+}
+
+.commentarea .res-expando-box div.usertext-body .md {
+    background: none;
+    border: none;
+}
+
+.res-expando-box .res-text {
+    padding: 0;
 }

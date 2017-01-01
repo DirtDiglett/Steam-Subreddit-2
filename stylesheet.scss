@@ -5,12 +5,12 @@
 ::-moz-selection,
 ::selection {
 	background-color: #0564d7;
+	color: #fff;
 	text-shadow: none;
-	color: #fff
 }
 
 :focus {
-	outline: 0!important
+	outline: 0 !important;
 }
 
 *,
@@ -56,7 +56,7 @@ body:after {
 	left: 0;
 	position: absolute;
 	right: 0;
-	z-index: -1
+	z-index: -1;
 }
 
 a,
@@ -79,8 +79,8 @@ textarea {
 	border: 1px solid rgba(0,0,0,0.6)!important;
 	box-shadow: 1px 1px 0 rgba(255,255,255,0.13)!important;
 	color: #fff;
-	outline: none;
 	height: 29px;
+	outline: none;
 	padding: 4px 8px;
 
 	&:hover,
@@ -90,27 +90,27 @@ textarea {
 
 	&::placeholder {
 		color: #0e1c25;
-		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 		font-style: italic;	
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 	}
 
 	&::-moz-placeholder {
 		color: #0e1c25;
-		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 		font-style: italic;
 		opacity: 1;
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 	}
 
 	&::-ms-input-placeholder {
 		color: #0e1c25;
-		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 		font-style: italic;			
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 	}
 
 	&::-webkit-input-placeholder {
 		color: #0e1c25;
-		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 		font-style: italic;	
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 	}
 }
 
@@ -123,28 +123,28 @@ textarea,
 	background: rgba(103, 193, 245, 0.4) url(%%dropdown-arrow%%) no-repeat right 0;
 	border: 0;
 	color: #67c1f5;
-	outline: none;
-	padding: 0 31px 0 15px;
+	font-size: 12px;
 	height: 31px;
 	line-height: 31px;
-	font-size: 12px;
+	outline: none;
+	padding: 0 31px 0 15px;
 	top: -2px;
-   -webkit-appearance: none;
    -moz-appearance: none;
+   -webkit-appearance: none;
    appearance: none;
 
 	&:hover {
-		color: #fff;
-		background: url(%%dropdown-arrow%%), linear-gradient(-60deg, rgb(103, 193, 245) 0%, rgb(65, 122, 155) 100%);
-		background-repeat: no-repeat;
+		background: url(%%dropdown-arrow%%), linear-gradient(-60deg, rgb(103, 193, 245) 0%, rgb(65, 122, 155) 100%) no-repeat;
 		background-position: right -31px, 0 0;
+		
+		color: #fff;
 	}
 
 	option {
 		background: #417a9b;
+		color: #e5e4dc;
 		font-size: 13px;
 		padding: 5px 12px;
-		color: #e5e4dc;
 
 		&:hover {
 			background: #212d3d;
@@ -157,65 +157,63 @@ textarea,
 }
 
 .content button {
+	background: rgba(0,0,0,0.5);
 	border-radius: 2px;
 	border: none;
-	padding: 6px 15px;
-	display: inline-block;
-	cursor: pointer;
-	text-decoration: none;
 	color: #67c1f5;
-	background: rgba(0,0,0,0.5);
-	text-transform: capitalize;
+	cursor: pointer;
+	display: inline-block;
 	font-size: 15px;
 	margin: 0;
+	padding: 6px 15px;
+	text-decoration: none;
+	text-transform: capitalize;
 
 	&:hover {
-		color: #fff;
 		background: rgba(102,192,244,0.4);
+		color: #fff;
 	}
 
 	&:active {
-		color: darken(#fff,10%);
 		background: darken(rgba(102,192,244,0.4),10%);
+		color: darken(#fff,10%);
 	}
 }
 
 .toggle .error {
-	font-size: 13px;
-	color: #e1c48a;
 	background: #827251;
-	padding: 6px 8px;
-	height: 24px;
-	position: relative;
-	margin: 0;
 	border-radius: 2px;
+	color: #e1c48a;
+	font-size: 13px;
+	height: 24px;
+	margin: 0;
+	padding: 6px 8px;
+	position: relative;
 	text-transform: uppercase;	
 }
 
 .approval-checkmark {
+	background: url(%%sprite%%) 0 -46px;
 	height: 0;
-	padding-right: 23px;
-	padding-bottom: 23px;
 	margin-bottom: -6px;
-	background-image: url(%%sprite%%);
-	background-position: 0 -46px;
+	padding: 0 23px 23px 0;
 }
 
 .linefield,
 .roundfield {
-	width: auto;
 	background: rgba(84,133,183,0.2);
 	border-radius: 3px;
+	border: none;
 	color: #dae3ea;
 	padding: 16px;
-	border: none;
+	width: auto;
 
 	.title {
 		@include sidebarh3(null, null);
-		margin-bottom: 12px;
-		text-transform: capitalize;
 		display: block;
+		margin-bottom: 12px;
 		padding: 0;
+		text-transform: capitalize;
 	}
 
 	.title + .gray {
@@ -245,34 +243,34 @@ textarea,
 }
 
 .linefield.mobile {
-	width: auto;
 	background: rgba(84,133,183,0.2);
 	border-radius: 3px;
+	border: none;
 	color: #dae3ea;
 	padding: 16px;
-	border: none;
+	width: auto;
 }
 
 
 .commentarea .menuarea .spacer .dropdown,
 .search-page .content .dropdown,
 .content > .menuarea .dropdown {
-	display: inline-block;
+	background: rgba(103, 193, 245, 0.4) url(%%dropdown-arrow%%) no-repeat right 0;
 	border: 0;
 	color: #67c1f5;
+	display: inline-block;
+	font-size: 12px;
+	height: 31px;
+	line-height: 31px;
 	outline: none;
 	padding: 0 31px 0 15px;
-	line-height: 31px;
-	font-size: 12px;
 	top: -2px;
-	height: 31px;
-	background: rgba(103, 193, 245, 0.4) url(%%dropdown-arrow%%) no-repeat right 0;
 
 	&:hover {
-		color: #fff;
 		background: url(%%dropdown-arrow%%), linear-gradient(-60deg, rgb(103, 193, 245) 0%, rgb(65, 122, 155) 100%);
-		background-repeat: no-repeat;
 		background-position: right -31px, 0 0;
+		background-repeat: no-repeat;
+		color: #fff;
 
 		.selected {
 			color: #fff;
@@ -280,43 +278,43 @@ textarea,
 	}
 
 	.selected {
-		font-weight: normal;
+		background: none;
 		color: #67c1f5;
 		font-size: 12px;
-		text-decoration: none;
+		font-weight: normal;
 		padding-right: 0;
-		background: none;
+		text-decoration: none;
 	}
 }
 
 .commentarea .menuarea .spacer .drop-choices,
 .search-page .content .drop-choices,
 .content > .menuarea .drop-choices {
-	box-shadow: 0 0 12px #000000;
 	background: rgb(65, 122, 155);
-	margin-top: 16px;
-	min-width: 120px;
 	border: 0;
+	box-shadow: 0 0 12px #000000;
+	margin-top: -1px;
+	min-width: 120px;
 
 	a {
+		color: rgb(229, 228, 220);
 		font-size: 13px;
 		padding: 5px 12px;
-		color: rgb(229, 228, 220);
 
 		&:hover {
+			background-color: #212d3d;
 			color: #fff;
 			text-decoration: none;
-			background-color: #212d3d;
 		}
 	}
 }
 
 .content > .menuarea {
-	color: #8f98a0;
 	background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
-	padding: 16px;
 	border: none;
+	color: #8f98a0;
 	margin-bottom: 2px;
+	padding: 16px;
 
 	.dropdown-title {
 		color: #fff;
@@ -330,19 +328,19 @@ textarea,
 .search-page .raisedbox h4,
 .submit-page .content > h1,
 .fancy-settings h1 {
-	font-weight: bold;
 	color: #ffffff!important;
-	text-transform: uppercase;
+	font-weight: bold;
 	margin-bottom: 0;
 	padding: 0;
+	text-transform: uppercase;
 }
 
 .wiki-page {
 	.wiki-page-content {
 		background: #324b68;
 		border-radius: 3px;
-		margin: 0;
 		margin-top: 16px;
+		margin: 0;
 	}
 
 	.wiki-page-content .wiki>.toc>ul {
@@ -383,13 +381,13 @@ body.comments-page .usertext-edit textarea {
 }
 
 ul.report-reasons {
-	width: auto;
-	margin-top: 10px;
-	border: 1px solid #ff8209;
 	background: rgba(255, 130, 9, 0.2);
-	color: #fff;
 	border-radius: 1px;
+	border: 1px solid #ff8209;
+	color: #fff;
+	margin-top: 10px;
 	padding: 16px;
+	width: auto;
 
 	li {
 		opacity: 1 !important;
@@ -399,8 +397,8 @@ ul.report-reasons {
 		color: #fff;
 		font-size: 16px;
 		font-weight: normal;
-		text-transform: capitalize;
 		padding: 0;
+		text-transform: capitalize;
 	}
 
 	li.report-reason {
@@ -412,12 +410,12 @@ ul.report-reasons {
 
 .sitetable .nav-buttons {
 	background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
-	padding: 16px;
-	border: none;
-	margin: 0;
-	text-align: left;
-	margin-bottom: 2px;
 	border-radius: 0;
+	border: none;
+	margin-bottom: 2px;
+	margin: 0;
+	padding: 16px;
+	text-align: left;
 
 	.nextprev {
 		color: #fff;
@@ -448,23 +446,18 @@ ul.report-reasons {
 	margin-bottom: 0;
 
 	&:after {
-		content: "DO NOT set Unique/Special flairs in the flair template section. You must manually assign the CSS Classes to users for these.";
-		font-size: 15px;
-		margin: 12px;
-		display: block;
+		background: rgba(27,27,27,0.36) url(%%info%%) no-repeat 12px center;
+		border: 1px solid #ffa500;
+		border-bottom: 0;
 		border-radius: 4px 4px 0 0;
 		color: #ffa500;
+		content: "DO NOT set Unique/Special flairs in the flair template section. You must manually assign the CSS Classes to users for these.";
+		display: block;
+		font-size: 15px;
+		line-height: 55px;
+		margin: 48px 12px 0 12px;
 		min-height: 55px;
 		padding-left: 40px;
-		background: url(%%info%%);
-		background-repeat: no-repeat;
-		background-position: 12px center;
-		background-color: rgba(27,27,27,0.36);
-		border: 1px solid #ffa500;
-		line-height: 55px;
-		border-bottom: 0;
-		margin-bottom: 0;
-		margin-top: 48px;
 	}
 }
 
@@ -474,22 +467,18 @@ ul.report-reasons {
 }
 
 .flair-settings.fancy-settings + .tabmenu:before {
-	content: "The css Classes: 'special valve', 'special steammod', 'special steamdeveloper', 'special steamtranslator', 'special submod', 'special discordmod'";
-	font-size: 15px;
-	margin: 12px;
-	display: block;
+	background: rgba(27,27,27,0.36), no-repeat 12px center;
 	border-radius: 0 0 4px 4px;
+	border-top: 0;
+	border: 1px solid #ffa500;
 	color: #ffffff;
+	content: "The css Classes: 'special valve', 'special steammod', 'special steamdeveloper', 'special steamtranslator', 'special submod', 'special discordmod'";
+	display: block;
+	font-size: 15px;
+	line-height: 14px;
+	margin: 0 12px 32px 12px;
 	min-height: 36px;
 	padding-left: 40px;
-	background-repeat: no-repeat;
-	background-position: 12px center;
-	background-color: rgba(27,27,27,0.36);
-	border: 1px solid #ffa500;
-	line-height: 14px;
-	border-top: 0;
-	margin-top: 0;
-	margin-bottom: 32px;
 }
 
 body.search-page #search input[type=text],
@@ -509,27 +498,27 @@ body.search-page #search input[type=text],
 
 	&::placeholder {
 		color: #0e1c25;
+		font-style: italic;
 		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
-		font-style: italic;	
 	}
 
 	&::-moz-placeholder {
 		color: #0e1c25;
-		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 		font-style: italic;
 		opacity: 1;
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 	}
 
 	&::-ms-input-placeholder {
 		color: #0e1c25;
+		font-style: italic;		
 		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
-		font-style: italic;			
 	}
 
 	&::-webkit-input-placeholder {
 		color: #0e1c25;
+		font-style: italic;
 		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
-		font-style: italic;	
 	}
 }
 
@@ -564,35 +553,35 @@ body.search-page #search .search-submit-button,
 
 
 // Disable certain elements
-.titlebox .bottom,
+#header-bottom-right .separator,
+#hsts_pixel,
+.comment.collapsed>.midcol,
+.debuginfo,
 .leavemoderator,
 .morelink .nub,
-.sidebox.create .morelink a,
-.titlebox form.toggle.leavecontributor-button,
+.rank-spacer,
 .side .md hr,
-h1.redditname a,
-.comment.collapsed>.midcol,
-.side input[type=checkbox]:not(#rem-login-main):not([name=restrict_sr]),
-div.titlebox span.word,
-.titlelebox .word,
-.titlebox .users-online:before,
-.sidebox.create,
-.debuginfo,
-#hsts_pixel,
+.side .md-container .md table:nth-of-type(1) thead,
 .side .titlebox .tagline .flairselector .flairoptionpane a.author,
 .side .titlebox .tagline .flairselector .status:empty,
-.side .md-container .md table:nth-of-type(1) thead,
-body>.content .link .rank,
-.rank-spacer,
+.side input[type=checkbox]:not(#rem-login-main):not([name=restrict_sr]),
+.sidebox.create .morelink a,
+.sidebox.create,
 .thing .tagline .stickied-tagline,
-body.comments-page .thing.morerecursion .tagline,
+.titlebox .bottom,
+.titlebox .users-online:before,
+.titlebox form.toggle.leavecontributor-button,
+.titlebox>h1,
+.titlelebox .word,
+a.author.admin ~ .userattrs,
+a.author.moderator ~ .userattrs,
+a.author.submitter ~ .userattrs,
 body.comments-page .thing.morerecursion .buttons,
 body.comments-page .thing.morerecursion .deepthread:after,
-#header-bottom-right .separator,
-a.author.moderator ~ .userattrs,
-a.author.admin ~ .userattrs,
-a.author.submitter ~ .userattrs,
-.titlebox>h1 {
+body.comments-page .thing.morerecursion .tagline,
+body>.content .link .rank,
+div.titlebox span.word,
+h1.redditname a {
 	display: none
 }
 

@@ -31,21 +31,20 @@
 	}
 
 	.dropdown.srdrop .selected, #srDropdown {
-		margin: 0 8px 0 0;
-		padding: 0;
 		background-image: none;
 		font-size: 0;
+		height: 23px;
+		margin: 0 8px 0 0;
+		padding: 0;
 		position: relative;
 		width: 23px;
-		height: 23px;
 
 		&:after {
-			position: absolute;
+			background: url(%%sprite%%) 0 0;
 			content: "";
-			background-image: url(%%sprite%%);
-			background-position: 0 0;
+			height: 23px;
+			position: absolute;
 			width: 23px;
-			height: 23px;            
 		}
 
 		&:hover:after {
@@ -69,9 +68,9 @@
 			padding: 4px 6px;
 
 			&:hover {
-				color: #fff;
 				background-color: #212d3d;
 				border-bottom: 1px solid #fff;
+				color: #fff;
 			}
 		}
 	}
@@ -101,17 +100,17 @@ body:not(.loggedin) #sr-header-area .width-clip {
 
 // The user bar
 #header-bottom-right {
-	position: absolute;
-	top: 0 !important;
-	right: 0;
-	width: auto;
-	height: 24px;
 	background-color: transparent;
 	font-size: 11px;
-	padding: 0;
-	z-index: 9006;
-	margin: 7px;
+	height: 24px;
 	line-height: 23px;
+	margin: 7px;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0 !important;
+	width: auto;
+	z-index: 9006;
 
 	.separator {
 		display: none;
@@ -137,11 +136,11 @@ body:not(.loggedin) #header-bottom-right {
 }
 
 .user {
+	display: inline-block;
 	height: 24px;
+	left: 0;
 	position: relative;
 	top: -2px;
-	left: 0;
-	display: inline-block;
 
 	.userkarma {
 		font-weight: 400;
@@ -153,11 +152,11 @@ body:not(.loggedin) #header-bottom-right {
 #modmail,
 #new_modmail,
 #openRESPrefs .gearIcon {
-	width: 27px;
-	height: 24px;
-	background-image: url(%%sprite%%)!important;
-	background-repeat: no-repeat!important;
 	background-color: transparent;
+	background-image: url(%%sprite%%) !important;
+	background-repeat: no-repeat;
+	height: 24px;
+	width: 27px;
 }
 
 #openRESPrefs .gearIcon {
@@ -176,11 +175,11 @@ body:not(.loggedin) #header-bottom-right {
 }
 
 #mail {
-	top: -2px;
-	margin-left: 8px;
-	overflow: visible;
 	background-position: -23px 0;
+	margin-left: 8px;
 	margin-right: 4px;
+	overflow: visible;
+	top: -2px;
 }
 
 #mail.nohavemail {
@@ -194,8 +193,8 @@ body:not(.loggedin) #header-bottom-right {
 
 #mail.havemail {
 	background-color: #5c7e10;
-	opacity: 1;
 	background-position: -23px 0;
+	opacity: 1;
 
 	&:hover {
 		background-color: #7ea64b;
@@ -216,8 +215,8 @@ body:not(.loggedin) #header-bottom-right {
 #modmail.havemail,
 #new_modmail.havemail {
 	background-color: #5c7e10;
-	margin-right: 4px;
 	background-position: -50px 0;
+	margin-right: 4px;
 
 	&:hover {
 		background-color: #7ea64b;
@@ -225,86 +224,73 @@ body:not(.loggedin) #header-bottom-right {
 }
 
 .message-count {
-	background-color: #5c7e10;
-	position: relative;
-	top: -2px;
-	color: #fff!important;
-	margin-left: -4px;
-	height: 24px;
-	font-size: 11px;
-	line-height: 24px;
+	background: #557e10 url(%%messages-icons%%) no-repeat 0 -34px;
 	border-radius: 0;
-	margin-right: 4px;
-	margin-left: -31px;
-	background-image: url(%%messages-icons%%);
-	background-repeat: no-repeat;
-	background-position: 0 -34px;
-	padding-left: 27px;
+	color: #fff !important;
+	font-size: 11px;
+	height: 24px;
+	line-height: 24px;
+	margin: 0 4px 0 -31px;
+	padding: 0 7px 0 27px;
+	position: relative;
 	text-indent: -4px;
-	padding-right: 7px;
+	top: -2px;
 
 	&:hover {
 		background-color: #7ea64b;
 	}
 }
 #mail.havemail:before {
-	position: fixed;
-	padding-left: 34px;
-	bottom: 34px;
-	z-index: 100;
-	background-color: #5c7e10;
-	border-radius: 2px;
-	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
-	color: #fff;
-	width: 300px;
-	height: 34px;
-	left: 34px;
-	content: "You have new messages";
-	text-indent: 0;
-	font-size: 14px;
-	line-height: 34px;
-	transform: translateY(112px);
-	transition: background-color .25s ease, box-shadow .25s ease;
-	background-image: url(%%messages-icons%%);
-	background-position: 0 0;
-	background-repeat: no-repeat;
-	font-family: "Segoe UI",Segoe,Roboto,"Helvetica Neue",Helvetica,"Calibri Light",Calibri,sans-serif;
-	font-weight: bold;
-	text-transform: uppercase;
-
-	animation-name: toast;
 	animation-duration: 10s;
 	animation-iteration-count: 1;
+	animation-name: toast;
 	animation-timing-function: ease;
+	background: #5c7e10 url(%%messages-icons%%) no-repeat 0 0;
+	border-radius: 2px;
+	bottom: 34px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
+	color: #fff;
+	content: "You have new messages";
+	font-family: "Segoe UI",Segoe,Roboto,"Helvetica Neue",Helvetica,"Calibri Light",Calibri,sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	height: 34px;
+	left: 34px;
+	line-height: 34px;
+	padding-left: 34px;
+	position: fixed;
+	text-indent: 0;
+	text-transform: uppercase;
+	transform: translateY(112px);
+	transition: background-color .25s ease, box-shadow .25s ease;
+	width: 300px;
+	z-index: 100;
 }
 
 #mail.havemail:hover:before {
+	animation-play-state: paused;
 	background-color: #7ea64b;
 	color: #fff;
-	animation-play-state: paused
 }
 
 #header-bottom-right a.pref-lang,
 .loggedin .logout a {
-	background-position: -77px 0;
-	background-image: url(%%sprite%%);
-	background-color: #262625;
-	width: 27px;
-	height: 24px;
+	background: #262625 url(%%sprite%%) -77px 0;
 	display: inline-block;
-	text-indent: -9999px;
-	margin: 0;
+	height: 24px;
+	margin: 0 4px 0 0;
 	position: relative;
+	text-indent: -9999px;
 	top: -2px;
-	margin-right: 4px;
+	width: 27px;
 
 	&:hover {
 		background-color: #575451;
 	}
 }
 .loggedin .logout a {
-	margin-right: 0;
 	background-position: -104px 0;
+	margin-right: 0;
 }
 
 body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
@@ -315,16 +301,16 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 	// Search area
 	#search {
 		padding: 0;
-		width: 270px;
 		position: absolute;
-		top:($header-height - $header-tabs-height)-$header-tabs-margin + 3px;
 		right: $header-tabs-margin + 4px;
+		top:($header-height - $header-tabs-height)-$header-tabs-margin + 3px;
+		width: 270px;
 		z-index: 4;
 
 		input[type=text] {
-			width: 100%;
 			line-height: 29px;
 			padding: 0 0 0 8px;
+			width: 100%;
 		}
 
 		input[type=submit] {
@@ -333,11 +319,11 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 
 		#searchexpando {
 			background: $modal-background;
-			border: 1px solid #fff;
 			border-radius: 3px;
-			padding: 8px;
+			border: 1px solid #fff;
 			box-shadow: 0 0 3px #000;
 			margin: 2px 0 0 0;
+			padding: 8px;
 
 			input {
 				margin: 0 6px 0 0;
@@ -345,19 +331,19 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 
 			label,
 			p a {
-				margin-bottom: 5px;
-				display: block;
-				cursor: pointer;
 				background-color: rgba(0, 0, 0, 0.1);
 				border-radius: 2px;
-				padding: 4px 8px;
-				line-height: 25px;
-				font-size: 11px;
 				color: #407898;
+				cursor: pointer;
+				display: block;
+				font-size: 11px;
+				line-height: 25px;
+				margin-bottom: 5px;
+				padding: 4px 8px;
 
 				&:hover {
-					color: #fff;
 					background: #67c1f5;
+					color: #fff;
 				}
 
 				&:active {
@@ -380,15 +366,14 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 
 
 #header .redditname a {
-	position: absolute;
-	left: -4px;
+	background: url(%%logo%%) 0 0;
 	bottom: 67px;
-	width: 250px;
-	height: 100px;
 	display: block;
 	font-size: 0;
-	background-image: url(%%logo%%);
-	background-position: 0 0;
+	height: 100px;
+	left: -4px;
+	position: absolute;
+	width: 250px;
 
 	&:hover {
 		background-position: 0 -100px;
@@ -397,13 +382,12 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 
 #header-img,
 #header-img.default-header {
-	position: absolute;
-	width: 74px;
+	background: url(%%sprite%%) -23px -24px;
+	border-right: 1px solid rgba(16, 21, 25, 0.3);
 	height: $header-tabs-height;
 	margin: 0;
-	background-image: url(%%sprite%%);
-	background-position: -23px -24px;
-	border-right: 1px solid rgba(16, 21, 25, 0.3);
+	position: absolute;
+	width: 74px;
 
 	&:hover {
 		background: url(%%sprite%%), linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
@@ -412,26 +396,26 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 }
 
 #header-bottom-left {
-	position: absolute;
-	min-width: 960px;
-	margin: 0 $header-tabs-margin 0 $header-tabs-margin !important;
+	background: rgba(62, 126, 167, 0.8);
 	bottom: 0;
-	top: ($header-height - $header-tabs-height)-$header-tabs-margin;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 	height: $header-tabs-height;
 	left: 0;
+	margin: 0 $header-tabs-margin 0 $header-tabs-margin !important;
+	min-width: 960px;
+	position: absolute;
 	right: 0;
-	background: rgba(62, 126, 167, 0.8);
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+	top: ($header-height - $header-tabs-height)-$header-tabs-margin;
 }
 
 #header .tabmenu {
-	display: inline-block;
-	line-height: $header-tabs-height;
-	position: absolute;
 	bottom: 0;
-	left: 0;
-	margin: 0 0 0 74px;
+	display: inline-block;
 	height: $header-tabs-height;
+	left: 0;
+	line-height: $header-tabs-height;
+	margin: 0 0 0 74px;
+	position: absolute;
 
 	li {
 		margin: 0;
@@ -440,17 +424,17 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 
 #header .tabmenu li a {
 	background: none !important;
-	padding: 0 15px;
-	font-weight: 400;
-	line-height: 34px;
-	height: $header-tabs-height;
-	display: inline-block;
-	color: #d9dadd;
-	font-size: 13px;
-	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25 );
-	position: relative;
 	border: none;
 	border-right: 1px solid rgba(16, 21, 25, 0.3);
+	color: #d9dadd;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 400;
+	height: $header-tabs-height;
+	line-height: 34px;
+	padding: 0 15px;
+	position: relative;
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25 );
 
 	&:hover {
 		background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%) !important;

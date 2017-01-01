@@ -137,18 +137,12 @@ $special-font:					"Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, "Cali
 
 @mixin header($update-name: null) {
 	@if $update-name == null {
-		background-image: url(%%header-default-scroller%%);
-		background-position: 0 0;
-	    background-color: #171a21;
-	    transform: translate3d(0,0,0);
-	    background-size: auto 250px;
+		background: #171a21 url(%%header-default-scroller%%) repeat-x 0 0/auto 250px;
+	    transform: translate3d(0,0,0); // This forces the animation to be hardware accelerated for more performance and less impact
 	    animation: animatedHeader 160s linear infinite;
 	}
 
 	@if $update-name == 'winter-sale' {
-		background-image: url(%%winter-sale-header%%);
-		background-position: 70% 0;
-		background-size: 1920px;
-		background-color: #171a21;
+		background: #171a21 url(%%winter-sale-header%%) no-repeat 70% 0/1920px auto;
 	}
 }

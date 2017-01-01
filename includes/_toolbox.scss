@@ -14,4 +14,8 @@ body.mod-toolbox {
 	.thing .tagline .flair-special ~ .tb-bracket-button {
 	    margin-left: $flair-special-width + 4px ;
 	}
+
+	.thing .tagline .flair-level ~ .tb-bracket-button {
+	    margin-left: $flair-small-width + 4px ;
+	}
 }

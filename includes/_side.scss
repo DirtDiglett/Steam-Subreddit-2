@@ -1,7 +1,7 @@
 .side {
+	background: none;
 	margin: 130px 16px 108px 0;
 	padding: 0;
-	background: none;
 	width: 320px;
 
 	.spacer {
@@ -21,15 +21,15 @@
 	.md>ul:nth-of-type(1) {
 		@include modal();
 
-		position: absolute;
-		top: 53px;
-		right: 20px;
-		width: 320px;
-		overflow: hidden;
-		list-style: none;
-		padding: 8px;
-		margin: 0;
 		font-size: 13px;
+		list-style: none;
+		margin: 0;
+		overflow: hidden;
+		padding: 8px;
+		position: absolute;
+		right: 20px;
+		top: 53px;
+		width: 320px;
 
 		li {
 			margin: 0;
@@ -67,19 +67,31 @@
 	}
 
 	a[href$="give.me.flair.in.r.steam.pm"] {
-		padding-top: 4px;
-		padding-left: 8px;
-		padding-bottom: 4px;
+		margin-left: 32px;
+		height: 32px;
+		padding: 0 0 0 8px;
+		line-height: 32px;
 		display: block;
+
+		&:before {
+			background: rgba(0, 0, 0, 0.2) url(%%sprite%%);
+			content: "";
+			height: 26px;
+			margin-left: -40px;
+			position: absolute;
+			width: 32px;
+			height: 32px;
+			background-position: -122px -24px;
+		}
 	}
 
 	.md {
 		color: #8f98a0;
 
 		p {
-			line-height: 1.4;
-			font-size: 13px;
 			color: #8f98a0;
+			font-size: 13px;
+			line-height: 1.4;
 		}
 
 		strong {
@@ -94,9 +106,8 @@
 
 		// Steam Status table, provided by Steamstat.us
 		table:nth-of-type(1) {
+			margin: 0 0 6px 0;
 			min-width: 100%;
-			margin: 0;
-			margin-bottom: 6px;
 
 			td {
 				border: none;
@@ -113,49 +124,58 @@
 				}
 
 				a[href$="//steamstat.us/#good"] {
-					color: #a4d007;
 					background: #4c6b22;
+					color: #a4d007;
+					padding: 2px 6px;
 					text-align: center;
-					padding: 2px 6px
 				}
 				a[href$="//steamstat.us/#bad"] {
-					color: #c25a2c;
 					background: #783614;
+					color: #c25a2c;
+					padding: 2px 6px;
 					text-align: center;
-					padding: 2px 6px
 				}
+				a[href$="//steamstat.us/#unknown"] {
+					background: rgba(134, 146, 154, 0.4);
+					color: #9faab0;
+					padding: 2px 6px;
+					text-align: center;
+				}
+			}
+
+			td[align=left] {
+				color: #8f98a0;
 			}
 		}
 
 		// The rules.
 		ol:nth-of-type(1) {
-			margin-bottom: 18px;
 			counter-reset: li;
-			padding-left: 30px;
 			font-family: $special-font;
+			margin-bottom: 18px;
+			padding-left: 30px;
 
 			li {
-				position: relative;
-				display: block;
-				padding: 4px 6px;
-				margin: 6px 0;
 				background: rgba(103, 193, 245, 0.1);
-				color: #c6d4df;
 				border-radius: 1px;
+				color: #c6d4df;
+				display: block;
+				margin: 6px 0;
+				padding: 4px 6px;
+				position: relative;
 
 				&:before {
-					content: counter(li);
-					counter-increment: li;
-					position: absolute;
-					left: -30px;
-					top: 0;
-					background: #383737;
+					background: rgba(0, 0, 0, 0.2);
 					bottom: 0;
 					color: #fff;
-					text-align: center;
-					width: 30px;
+					content: counter(li);
+					counter-increment: li;
+					left: -30px;
 					padding-top: 6px;
-					background-color: rgba(0, 0, 0, 0.2)
+					position: absolute;
+					text-align: center;
+					top: 0;
+					width: 30px;
 				}
 
 				strong {
@@ -173,14 +193,14 @@
 				margin-bottom: 2px;
 
 				& > a {
+					background: rgba(103, 193, 245, 0.1);
+					border-radius: 1px;
+					color: #67c1f5;
 					display: block;
 					height: 26px;
-					padding-top: 4px;
-					padding-left: 8px;
 					line-height: 19px;
-					background: rgba(103, 193, 245, 0.1);
-					color: #67c1f5;
-					border-radius: 1px;
+					padding-left: 8px;
+					padding-top: 4px;
 
 					&:hover {
 						color: #fff;
@@ -193,26 +213,29 @@
 		// The Community section
 		ul:nth-of-type(2) li {
 			a {
-				margin-left: 37px;
+				margin-left: 32px;
+				height: 32px;
+				padding: 0 0 0 8px;
+				line-height: 32px;
+
 
 				&:before {
+					background: rgba(0, 0, 0, 0.2) url(%%sprite%%);
 					content: "";
-					background-image: url(%%sprite%%);
-					background-color: rgba(0, 0, 0, 0.2);
-					position: absolute;
-					width: 36px;
 					height: 26px;
-					margin-left: -45px;
-					margin-top: -4px;
+					margin-left: -40px;
+					position: absolute;
+					width: 32px;
+					height: 32px;
 				}
 			}
 
 			a[href$="steamcommunity.com/groups/reddit"]:before {
-				background-position: -122px -24px
+				background-position: -122px -56px
 			}
 
 			a[href$="discord.gg/steam"]:before {
-				background-position: -122px -78px
+				background-position: -122px -88px
 			}
 		}
 
@@ -224,30 +247,30 @@
 	}
 
 	#moderation_tools {
-		border: 1px solid #a55b13;
-		border-radius: 4px;
-		box-shadow: 1px 1px 0 0 #39393a;
-		padding: 0;
 		background: rgba(27, 27, 27, 0.36);
-		margin-bottom: 17px;
+		border-radius: 4px;
+		border: 1px solid #a55b13;
+		box-shadow: 1px 1px 0 0 #39393a;
 		color: #8e8e8e;
+		margin-bottom: 17px;
+		padding: 0;
 
 		.title {
+			background: rgba(0, 0, 0, 0.5);
 			border-radius: 2px;
 			border: none;
-			padding: 6px 15px;
-			display: inline-block;
-			cursor: pointer;
-			text-decoration: none !important;
 			color: #67c1f5 !important;
-			background: rgba(0, 0, 0, 0.5);
+			cursor: pointer;
+			display: inline-block;
 			margin: 10px;
 			padding-right: 34px;
+			padding: 6px 15px;
+			text-decoration: none !important;
 
 			&:hover {
-				text-decoration: none !important;
-				color: #fff !important;
 				background: rgba(102, 192, 244, 0.4);
+				color: #fff !important;
+				text-decoration: none !important;
 
 				h1,
 				.collapse-button {
@@ -260,31 +283,26 @@
 			}
 
 			h1 {
-				font-size: 0;
 				color: #67c1f5;
+				font-size: 0;
 
 				&:before {
-					font-size: 15px;
 					content: "Moderator Tools";
+					font-size: 15px;
 				}
 			}
 
 			.collapse-button {
 				background: none;
-				border: 1px solid #67c1f5;
 				border-radius: 3px;
+				border: 1px solid #67c1f5;
 				color: #67c1f5;
-				margin: 0;
-				margin-left: 8px;
-				width: 14px;
+				font: bold 16px/8px $special-font;
 				height: 14px;
-				font-size: 16px;
-				line-height: 8px;
-				vertical-align: middle;
+				margin: 2px 0 0 8px;
 				position: absolute;
-				margin-top: 2px;
-				font-weight: bold;
-				font-family: $special-font;
+				vertical-align: middle;
+				width: 14px;
 			}		
 		}
 
@@ -304,25 +322,23 @@
 					li a {
 						@include sidebarbutton();
 
-						min-height: 26px;
-						padding-top: 4px;
-						padding-left: 8px;
-						line-height: 19px;
 						display: inline-block;
-						margin-left: 37px;
-						width: 261px;
 						font-size: 13px;
+						line-height: 19px;
+						margin-left: 37px;
+						min-height: 26px;
+						padding: 4px 0 0 8px;
 						text-transform: capitalize;
+						width: 261px;
 
 						&:before {
-							content: "";
 							background-color: rgba(0, 0, 0, 0.2);
+							background-image: url(%%sprite%%);				
+							content: "";
+							margin: -4px 0 0 -45px;
+							min-height: 26px;
 							position: absolute;
 							width: 36px;
-							min-height: 26px;
-							margin-left: -45px;
-							margin-top: -4px;
-							background-image: url(%%sprite%%);						
 						}	
 						
 						&:hover {
@@ -335,8 +351,7 @@
 
 		.icon-menu {
 			li {
-				margin: 0;
-				margin-bottom: 2px;
+				margin: 0 0 2px 0;
 			}
 
 			li.selected {
@@ -355,7 +370,6 @@
 }
 
 .side .icon-menu {
-
 	// Loop through the icons in the menu list.
 	// Generates the appropriate background positioning for the spritesheet
 	$offset: -24px;
@@ -380,31 +394,29 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 .flairselector {
 	@include modal();
-	position: fixed;
-	top: 20% !important;
 	left: 50% !important;
 	margin-left: -170px;
-	padding: 16px !important;
-	width: 380px !important;
 	overflow: hidden;		
+	padding: 16px !important;
+	position: fixed;
+	top: 20% !important;
+	width: 380px !important;
 	
 	h2 {
-		font-weight: bold;
-		font-family: $special-font;
-		text-align: left;
 		background: none;
-		margin: 0;
 		color: #2a3e59;
-		font-size: 17px;
+		font-family: bold 17px $special-font;
+		margin: 0;
 		padding-bottom: 8px;
-		text-transform: uppercase;					
+		text-align: left;
+		text-transform: uppercase;
 	}
 
 	.flair {
+		height: $flair-height;
+		margin: 0;
 		min-width: 0 !important;
 		position: relative;
-		margin: 0;
-		height: $flair-height;
 	}
 
 	.flairoptionpane {
@@ -453,16 +465,16 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	}	
 
 	ul {
-		width: 86px !important;
 		margin-right: 4px;
+		width: 86px !important;
 
 		li {
-			border: none;
-			padding: 4px;
-			margin: 4px 0;
-			width: auto !important;
-			text-align: center !important;
 			border-radius: 2px;
+			border: none;
+			margin: 4px 0;
+			padding: 4px;
+			text-align: center !important;
+			width: auto !important;
 
 			&:hover {
 				background: rgba(0,0,0,0.1);
@@ -478,20 +490,19 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 	form {
 		border: none;
-		padding: 0;
+		padding: 0 0 34px 0;
 		text-align: left;
-		padding-bottom: 34px;
 
 		.flairselection {
-			line-height: 24px;
 			background: #27455e;
 			border-radius: 3px;
+			line-height: 24px;
 			padding: 4px 8px;
 
 			&:before {
-				content: "Flair Preview";
 				color: #fff;
-				display: block;				
+				content: "Flair Preview";
+				display: block;
 			}	
 
 			.flair {
@@ -504,19 +515,18 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		}
 
 		button {
-			position: absolute;
-			left: 16px;
-			bottom: 16px;
-			padding: 0 15px;
-			font-size: 0;
-			height: 30px;
+			background: #212c3d;
 			border-radius: 2px;
 			border: none;
+			bottom: 16px;
 			color: #66c0f4;
-			background: #212c3d;
+			font-size: 0;
+			height: 30px;
+			left: 16px;
+			margin: 0 4px 0 0;
+			padding: 0 15px;
+			position: absolute;
 			text-transform: capitalize;
-			margin: 0;
-			margin-right: 4px;
 			width: 100px;
 
 			&:hover {
@@ -533,24 +543,23 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	}
 
 	.flairremove {
-		position: absolute;
-		left: 128px;
-		bottom: 16px;
-		padding: 0 15px;
-		font-size: 0;
-		height: 30px;
+		background: #212c3d;
 		border-radius: 2px;
 		border: none;
+		bottom: 16px;
 		color: #66c0f4;
-		background: #212c3d;
-		text-transform: capitalize;
-		margin: 0;
-		margin-right: 4px;
 		cursor: pointer;
+		font-size: 0;
+		height: 30px;
+		left: 128px;
+		margin: 0 4px 0 0;
+		padding: 0 15px;
+		position: absolute;
+		text-transform: capitalize;
 
 		&:hover {
-			color: #fff;
 			background: #66c0f4;			
+			color: #fff;
 		}
 
 		&:after {
@@ -570,13 +579,12 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 }
 
 .morelink {
+	background: 0 0 !important;
+	border: 0;
 	height: auto;
+	padding: 42px 16px 16px 16px;
 	position: absolute;
 	top: 272px;
-	padding: 16px;
-	border: 0;
-	background: 0 0 !important;
-	padding-top: 42px;
 
 	&:hover a,
 	a {
@@ -584,20 +592,17 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	}
 
 	a {
-		position: relative;
-		width: 136px;
-		height: 58px;
-		display: inline-block;
-		font-size: 18px;
-		font-weight: 400;
-		line-height: 56px;
-		color: #66c0f4;
-		text-align: center;
 		background-image: url(%%spotlight-bg%%);
 		background-position-y: -105px;
 		border-radius: 3px;
 		box-shadow: 0 0 4px #000;
-		font-family: $special-font;
+		color: #66c0f4;
+		display: inline-block;
+		font: 400 18px/56px $special-font;
+		height: 58px;
+		position: relative;
+		text-align: center;
+		width: 136px;
 
 		&:hover {
 			background-position-y: -142px;
@@ -608,12 +613,12 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 .submit-link .morelink {
 	&:before {
-		content: "";
-		position: absolute;
-		width: 320px;
-		top: 0;
-		left: 0;
 		bottom: 0;
+		content: "";
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 320px;
 	}
 }
 
@@ -621,20 +626,17 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	margin-left: 152px;
 
 	&:after {
+		color: #fff;
 		content: "Submit content";
-		position: absolute;
-		top: 7px;
+		font: 17px $special-font;
 		left: 15px;
-		color: #fff;
-		text-transform: uppercase;
-		color: #fff;
-		font-size: 17px;
 		letter-spacing: 1px;
-		font-family: $special-font;
-		width: 300px;
-		text-align: left;
-
 		margin-left: -152px;	
+		position: absolute;
+		text-align: left;
+		text-transform: uppercase;
+		top: 7px;
+		width: 300px;
 	}
 }
 
@@ -648,21 +650,21 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	flex-wrap: wrap;
 
 	&>* {
-		width: 100%;
 		order: 2;
+		width: 100%;
 	}
 
 	.subscribers,
 	.users-online {
+		font-family: $special-font;
 		order: -1;
 		text-align: center;
-		font-family: $special-font;
 	}
 
 	.subscribers {
 		span {
-			font-size: 24px;
 			color: #fff;
+			font-size: 24px;
 		}
 
 		span.number:after {
@@ -671,8 +673,8 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	}
 
 	.users-online {
-		font-size: 18px;
 		color: #8bc53f;
+		font-size: 18px;
 
 		.number {		
 			&:after {
@@ -689,37 +691,34 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 	.fancy-toggle-button {
 		display: block;
-		width: auto;
 		margin: 8px auto;
+		width: auto;
 
 		a {
-			font-weight: 300;
 			font-size: 14px;
+			font-weight: 300;
 		}
 	}
 
 	.subButtons {
+		margin-bottom: 8px;
 		order: 0;
 		text-align: center;
-		margin-bottom: 8px;
 	}
 
 	input[type=checkbox]+label {
-		line-height: 17px;
-		font-size: 13px;
-		padding-top: 4px;
-		padding-left: 5px;
-		padding-bottom: 4px;
-		display: block;
 		cursor: pointer;
+		display: block;
+		font-size: 13px;
+		line-height: 17px;
+		padding: 4px 0 4px 5px;
 
 		&:before {
 			content: "";
 			display: inline-block;
 			width: 16px;
 			height: 16px;
-			background: url(%%checkboxes%%);
-			background-position: 0 0;
+			background: url(%%checkboxes%%) 0 0;
 			vertical-align: middle;
 			margin-right: 4px;
 		}
@@ -727,8 +726,8 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 	.res-sr-style-toggle input+label::before,
 	input:checked+label::before {
+		background-position: 0 -16px;
 		content: "";
-		background-position: 0 -16px
 	}
 
 	[for=flair_enabled] {
@@ -736,44 +735,43 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 		&:after {
 			content: "Display my flair";
-			vertical-align: middle;
 			font-size: 13px;
+			vertical-align: middle;
 		}
 	}
 
 	// Flair section
 	.tagline {
-		display: block;
-		margin: 0 0 2px 0;
-		height: 36px;
 		border-radius: 1px;
-		position: relative;
+		display: block;
+		font-size: 0;
+		height: 36px;
+		margin: 0 0 2px 0;
 		overflow: hidden;
 		padding: 8px 8px 55px 8px;
-		font-size: 0;
+		position: relative;
 
 		&:before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 25px;
+			border-radius: 3px 3px 0 0;
 			border: 1px solid rgba(103, 193, 245, 0.1);
-			border-radius: 3px 3px 0 0;			
+			bottom: 25px;
+			content: "";
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
 		}
 
 		.author {
-			font-size: 13px;
-			font-family: $special-font;
+			font: 13px $special-font;
 		}
 
 		.flair {
 			// Force the flair to show fullwidth as a preview.
-			min-width: 600px;
-			font-size: 11px;
-			color: #fff;
 			background-color: rgba(0,0,0,0.8);
+			color: #fff;
+			font-size: 11px;
+			min-width: 600px;
 		}
 
 		.flair-small {
@@ -799,31 +797,25 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 		.flairselectbtn {
 			// This hides the default "edit" wording, to replace with a cool button.
-			position: absolute;
 			bottom: 0;
+			font-size: 0;
 			left: 0;
+			position: absolute;
 			right: 0;
 			top: 0;
-			font-size: 0;
 
 			&:after {
 				@include sidebarbutton();
-				content: "Edit flair";
-				position: absolute;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				min-height: 17px;
 				border-radius: 1px;
-				line-height: 17px;
+				bottom: 0;
+				content: "Edit flair";
 				font-size: 13px;
-				padding-top: 4px;
-				padding-left: 8px;
-				padding-bottom: 4px;
-
-				
-
-							
+				left: 0;
+				line-height: 17px;
+				min-height: 17px;
+				padding: 4px 0 4px 8px;
+				position: absolute;
+				right: 0;
 			}
 
 			&:hover {
@@ -839,18 +831,17 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 .subscribe-button {
 	.add,
 	.remove {
-		width: 190px;
+		background: #799905 linear-gradient(to bottom, #799905 5%, #536904 95%);
+		border-radius: 2px;
+		border: none;
+		color: #D2E885;
 		height: 40px;
 		line-height: 37px;
 		padding-top: 0;
 		text-align: center;
-		background: linear-gradient(to bottom, #799905 5%, #536904 95%);
-		background-color: #799905;
-		border: none;
-		text-transform: capitalize;
-		border-radius: 2px;
-		color: #D2E885;
 		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
+		text-transform: capitalize;
+		width: 190px;
 
 		&:hover {
 			color: #fff;
@@ -869,11 +860,11 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	}
 
 	.remove {
-		box-shadow: none !important;
 		background: none;
-		text-shadow: none;
-		color: rgba(255, 255, 255, 0.6);
 		border: 1px solid rgba(255, 255, 255, 0.6);
+		box-shadow: none !important;
+		color: rgba(255, 255, 255, 0.6);
+		text-shadow: none;
 
 		&:hover {
 			border-color: #fff;
@@ -893,17 +884,16 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	&:before {
 		@include sidebarh3(null,null);
 		content: "Login";
-		margin-bottom: 12px;
 		display: block;		
+		margin-bottom: 12px;
 	}
 
 	input[type=text],
 	input[type=password] {
-		width: 100%;
-		line-height: 26px;
-		margin: 0;
-		margin-bottom: 6px;
 		border: 1px solid rgba(0,0,0,0.3);
+		line-height: 26px;
+		margin: 0 0 6px 0;
+		width: 100%;
 
 		&:hover,
 		&:focus {
@@ -921,39 +911,35 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		margin: 0;
 
 		button {
-			min-height: 17px;
 			background: rgba(103, 193, 245, 0.1);
-			color: #67c1f5;
 			border-radius: 3px;
-			margin-bottom: 2px;
-			padding: 0;
-			line-height: 29px;
+			border: none;
+			color: #67c1f5;
 			font-size: 13px;
+			line-height: 29px;
+			margin: 0 0 2px 0;
+			min-height: 17px;
 			padding: 0 15px;
 			text-transform: capitalize;
-			margin: 0;
-			border: none;
 
 			&:hover {
-				text-decoration: none;
+				background: #67c1f5 linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
 				color: #ffffff;
-				background: #67c1f5;
-				background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+				text-decoration: none;
 			}
 
 			&:active {
-				background: darken(#67c1f5, 10%);
-				background: linear-gradient(135deg, darken(#67c1f5, 10%) 0%, darken(#417a9b, 10%) 100%)
+				background: darken(#67c1f5, 10%) linear-gradient(135deg, darken(#67c1f5, 10%) 0%, darken(#417a9b, 10%) 100%)
 			}
 		}
 	}
 }
 
 .linkinfo {
+	border-radius: 0;
 	display: flex;
 	flex-flow: column;
 	flex-wrap: wrap;
-	border-radius: 0;
 
 	&:before {
 		@include sidebarh3(null,null);
@@ -993,18 +979,18 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	}
 
 	.shortlink {
-		order: 4;
+		border-radius: 0;
 		font-size: 0;
 		margin-top: 8px;
-		border-radius: 0;
+		order: 4;
 
 		input {
-			width: 100%;
+			border: 1px solid rgba(0,0,0,0.3);
+			font-size: 13px;
 			line-height: 26px;
 			margin: 0;
-			font-size: 13px;
-			border: 1px solid rgba(0,0,0,0.3);
 			padding: 4px 8px;
+			width: 100%;
 		}
 	}
 }
@@ -1015,9 +1001,9 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	flex-wrap: wrap;
 
 	.title {
+		margin-bottom: 12px;
 		order: 1;
 		width: 100%;
-		margin-bottom: 12px;
 
 		h1 {
 			@include sidebarh3();
@@ -1033,8 +1019,8 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 	.more {
 		font-size: inherit;
-		text-align: left;
 		margin-top: 16px;
+		text-align: left;
 
 		a {
 			color: $anchor-color;
@@ -1093,6 +1079,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 			height: 24px;
 			overflow: hidden;
 			line-height: 24px;
+			margin-bottom: 2px;
 
 			.flair:hover {
 				width: 800px; // Should prevent layout breakage and just throw it off the screen.
@@ -1114,9 +1101,8 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	.thing {
 		background: rgba(84, 133, 183, 0.4);
 		border-radius: 3px;
+		margin: 0 0 2px 0;
 		padding: 4px;
-		margin: 0;
-		margin-bottom: 2px;
 		transition: background 0.1s ease-in-out;
 
 		&:hover {
@@ -1125,10 +1111,10 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 		.score {
 			color: rgba(255, 255, 255, 0.7);
-			line-height: 16px;
 			font-size: 11px;
-			text-align: left;
+			line-height: 16px;
 			margin: 0;			
+			text-align: left;
 		}
 
 		.entry {
@@ -1169,16 +1155,16 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 #ad_main_top.sponsor-300-250,
 #ad_main,
 #ad_frame {
-	width: 320px;
 	height: 280px;
 	padding: 8px !important;
+	width: 320px;
 
 	&:after {
+		color: rgba(255,255,255, 0.4);
 		content: "Advertisement";
-		text-align: center;
 		display: block;
 		margin-top: -9px;
-		color: rgba(255,255,255, 0.4);
+		text-align: center;
 	}
 }
 
@@ -1200,31 +1186,30 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 .sponsorshipbox,
 .stylesheet-customize-container .pretty-form,
 .account-activity-box {
-	background-color: rgba(0, 0, 0, 0.2);
-	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 transparent;
-	padding: 16px;
+	background: rgba(0, 0, 0, 0.2) linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0;
 	border: none;
-	color: #8f98a0
+	color: #8f98a0;
+	padding: 16px;
 }
 
 .side {
 	// /r/steam Feedback
 	a[href$="surveyhero.com/c/922b7f1"] {
 		background: none!important;
-		padding: 0 15px;
-		font-weight: 400;
-		line-height: 34px;
-		height: 35px;
-		display: inline-block;
-		color: #d9dadd;
-		font-size: 13px;
-		text-shadow: -1px -1px 0 rgba(0,0,0,0.25);
-		position: absolute;
 		border: none;
-		border-right: 1px solid rgba(16,21,25,0.3);
-		top: 195px;
-		right: 297px;
 		border-left: 1px solid rgba(16,21,25,0.3);
+		border-right: 1px solid rgba(16,21,25,0.3);
+		color: #d9dadd;
+		display: inline-block;
+		font-size: 13px;
+		font-weight: 400;
+		height: 35px;
+		line-height: 34px;
+		padding: 0 15px;
+		position: absolute;
+		right: 297px;
+		text-shadow: -1px -1px 0 rgba(0,0,0,0.25);
+		top: 195px;
 
 		&:hover {
 			background: linear-gradient(to bottom,#e3eaef 5%,#c7d5e0 95%)!important;

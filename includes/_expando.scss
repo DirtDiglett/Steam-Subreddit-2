@@ -3,20 +3,16 @@
 }
 
 .expando-button {
-	margin: 0;
-	width: 24px;
-	height: $expando-height;
-	background: rgba(103, 193, 245, 0.4);
-	max-width: 24px;
-	max-height: $expando-height;
-	margin-top: 24px;
-	margin-right: 8px;
+	background: rgba(103, 193, 245, 0.4) url(%%sprite%%) -80px -182px !important;
 	border-radius: 2px;
-	background-image: url(%%sprite%%) !important;
-	background-position: -104px -182px !important;
+	height: $expando-height;
+	margin: 24px 8px 0 0;
+	max-height: $expando-height;
+	max-width: 24px;
+	width: 24px;
 
 	&:hover {
-		background: #67c1f5;
+		background-color: #67c1f5 !important;
 	}
 
 	// Loops for the background positions
@@ -38,12 +34,11 @@
 	&.image.expanded,
 	&.image.gallery.expanded,
 	&.video-muted.expanded {
-		background-position: -104px -158px !important;
+		background-position: -80px -158px !important;
 		margin-bottom: 0;
 	}
 }
 
 .usertext-body .md .expando-button {
-	margin-top: -4px;
-	margin-left: 4px;
+	margin: -4px 8px 0 4px;
 }

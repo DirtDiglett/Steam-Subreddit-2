@@ -33,19 +33,13 @@ body.search-page {
 	}
 
 	.search-result-group-header {
-		color: #8f98a0;
 		background: linear-gradient(to right,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%) repeat scroll 0 0 transparent;
-		padding: 16px;
 		border: none;
+		color: #8f98a0;
 		margin-bottom: 2px;
+		padding: 16px;
 
-		.search-header-label {
-			color: #fff;
-			font-size: 16px;
-			font-weight: normal;
-			text-transform: capitalize;
-		}
-
+		.search-header-label,
 		.dropdown-title {
 			color: #fff;
 			font-size: 16px;
@@ -55,18 +49,16 @@ body.search-page {
 	}
 
 	.search-result-group {
+		margin: 0 0 18px 0;
 		max-width: none;
 		padding: 0;
-		margin: 0;
-		margin-bottom: 18px;
 	}
 
 	.search-result {
 		background: rgba(84, 133, 183, 0.4);
 		border-radius: 3px;
+		margin: 0 0 18px 0;
 		padding: 4px;
-		margin: 0;
-		margin-bottom: 4px;
 
 		&:hover {
 			background: rgba(117,204,255,0.25);
@@ -100,22 +92,21 @@ body.search-page {
 		}
 
 		.search-title {
-			margin-right: 5px;
-			font-family: $special-font;
 			color: #fff!important;
-			font-weight: normal!important;
-			margin: 0;
-			padding: 0;
+			font-family: $special-font;
 			font-size: 18px;
+			font-weight: normal!important;
+			margin: 0 5px 0 0;
+			padding: 0;
 		}
 
 		mark {
-			color: #8a6d3b!important;
-			background-color: #fcf8e3;
-			font-weight: normal;
-			padding: 0 4px;
+			background: #fcf8e3;
 			border-radius: 2px;
+			color: #8a6d3b !important;
+			font-weight: normal;
 			line-height: 21px;
+			padding: 0 4px;
 		}
 
 		.search-result-meta {
@@ -137,17 +128,17 @@ body.search-page {
 			}
 
 			span {
-				margin: 0;
+				background: rgba(103,193,245,0.1);
 				border-radius: 2px;
 				border: none;
-				padding: 4px 17px;
-				cursor: pointer;
-				text-transform: uppercase;
 				color: #67c1f5;
-				background: rgba(103,193,245,0.1);
-				height: 24px;
+				cursor: pointer;
 				font-weight: normal;
+				height: 24px;
+				margin: 0;
+				padding: 4px 17px;
 				text-decoration: none;
+				text-transform: uppercase;
 
 				&:hover {
 					background: #67c1f5;

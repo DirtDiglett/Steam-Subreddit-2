@@ -1,39 +1,36 @@
-.side {
+.side .titlebox {
 	a[href$="comments/5krnce/rsteam_has_a_new_theme/"] {
-		position: absolute;
-		display: block;
-		top: $header-height + 20px;
-		height: $banner-height;
-		left: 0;
-		right: 0;
-		margin: 0 352px 0 16px;
-		background-image: url(%%info-banner%%);
-		background-repeat: no-repeat;
-		background-position: -1px -1px;
+		background: #d1dae1 url(%%info-banner%%) no-repeat -1px -1px;
 		border: 1px solid transparent;
 		box-shadow: 0 0 4px #000;
+		display: block;
+		height: $banner-height;
+		left: 0;
+		margin: 0 352px 0 16px;
 		overflow: hidden;
-		background-color: #d1dae1;
+		position: absolute;
+		right: 0;
+		top: $header-height + 20px;
 
 		&:before {
+			color: #525557;
 			content: "/r/steam has been updated with a new theme";
-			left: 8px;
-			height: $banner-height;
-			line-height: $banner-height - 1px;
 			display: inline-block;
 			font-family: "Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, Calibri, sans-serif;
-			font-weight: bold;
 			font-size: 17px;
-			text-transform: uppercase;
+			font-weight: bold;
+			height: $banner-height;
+			left: 8px;
 			letter-spacing: 2px;
-			color: #525557;
-			text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+			line-height: $banner-height - 1px;
 			padding-left: 86px;
+			text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+			text-transform: uppercase;
 		}
 
 		&:hover {
 			box-shadow: 0 0 4px #fff;
-			border: 1px solid #fff;
+			border-color: #fff;
 		}
 	}
 }
