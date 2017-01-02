@@ -317,30 +317,6 @@ body:not(.subscriber) .arrow.down {
 		}
 	}
 
-	.tagline {
-		color: #c6d4df;
-		font: 13px/20px $special-font;
-		height: 24px;
-
-		a {
-			color: $anchor-color;
-			margin-right: 4px;
-			text-decoration: none;
-
-			&:hover {
-				color: $anchor-hover-color;
-			}
-		}
-
-		a[href$="/gilded"] {
-			z-index: 0;
-		}
-
-		.edited-timestamp {
-			font-style: italic;
-		}
-	}
-
 	.expando-button ~ .tagline {
 		position: relative;
 		left: -32px;
@@ -1031,8 +1007,7 @@ body.comments-page .menuarea ~ .sitetable {
 	}
 
 	p {
-		margin-bottom: 16px;
-		margin: 0;
+		margin: 0 0 16px 0;
 	}
 
 	blockquote {
@@ -1214,4 +1189,40 @@ body.comments-page .menuarea ~ .sitetable {
 
 .usertext.grayed .usertext-body {
 	background: transparent !important;
+}
+
+.tagline {
+	color: #c6d4df;
+	font: 13px/20px $special-font;
+	height: 24px;
+
+	a {
+		color: $anchor-color;
+		margin-right: 4px;
+		text-decoration: none;
+
+		&:hover {
+			color: $anchor-hover-color;
+		}
+	}
+
+	a[href$="/gilded"] {
+		z-index: 0;
+	}
+
+	.edited-timestamp {
+		font-style: italic;
+	}
+}
+
+.panestack-title a.title-button.gold {
+    background-color: rgba(255, 240, 136, 0.4);
+    color: #fff088;
+    padding: 4px 8px;
+    border: none;
+
+    &:hover {
+    	background-color: #fff088;
+    	color: #6a4d00;
+    }
 }

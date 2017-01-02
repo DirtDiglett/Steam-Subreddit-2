@@ -173,18 +173,8 @@
 		}
 
 		.file-upload-button {
-			@include outlinebutton();
-
 			background: none;
 			font-weight: normal;
-
-			&:hover {
-				@include outlinebutton(hover);
-			}
-
-			&:active {
-				@include outlinebutton(active);
-			}
 		}
 	}
 

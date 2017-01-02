@@ -1,3 +1,23 @@
+// Try to combine all the sidebarbuttons()
+.side form.toggle,
+.side a[href$="give.me.flair.in.r.steam.pm"],
+#moderation_tools ul li ul li a,
+.tagline .flairselectbtn:after {
+	@include sidebarbutton();
+}
+
+.side form.toggle:hover,
+.side a[href$="give.me.flair.in.r.steam.pm"]:hover,
+#moderation_tools ul li ul li a:hover,
+.tagline .flairselectbtn:hover:after {
+	@include sidebarbutton(hover);
+}
+
+.side .md>ul:nth-of-type(1),
+.flairselector {
+	@include modal();
+}
+
 .side {
 	background: none;
 	margin: 130px 16px 108px 0;
@@ -19,8 +39,6 @@
 
 	// This handles the modal on the top right that holds the helpful links.
 	.md>ul:nth-of-type(1) {
-		@include modal();
-
 		font-size: 13px;
 		list-style: none;
 		margin: 0;
@@ -54,16 +72,10 @@
 
 	form.toggle,
 	a[href$="give.me.flair.in.r.steam.pm"] {
-		@include sidebarbutton();
-
 		min-height: 17px;
 		line-height: 17px;
 		margin-bottom: 2px;
-		padding: 0;	
-		
-		&:hover {
-			@include sidebarbutton(hover);
-		}	
+		padding: 0;		
 	}
 
 	a[href$="give.me.flair.in.r.steam.pm"] {
@@ -320,8 +332,6 @@
 					margin: 0;
 
 					li a {
-						@include sidebarbutton();
-
 						display: inline-block;
 						font-size: 13px;
 						line-height: 19px;
@@ -339,10 +349,6 @@
 							min-height: 26px;
 							position: absolute;
 							width: 36px;
-						}	
-						
-						&:hover {
-							@include sidebarbutton(hover);
 						}			
 					}
 				}
@@ -393,7 +399,6 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 }
 
 .flairselector {
-	@include modal();
 	left: 50% !important;
 	margin-left: -170px;
 	overflow: hidden;		
@@ -401,11 +406,35 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	position: fixed;
 	top: 20% !important;
 	width: 380px !important;
-	
+	border: none;
+
+	&:before {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.4);
+		content: "";
+		z-index: -1;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: linear-gradient(100deg,#c6d4df 5%,#e2f4ff 95%);
+		border: 1px solid white;
+		z-index: -1;
+	}
+
 	h2 {
 		background: none;
 		color: #2a3e59;
-		font-family: bold 17px $special-font;
+		font: bold 17px $special-font;
 		margin: 0;
 		padding-bottom: 8px;
 		text-align: left;
@@ -574,7 +603,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	}
 
 	&.drop-choices.active {
-		border: 1px solid #fff;
+		border: none;
 	}
 }
 
@@ -803,9 +832,9 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 			position: absolute;
 			right: 0;
 			top: 0;
+			margin: 0;
 
 			&:after {
-				@include sidebarbutton();
 				border-radius: 1px;
 				bottom: 0;
 				content: "Edit flair";
@@ -1032,18 +1061,8 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	}
 
 	a.helplink {
-		@include outlinebutton();
-
 		order: 3;
 		margin-top: 16px;
-
-		&:hover {
-			@include outlinebutton(hover);
-		}
-
-		&:active {
-			@include outlinebutton(active);
-		}
 	}
 
 	.content {
@@ -1136,17 +1155,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	text-align: left;
 
 	a {
-		@include outlinebutton();
-
 		display: inline-block;
-
-		&:hover {
-			@include outlinebutton(hover);
-		}
-
-		&:active {
-			@include outlinebutton(active);
-		}
 	}
 }
 
@@ -1220,18 +1229,8 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 	// /r/steam Design Feedback
 	a[href$="surveyhero.com/c/80f982f"] {
-		@include outlinebutton();
-
 		display: block;
 		text-align: center;
 		margin-top: 16px;
-
-		&:hover {
-			@include outlinebutton(hover);
-		}
-
-		&:active {
-			@include outlinebutton(active);
-		}
 	}
 }

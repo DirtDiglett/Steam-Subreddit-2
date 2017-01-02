@@ -20,7 +20,7 @@
 	padding: $sr-header-area-padding;
 	position: relative;
 	transition: all .15s ease;
-	z-index: 9005;
+	z-index: 10;
 
 	.width-clip {
 		right: 300px;
@@ -110,7 +110,7 @@ body:not(.loggedin) #sr-header-area .width-clip {
 	right: 0;
 	top: 0 !important;
 	width: auto;
-	z-index: 9006;
+	z-index: 10;
 
 	.separator {
 		display: none;

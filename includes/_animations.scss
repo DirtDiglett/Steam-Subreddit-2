@@ -28,12 +28,3 @@
 		opacity: 0
 	}
 }
-
-@keyframes animatedBackground {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: -$header-image-width 0; // The header image width
-	}
-}

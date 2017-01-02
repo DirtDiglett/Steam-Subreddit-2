@@ -552,7 +552,7 @@
 	}
 
 	a.voteWeight {
-	    background: none !important;
+		background: none !important;
 	}
 }
 
@@ -561,25 +561,88 @@
 body.res.pinHeader-sub,
 body.res.pinHeader-subanduser {
 	#sr-header-area {
-    	top: 0;
-   	}
+		top: 0;
+	}
 
-    #header-bottom-right {
-	    z-index: 10001;
-	    position: fixed;
+	#header-bottom-right {
+		z-index: 10001;
+		position: fixed;
 	}
 }
 
 .pinHeader-subanduser #header-bottom-right.res-floating-userbar {
-    top: -6px!important;
-    opacity: 1;
+	top: -6px!important;
+	opacity: 1;
 }
 
 .commentarea .res-expando-box div.usertext-body .md {
-    background: none;
-    border: none;
+	background: none;
+	border: none;
 }
 
 .res-expando-box .res-text {
-    padding: 0;
+	padding: 0;
+}
+
+.res .RESDialogSmall {
+	@include modal();
+
+	& > h3 {
+		background: none;
+		color: #2a3e59;
+		font: bold 17px $special-font;
+		margin: 0;
+		padding-bottom: 8px;
+		text-align: left;
+		text-transform: uppercase;
+		padding: 12px;
+		margin: 0;
+		padding-bottom: 12px;
+		height: auto;
+		border: none;
+	}
+
+	.RESDialogContents {
+		padding: 12px;
+	}
+
+	.comment .midcol {
+		width: auto;
+	}
+
+	.tagline {
+		margin-left: 0;
+		height: 24px;
+    	line-height: 24px;
+	}
+
+	.comment {
+		margin: 0!important;
+		padding-left: 5px !important;
+	}
+
+	.RESDialogSmall .comment .tagline {
+		margin-left: 5px;
+	}
+}
+
+.RESHoverInfoCard::before {
+	border-width: 10px 10px 10px 0;
+	left: -10px;
+	border-color: transparent #fff;
+}
+
+.RESHoverInfoCard::after {
+    border-width: 8px 9px 8px 0px;
+    border-color: transparent #c6d4df;
+    left: -9px;
+    top: 12px;
+}
+
+.RESDialogSmall .RESCloseButton {
+	display: none;
+}
+
+.res .parentArrow {
+    margin: 4px;
 }

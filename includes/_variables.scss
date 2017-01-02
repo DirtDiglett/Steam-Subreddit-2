@@ -1,6 +1,6 @@
 // Here we will store every primary variable. Colors, sizing, etc.
 $header-height:					250px !default;
-$header-image-width:			6468px;
+$header-image-width:			3571px;
 $sr-header-area-padding:		7px !default;
 $sr-header-area-height:			24px + ($sr-header-area-padding * 2) !default;
 $header-tabs-height:			35px !default;
@@ -137,9 +137,7 @@ $special-font:					"Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, "Cali
 
 @mixin header($update-name: null) {
 	@if $update-name == null {
-		background: #171a21 url(%%header-default-scroller%%) repeat-x 0 0/auto 250px;
-	    transform: translate3d(0,0,0); // This forces the animation to be hardware accelerated for more performance and less impact
-	    animation: animatedHeader 160s linear infinite;
+		background: #171a21 url(%%default-header%%) repeat-x 70% 0/1920px auto;
 	}
 
 	@if $update-name == 'winter-sale' {

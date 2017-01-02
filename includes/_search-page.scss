@@ -159,14 +159,8 @@ body.search-page {
 	}
 
 	.nextprev a {
-		@include outlinebutton();
-
 		background: none;
 		font-weight: normal;
-
-		&:hover {
-			@include outlinebutton(hover);
-		}
 	}
 
 	.search-expando.collapsed:before {

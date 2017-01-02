@@ -8,7 +8,7 @@ a.author.submitter,
 	border-radius: 4px 2px 2px 4px !important;
 	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
 	padding-left: 0 !important;
-	padding: 2px 8px !important;
+	padding: 2px 8px 2px 0 !important;
 
 	&:before {
 		border-radius: 2px 0 0 2px;
@@ -242,7 +242,7 @@ a.author.admin,
 }
 
 @each $flair in $flair-level-smallnumber-list {
-	$i: index($flair-level-smallnumber-list, $flair)-1;
+	$i: index($flair-level-smallnumber-list, $flair);
 	.flair-level.flair-#{$flair}:before {
 		background-position-y: $flair-height * -$i;
 	}
@@ -250,37 +250,43 @@ a.author.admin,
 
 .flair-small ~ .score,
 .flair-small ~ .score-hidden,
-.flair-small ~ a[href$="/gilded"] {
+.flair-small ~ a[href$="/gilded"],
+.flair-small ~ .userattrs:not(:empty) {
 	margin-left: ($flair-small-width + 4px);
 }
 
 .flair-year ~ .score,
 .flair-year ~ .score-hidden,
-.flair-year ~ a[href$="/gilded"] {
+.flair-year ~ a[href$="/gilded"],
+.flair-year ~ .userattrs:not(:empty) {
 	margin-left: ($flair-year-width + 4px);
 }
 
 .flair-game ~ .score,
 .flair-game ~ .score-hidden,
-.flair-game ~ a[href$="/gilded"] {
+.flair-game ~ a[href$="/gilded"],
+.flair-game ~ .userattrs:not(:empty) {
 	margin-left: ($flair-game-width + 4px);
 }
 
 .flair-special ~ .score,
 .flair-special ~ .score-hidden,
-.flair-special ~ a[href$="/gilded"] {
+.flair-special ~ a[href$="/gilded"],
+.flair-special ~ .userattrs:not(:empty) {
 	margin-left: ($flair-special-width + 4px);
 }
 
 .flair-level ~ .score,
 .flair-level ~ .score-hidden,
-.flair-level ~ a[href$="/gilded"] {
+.flair-level ~ a[href$="/gilded"],
+.flair-level ~ .userattrs:not(:empty) {
 	margin-left: ($flair-level-width + 4px);
 }
 
 .thing.collapsed .flair ~ .score,
 .thing.collapsed .flair ~ .score-hidden,
-.thing.collapsed .flair ~ a[href$="/gilded"] {
+.thing.collapsed .flair ~ a[href$="/gilded"],
+.thing.collapsed .flair ~ .userattrs:not(:empty) {
 	margin-left: 0;
 }
 

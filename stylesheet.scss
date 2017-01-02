@@ -28,7 +28,7 @@ body {
 	z-index: 3;
 
 	&:before {
-		@include header(winter-sale);
+		@include header();
 
 		display: block;
 		height: $header-height;
@@ -134,9 +134,9 @@ textarea,
    appearance: none;
 
 	&:hover {
-		background: url(%%dropdown-arrow%%), linear-gradient(-60deg, rgb(103, 193, 245) 0%, rgb(65, 122, 155) 100%) no-repeat;
+		background: url(%%dropdown-arrow%%), linear-gradient(-60deg, rgb(103, 193, 245) 0%, rgb(65, 122, 155) 100%);
 		background-position: right -31px, 0 0;
-		
+		background-repeat: no-repeat;		
 		color: #fff;
 	}
 
@@ -533,6 +533,22 @@ body.search-page #search .search-submit-button,
 	}
 }
 
+.sidecontentbox a.helplink,
+.account-activity-box a,
+.side a[href$="surveyhero.com/c/80f982f"],
+body.search-page .nextprev a,
+#newlink-with-image-upload .file-upload-button {
+	@include outlinebutton();
+
+	&:hover {
+		@include outlinebutton(hover);
+	}
+
+	&:active {
+		@include outlinebutton(active);
+	}
+}
+
 // Import our specific includes
 @import "includes/header";
 @import "includes/side";
@@ -599,4 +615,25 @@ h1.redditname a {
 .subscribe-button a.remove,
 .unvotable-message:first-letter {
 	text-transform: capitalize
+}
+
+.submit.mod-override .morelink a:after {
+	right: 0;
+	top: 50%;
+	margin: -8px 12px 0 0;
+}
+
+
+// Test
+
+$mods: "DirtDiglett","Reiniger", "dihydrogen_monoxide", "KillahInstinct", "_snh", "MilkGames", "R3TR1X", "Axanery", "nanenj";
+
+@each $mod in $mods {
+	a.author[href$="/user/#{$mod}"] {
+		color: gold !important;
+	}
+
+	a.author[href$="/user/#{$mod}"] ~ .flair:before {
+		box-shadow: inset 0 0 0 2px gold;
+	}
 }
