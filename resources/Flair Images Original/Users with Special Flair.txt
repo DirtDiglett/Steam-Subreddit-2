@@ -17,6 +17,15 @@ HenryG_Valve			:	special valve
 Valve_Anti-Cheat		:	special valve
 jacobu_valve			:	special valve
 Drunken_F00l			:	special valve
+Programmer_Joe			:	special valve
+DRiller_Valve			:	special valve
+cboyd_valve			:	special valve
+ido_valve			:	special valve
+vitaliy_valve			:	special valve
+brianlev_valve			:	special valve
+mattwood_valve			:	special valve
+ValveRyan			:	special valve
+j_cliffe			:	special valve
 
 // STEAM Moderators
 ultio				:	special steammod

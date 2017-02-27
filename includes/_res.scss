@@ -170,7 +170,7 @@
 	}
 
 	#srDropdownContainer a {
-		background: url(%%sprite%%) 0 0;
+		background: url($spritesheet) 0 0;
 		display: inline-block;
 		font-size: 0 !important;
 		height: 23px;
@@ -212,7 +212,7 @@
 		background-color: transparent !important;
 		background: transparent !important;
 		border-right: 3px solid rgba(255, 255, 255, 0.4);
-	
+
 		.md-container {
 			border: none !important;
 		}
@@ -288,7 +288,7 @@
 		span.score.likes {
 			color: #a4d007;
 		}
-		
+
 		span.score.dislikes {
 			color: #bb5150;
 		}
@@ -308,7 +308,7 @@
 
 	#NREMail.nohavemail {
 		background-color: #262625;
-		background-image: url(%%sprite%%)!important;
+		background-image: url($spritesheet)!important;
 		background-position: -23px 0;
 		background-repeat: no-repeat!important;
 		height: 24px;
@@ -330,9 +330,10 @@
 		border-radius: 3px;
 		color: #999896;
 		height: 32px;
-		line-height: 25px;
+		line-height: 32px;
 		position: relative;
 		width: 32px;
+		text-align: center;
 
 		&:hover {
 			background-color: rgba(102,192,244,0.4)!important;
@@ -344,45 +345,50 @@
 		background-color: #324b68 !important;
 		border: 1px solid rgba(0,0,0,0.4)!important;
 	}
-	
+
 	.res-commentBoxes .comment .comment {
 		background-color: #273b52 !important;
 		border: 1px solid rgba(0,0,0,0.2)!important;
 	}
-	
+
 	.res-commentBoxes .comment .comment .comment {
 		background-color: #324b68 !important;
 		border: 1px solid rgba(0,0,0,0.4)!important;
 	}
-	
+
 	.res-commentBoxes .comment .comment .comment .comment {
 		background-color: #273b52 !important;
 		border: 1px solid rgba(0,0,0,0.2)!important;
 	}
-	
+
 	.res-commentBoxes .comment .comment .comment .comment .comment {
 		background-color: #324b68 !important;
 		border: 1px solid rgba(0,0,0,0.4)!important;
 	}
-	
+
 	.res-commentBoxes .comment .comment .comment .comment .comment .comment {
 		background-color: #273b52 !important;
 		border: 1px solid rgba(0,0,0,0.2)!important;
 	}
-	
+
 	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment {
 		background-color: #324b68 !important;
 		border: 1px solid rgba(0,0,0,0.4)!important;
 	}
-	
+
 	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment {
 		background-color: #273b52 !important;
 		border: 1px solid rgba(0,0,0,0.2)!important;
 	}
-	
+
 	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment {
 		background-color: #324b68 !important;
 		border: 1px solid rgba(0,0,0,0.4)!important;
+	}
+
+	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+		background-color: #273b52 !important;
+		border: 1px solid rgba(0,0,0,0.2)!important;
 	}
 
 
@@ -396,6 +402,8 @@
 			text-align: center;
 			text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
 			text-transform: capitalize;
+			float: none;
+			margin: 0;
 
 			&:hover {
 				background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%);
@@ -487,7 +495,7 @@
 
 	.markdownEditor {
 		a.edit-btn {
-			background: rgba(0,0,0,0.4) url(%%sprite%%);
+			background: rgba(0,0,0,0.4) url($spritesheet);
 			background-position-x: -194px !important;
 			border-radius: 3px;
 			border: 0;
@@ -645,4 +653,9 @@ body.res.pinHeader-subanduser {
 
 .res .parentArrow {
     margin: 4px;
+}
+
+.res .RES-keyNav-activeElement {
+    background: rgba(255,255,255,0.18)!important;
+    border-right: 3px solid rgba(255,255,255,0.4);
 }

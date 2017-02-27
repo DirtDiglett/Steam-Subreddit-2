@@ -48,6 +48,13 @@ body > .content {
 	}
 }
 
+hr,
+.md hr {
+	border: 0;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	margin: 12px 0;
+}
+
 .side:before,
 .side:after,
 body:before,
@@ -90,7 +97,7 @@ textarea {
 
 	&::placeholder {
 		color: #0e1c25;
-		font-style: italic;	
+		font-style: italic;
 		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 	}
 
@@ -103,13 +110,13 @@ textarea {
 
 	&::-ms-input-placeholder {
 		color: #0e1c25;
-		font-style: italic;			
+		font-style: italic;
 		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 	}
 
 	&::-webkit-input-placeholder {
 		color: #0e1c25;
-		font-style: italic;	
+		font-style: italic;
 		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 	}
 }
@@ -136,7 +143,7 @@ textarea,
 	&:hover {
 		background: url(%%dropdown-arrow%%), linear-gradient(-60deg, rgb(103, 193, 245) 0%, rgb(65, 122, 155) 100%);
 		background-position: right -31px, 0 0;
-		background-repeat: no-repeat;		
+		background-repeat: no-repeat;
 		color: #fff;
 	}
 
@@ -189,11 +196,11 @@ textarea,
 	margin: 0;
 	padding: 6px 8px;
 	position: relative;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 }
 
 .approval-checkmark {
-	background: url(%%sprite%%) 0 -46px;
+	background: url($spritesheet) 0 -46px;
 	height: 0;
 	margin-bottom: -6px;
 	padding: 0 23px 23px 0;
@@ -339,8 +346,9 @@ textarea,
 	.wiki-page-content {
 		background: #324b68;
 		border-radius: 3px;
-		margin-top: 16px;
-		margin: 0;
+		margin: 16px 0 0 0;
+		padding: 16px;
+		color: #97a7b1;
 	}
 
 	.wiki-page-content .wiki>.toc>ul {
@@ -372,13 +380,25 @@ textarea,
 }
 
 body.comments-page .usertext-edit textarea {
-	background-image: url(%%comment-bg%%) no-repeat center;
-	transition: background 0.2s ease-in-out;
+	background: url(%%comment-bg%%) no-repeat center !important;
+	transition: background 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	max-width: 100%;
 
 	&:focus {
-		background-position: center -55px; //55px is the height of the image.
+		background-position: center -55px !important; //55px is the height of the image.
 	}
 }
+
+body.comments-page .thing .flat-list li.first a {
+	background: none;
+
+	&:hover {
+		background: #67c1f5;
+	    color: #fff;
+	    text-decoration: none;
+	}
+}
+
 
 ul.report-reasons {
 	background: rgba(255, 130, 9, 0.2);
@@ -493,7 +513,7 @@ body.search-page #search input[type=text],
 	&:hover,
 	&:focus {
 		border: 1px solid #4c9acc !important;
-		box-shadow: 1px 1px 0 rgba(255, 255, 255, 0) !important;	
+		box-shadow: 1px 1px 0 rgba(255, 255, 255, 0) !important;
 	}
 
 	&::placeholder {
@@ -511,7 +531,7 @@ body.search-page #search input[type=text],
 
 	&::-ms-input-placeholder {
 		color: #0e1c25;
-		font-style: italic;		
+		font-style: italic;
 		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
 	}
 
@@ -524,10 +544,10 @@ body.search-page #search input[type=text],
 
 body.search-page #search .search-submit-button,
 .side #search input[type=submit] {
-	background: url(%%sprite%%) -97px -24px !important;
+	background: url($spritesheet) -97px -24px !important;
 	height: 25px;
 	width: 25px;
-	
+
 	&:hover {
 		background-position-y: -49px !important;
 	}
@@ -564,8 +584,8 @@ body.search-page .nextprev a,
 @import "includes/toolbox";
 
 // This import will be adjusted as new events with new styling requirements appear.
-@import "includes/snow";
-@import "includes/update-banner";
+//@import "includes/snow";
+//@import "includes/update-banner";
 
 
 // Disable certain elements
@@ -623,17 +643,47 @@ h1.redditname a {
 	margin: -8px 12px 0 0;
 }
 
+body.listing-page.gold .thing.gilded {
+	margin-bottom: 4px!important;
+}
 
-// Test
+p.parent {
+	color: #fff;
+}
 
-$mods: "DirtDiglett","Reiniger", "dihydrogen_monoxide", "KillahInstinct", "_snh", "MilkGames", "R3TR1X", "Axanery", "nanenj";
 
-@each $mod in $mods {
-	a.author[href$="/user/#{$mod}"] {
-		color: gold !important;
+@media (max-width: 1135px) {
+	.side a[href$="surveyhero.com/c/922b7f1"] {
+		display: none;
+	}
+}
+
+.subreddit-rules-page {
+	max-width: none;
+}
+
+.subreddit-rule-item {
+	background: rgba(84,133,183,0.4);
+	border-radius: 3px;
+	margin: 0 0 8px 0;
+	padding: 8px;
+
+	&:hover {
+		background: rgba(117,204,255,0.37);
+	}
+}
+
+.subreddit-rules-page .md-container .md {
+	.subreddit-rule-title {
+		font-weight: 500;
+		font-family: $special-font;
 	}
 
-	a.author[href$="/user/#{$mod}"] ~ .flair:before {
-		box-shadow: inset 0 0 0 2px gold;
+	.subreddit-rule-kind {
+		color: #8f98a0;
+	}
+
+	.subreddit-rule-description {
+		color: #c6d4df;
 	}
 }

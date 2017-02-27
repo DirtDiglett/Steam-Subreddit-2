@@ -408,17 +408,6 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	width: 380px !important;
 	border: none;
 
-	&:before {
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background: rgba(0,0,0,0.4);
-		content: "";
-		z-index: -1;
-	}
-
 	&:after {
 		content: "";
 		position: absolute;
@@ -446,10 +435,13 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		margin: 0;
 		min-width: 0 !important;
 		position: relative;
+		padding-right: 8px;
 	}
 
 	.flairoptionpane {
 		margin-bottom: 24px;
+		background: #27455e;
+    	border-radius: 4px;
 
 		.flair {
 			background-color: transparent !important;
@@ -605,6 +597,17 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	&.drop-choices.active {
 		border: none;
 	}
+}
+
+.flat-list.buttons .flairselector:before {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+	content: "";
+	z-index: -1;
 }
 
 .morelink {

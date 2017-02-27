@@ -6,9 +6,10 @@ $sr-header-area-height:			24px + ($sr-header-area-padding * 2) !default;
 $header-tabs-height:			35px !default;
 $header-tabs-margin:			20px !default;
 
+$spritesheet: "%%spritesheet%%";
+
 // Banner
 $banner-height:					null !default;
-$banner-height:					60px; // Delete this line to hide the banner.
 
 // Colors
 $anchor-color:					#66c0f4 !default;
@@ -38,9 +39,9 @@ $flair-level-width:				24px !default;
 $flair-small-list: "steamlogo", "lambda", "hl2", "blackmesa", "combine", "aperturelogo", "portal2logo", "tf2logo", "csgologo", "dota2logo", "gmodlogo", "skyrimlogo", "left4deadlogo", "portallogo", "borderlands", "frozensynapse", "blackops2", "isaac", "gtav", "dishonored", "fallout", "thedivision", "witcher3", "rocketleague", "batman", "assassinscreed", "vive", "oculus";
 $flair-year-list: "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13";
 $flair-game-list: "1", "5", "10", "25", "50", "100", "250", "500", "1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000", "9000", "10000", "11000", "12000";
-$flair-special-list: "valve", "steammod", "steammod1", "steamdeveloper", "steamtranslator", "submod", "sourcefilm", "steamdb", "es", "gauge", "pressure", "discordmod";
+$flair-special-list: "valve", "steammod", "steammod1", "steamdeveloper", "steamtranslator", "submod", "sourcefilm", "steamdb", "es", "gauge", "pressure", "discordmod", "automod", "cssmod";
 
-$flair-level-bignumber-list: "0","100","200","300","400","500","600","700","800","900","1000","1100","1200","1300";
+$flair-level-bignumber-list: "0","100","200","300","400","500","600","700","800","900","1000","1100","1200","1300","1400","1500","1600","1700","1800","1900","2000";
 $flair-level-smallnumber-list: "10","20","30","40","50","60","70","80","90";
 
 // CSS Properties
@@ -54,13 +55,13 @@ $special-font:					"Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, "Cali
 		color: #67c1f5;
 		background: rgba(103, 193, 245, 0.2);
 		border-radius: 1px;
-	} 
+	}
 
 	@if $state == 'hover' {
 		text-decoration: none;
 		color: #fff;
 		background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
-	} 
+	}
 	@if $state == 'active' {
 		text-decoration: none;
 		color: #fff;
@@ -111,7 +112,7 @@ $special-font:					"Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, "Cali
 
 	@if $margins-included == 'margin-inclusive' {
 		margin-bottom: 12px;
-		margin-top: 36px;	
+		margin-top: 36px;
 	}
 }
 
@@ -123,11 +124,11 @@ $special-font:					"Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, "Cali
 		padding: 2px 15px;
 		font-size: 12px;
 		border-radius: 2px;
-	} 
+	}
 
 	@if $state == 'hover' {
 		border-color: #fff;
-	} 
+	}
 
 	@if $state == 'active' {
 		color: darken(#ffffff, 10%);

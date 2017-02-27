@@ -9,6 +9,7 @@ a.author.submitter,
 	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
 	padding-left: 0 !important;
 	padding: 2px 8px 2px 0 !important;
+	color: #fff;
 
 	&:before {
 		border-radius: 2px 0 0 2px;
@@ -23,6 +24,7 @@ a.author.submitter,
 	background: #5485b7 !important;
 	box-shadow: inset 0 0 0 1px #5485b7;
 	font-weight: normal !important;
+	color: #fff;
 
 	&:before {
 		background: #26384f !important;
@@ -34,6 +36,7 @@ a.author.submitter,
 	&:hover {
 		background: #789fc6 !important;
 		box-shadow: inset 0 0 0 1px #6692bf;
+		text-transform: none;
 
 		&:before {
 			background: #375071 !important;
@@ -58,7 +61,8 @@ a.author.moderator,
 	&:hover {
 		background: #67922e !important;
 		box-shadow: inset 0 0 0 1px #3c531a;
-		
+		text-transform: none;
+
 		&:before {
 			background: #4b683f !important;
 			box-shadow: inset 0 0 0 1px #3c531a
@@ -74,13 +78,14 @@ a.author.admin,
 
 	&:before {
 		background: #482c2c !important;
-		box-shadow: inset 0 0 0 1px #c32626;		
+		box-shadow: inset 0 0 0 1px #c32626;
 		color: #c32626;
 		content: "Admin";
 	}
 
 	&:hover {
 		background: #922e2e !important;
+		text-transform: none;
 
 		&:before {
 			background-color: #683f3f;
@@ -166,7 +171,7 @@ a.author.admin,
 
 .flair-special {
 	padding-left: $flair-special-width;
-	
+
 	&:hover {
 		padding: 0 8px 0 ($flair-special-width + 8px);
 	}
@@ -175,7 +180,7 @@ a.author.admin,
 		background-position-x: -($flair-small-width + $flair-year-width + $flair-game-width);
 		border-radius: 2px;
 		width: $flair-special-width;
-	}	
+	}
 }
 
 // Loops for the background positions
@@ -189,14 +194,14 @@ a.author.admin,
 
 @each $flair in $flair-year-list {
 	$i: index($flair-year-list, $flair)-1;
-	.flair-#{$flair}:before {
+	.flair-year.flair-#{$flair}:before {
 		background-position-y: $flair-height * -$i;
 	}
 }
 
 @each $flair in $flair-game-list {
 	$i: index($flair-game-list, $flair)-1;
-	.flair-#{$flair}:before {
+	.flair-game.flair-#{$flair}:before {
 		background-position-y: $flair-height * -$i;
 	}
 }
@@ -252,35 +257,35 @@ a.author.admin,
 .flair-small ~ .score-hidden,
 .flair-small ~ a[href$="/gilded"],
 .flair-small ~ .userattrs:not(:empty) {
-	margin-left: ($flair-small-width + 4px);
+	margin-left: ($flair-small-width + 6px);
 }
 
 .flair-year ~ .score,
 .flair-year ~ .score-hidden,
 .flair-year ~ a[href$="/gilded"],
 .flair-year ~ .userattrs:not(:empty) {
-	margin-left: ($flair-year-width + 4px);
+	margin-left: ($flair-year-width + 6px);
 }
 
 .flair-game ~ .score,
 .flair-game ~ .score-hidden,
 .flair-game ~ a[href$="/gilded"],
 .flair-game ~ .userattrs:not(:empty) {
-	margin-left: ($flair-game-width + 4px);
+	margin-left: ($flair-game-width + 6px);
 }
 
 .flair-special ~ .score,
 .flair-special ~ .score-hidden,
 .flair-special ~ a[href$="/gilded"],
 .flair-special ~ .userattrs:not(:empty) {
-	margin-left: ($flair-special-width + 4px);
+	margin-left: ($flair-special-width + 6px);
 }
 
 .flair-level ~ .score,
 .flair-level ~ .score-hidden,
 .flair-level ~ a[href$="/gilded"],
 .flair-level ~ .userattrs:not(:empty) {
-	margin-left: ($flair-level-width + 4px);
+	margin-left: ($flair-level-width + 6px);
 }
 
 .thing.collapsed .flair ~ .score,
@@ -294,87 +299,86 @@ a.author.admin,
 .linkflairlabel,
 .flairselector .linkflairlabel {
 	background: rgba(0,0,0,0.2);
-	border: 1px solid rgba(255,255,255,0.3);
+	border: none;
 	color: #FFF;
 	float: right;
 	font-weight: normal;
 	margin: 0;
 	max-width: none;
-	padding: 2px 8px;
+	padding: 0 8px;
+	line-height: 21px;
 }
 
 .flairselector .linkflairlabel {
 	float: none;
-	height: 24px;
-	line-height: 18px;
 }
 
 .link.linkflair-resolved .linkflairlabel,
 .link .flairselector .linkflair-resolved .linkflairlabel {
 	background: #4c6b22;
-	border-color: #9cc808;
+//	border-color: #9cc808;
 	color: #9cc808;
 }
 
 .link.linkflair-psa .linkflairlabel,
 .link .flairselector .linkflair-psa .linkflairlabel {
 	background: #5c226b;
-	border-color: #ce77e4;
+//	border-color: #ce77e4;
 	color: #e788ff;
 }
 
 .link.linkflair-question .linkflairlabel,
 .link .flairselector .linkflair-question .linkflairlabel {
 	background: #333333;
-	border-color: #656565;
+//	border-color: #656565;
 	color: #b3b3b3;
 }
 
 .link.linkflair-suggestion .linkflairlabel,
 .link .flairselector .linkflair-suggestion .linkflairlabel {
 	background: #282a35;
-	border-color: #7d8198;
+//	border-color: #7d8198;
 	color: #abaec1;
 }
 
 .link.linkflair-news .linkflairlabel,
 .link .flairselector .linkflair-news .linkflairlabel {
 	background: #e4d304;
-	border-color: #fff790;
+//	border-color: #fff790;
 	color: #333;
 }
 
 .link.linkflair-discussion .linkflairlabel,
 .link .flairselector .linkflair-discussion .linkflairlabel {
 	background: #0430d0;
-	border-color: #6788ff;
+//	border-color: #6788ff;
 	color: #b6c5ff;
 }
 
 .link.linkflair-error .linkflairlabel,
 .link .flairselector .linkflair-error .linkflairlabel {
 	background: #d06804;
-	border-color: #ff8209;
+//	border-color: #ff8209;
 	color: #fff;
 }
 
 .link.linkflair-fluff .linkflairlabel,
 .link .flairselector .linkflair-fluff .linkflairlabel {
 	background: #d0c7a6;
-	border-color: #fbf6e6;
+//	border-color: #fbf6e6;
 	color: #333;
 }
 
 .link.linkflair-meta .linkflairlabel,
 .link .flairselector .linkflair-meta .linkflairlabel {
 	background: #7c9a14;
-	border-color: #b3dc24;
+//	border-color: #b3dc24;
 	color: #e9ff9b;
 }
 
 .link.linkflair-ugc .linkflairlabel,
 .link .flairselector .linkflair-ugc .linkflairlabel {
 	background: #654101;
-	border-color: #9a6810;
+//	border-color: #9a6810;
 	color: #f9c468;
 }

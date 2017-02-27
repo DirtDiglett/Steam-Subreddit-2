@@ -10,13 +10,13 @@
 .arrow {
 	background: rgba(0, 0, 0, 0.4) !important;
 	background-position: 0 0;
-	border-radius: 3px;	
+	border-radius: 3px;
 	height: 32px;
 	position: relative;
 	width: 32px;
 
 	&:before {
-		background: url(%%sprite%%) 0 -94px;
+		background: url($spritesheet) 0 -94px;
 		content: "";
 		height: 32px;
 		pointer-events: none;
@@ -101,6 +101,11 @@ body:not(.subscriber) .arrow.down {
 	margin-bottom: 4px;
 }
 
+.thing .title {
+	color: #fff;
+	font: 500 18px "Segoe UI",Segoe,Roboto,"Helvetica Neue",Helvetica,"Calibri Light",Calibri,sans-serif;
+}
+
 .link {
 	background: rgba(84, 133, 183, 0.4);
 	border-radius: 3px;
@@ -166,7 +171,7 @@ body:not(.subscriber) .arrow.down {
 
 		a.title {
 			color: #aedd08 !important;
-		}	
+		}
 
 		.tagline {
 			color: #78960e;
@@ -192,13 +197,33 @@ body:not(.subscriber) .arrow.down {
 			background-color: rgba(209,150,160,0.35);
 		}
 	}
+
+	.author {
+		font-weight: 500;
+	}
 }
 
 .link.promoted.new-ad-style-blue,
 .link.promotedlink.promoted,
 .link.promotedlink.external {
 	background: rgba(239, 247, 255, 0.2);
-	border: 1px solid rgba(239, 247, 255, 0.4);
+	border: 0;
+}
+
+.organic-listing {
+	border: 0;
+	background: none !important;
+
+	.help {
+		color: $anchor-color;
+	}
+}
+
+.sponsored-tagline {
+	color: #fff;
+	text-transform: capitalize;
+	font-weight: normal;
+	font-style: italic;
 }
 
 // Things apply to both Links and Comments.
@@ -225,7 +250,7 @@ body:not(.subscriber) .arrow.down {
 			li {
 				a,
 				span.redditSingleClick {
-					background: rgba(103, 193, 245, 0.1);
+					//background: rgba(103, 193, 245, 0.1);
 					border-radius: 2px;
 					border: none;
 					color: #67c1f5;
@@ -241,7 +266,7 @@ body:not(.subscriber) .arrow.down {
 						background: #67c1f5;
 						color: #fff;
 						text-decoration: none;
-					}				
+					}
 				}
 
 				.redditSingleClick:after {
@@ -254,7 +279,7 @@ body:not(.subscriber) .arrow.down {
 				}
 
 				&.report-button a {
-					background: rgba(165, 91, 19, 0.2);
+					//background: rgba(165, 91, 19, 0.2);
 					color: #ffa955;
 
 					&:hover {
@@ -264,7 +289,7 @@ body:not(.subscriber) .arrow.down {
 				}
 
 				&.save-button a {
-					background: rgba(176, 218, 29, 0.4);
+					//background: rgba(176, 218, 29, 0.4);
 					color: #9bd944;
 
 					&:hover {
@@ -275,7 +300,7 @@ body:not(.subscriber) .arrow.down {
 
 				.del-button a,
 				.remove-button a {
-					background: rgba(204, 13, 13, 0.4);
+					//background: rgba(204, 13, 13, 0.4);
 					color: #ff4141;
 
 					&:hover {
@@ -285,7 +310,7 @@ body:not(.subscriber) .arrow.down {
 				}
 
 				.marknsfw-button a {
-					background: rgba(209, 150, 160, 0.4);
+					//background: rgba(209, 150, 160, 0.4);
 					color: #e8bcc4;
 
 					&:hover {
@@ -295,7 +320,7 @@ body:not(.subscriber) .arrow.down {
 				}
 
 				.approve-button a {
-					background: rgba(76, 107, 34, 0.6);
+					//background: rgba(76, 107, 34, 0.6);
 					color: #a4d007;
 
 					&:hover {
@@ -306,7 +331,7 @@ body:not(.subscriber) .arrow.down {
 			}
 
 			li.give-gold-button a {
-				background: rgba(154, 125, 46, 0.2);
+				//background: rgba(154, 125, 46, 0.2);
 				color: #caa02d;
 
 				&:hover {
@@ -314,12 +339,17 @@ body:not(.subscriber) .arrow.down {
 					color: #fff;
 				}
 			}
+
+			li.first a {
+				background: rgba(103,193,245,0.4);
+			}
 		}
 	}
 
 	.expando-button ~ .tagline {
 		position: relative;
 		left: -32px;
+		margin-left: 150px;
 	}
 
 	.flat-list {
@@ -329,7 +359,7 @@ body:not(.subscriber) .arrow.down {
 		padding: 0;
 
 		li {
-			opacity: 0;
+			opacity: 0.4;
 
 			// b handles the little notices
 			b {
@@ -374,54 +404,6 @@ body:not(.subscriber) .arrow.down {
 			height: 24px;
 			margin: 1px 4px 0 0;
 
-			.pretty-button {
-				background-color: rgba(103,193,245,0.1);
-				background-image: none;
-				border-radius: 2px;
-				border: none;
-				color: #fff;
-				cursor: pointer;
-				display: inline-block;
-				font-weight: normal;
-				height: 24px;
-				line-height: 16px;
-				margin: 0 4px 0 0;
-				padding: 4px 17px;
-				text-transform: uppercase;
-
-				&:hover {
-					background: #67c1f5;
-					color: #fff;
-					text-decoration: none;
-				}
-
-				&.positive {
-					background: rgba(76,107,34,0.6);
-					color: #a4d007;
-
-					&:hover {
-						background: #4c6b22;
-						color: #b2dc1e;
-					}
-				}
-
-				&.negative {
-					background: rgba(204,13,13,0.4);
-					color: #ff4141;
-
-					&:hover {
-						background: #cc0d0d;
-						color: #fff;
-					}
-				}
-
-				&.pressed {
-					background: #fff !important;
-					color: #333 !important;
-					font-weight: bold;
-				}
-			}
-
 			.status-msg {
 				background: #827251;
 				border-radius: 1px;
@@ -430,6 +412,64 @@ body:not(.subscriber) .arrow.down {
 				height: 24px;
 				padding: 6px 8px;
 				text-transform: capitalize;
+			}
+		}
+
+		.pretty-button {
+			background-color: rgba(103,193,245,0.1);
+			background-image: none;
+			border-radius: 2px;
+			border: none;
+			color: #fff;
+			cursor: pointer;
+			display: inline-block;
+			font-weight: normal;
+			height: 24px;
+			line-height: 16px;
+			margin: 0 4px 0 0;
+			padding: 4px 17px;
+			text-transform: uppercase;
+
+			&:hover {
+				background: #67c1f5;
+				color: #fff;
+				text-decoration: none;
+			}
+
+			&.positive {
+				background: rgba(76,107,34,0.6);
+				color: #a4d007;
+
+				&:hover {
+					background: #4c6b22;
+					color: #b2dc1e;
+				}
+			}
+
+			&.negative {
+				background: rgba(204,13,13,0.4);
+				color: #ff4141;
+
+				&:hover {
+					background: #cc0d0d;
+					color: #fff;
+				}
+			}
+
+			&.neutral {
+				background: rgba(103,193,245,0.1);
+				color: #fff;
+
+				&:hover {
+					background: #67c1f5;
+					color: #fff;
+				}
+			}
+
+			&.pressed {
+				background: #fff !important;
+				color: #333 !important;
+				font-weight: bold;
 			}
 		}
 	}
@@ -442,7 +482,7 @@ body:not(.subscriber) .arrow.down {
 		height: 24px;
 		line-height: 22px;
 		padding: 0 8px;
-		
+
 		&.nsfw-stamp {
 			background-color: rgba(209, 150, 160, 0.25);
 			border: 1px solid #d196a0;
@@ -476,18 +516,27 @@ body:not(.subscriber) .arrow.down {
 			color: #fff;
 		}
 	}
+
+	&.deleted {
+		opacity: 0.4;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
 }
 
 .thumbnail {
 	align-items: center;
-	background: rgba(0, 0, 0, 0.2) url(%%sprite%%) 0 -238px/auto;
-	background-image: url(%%sprite%%) !important;
+	background: rgba(0, 0, 0, 0.1) url($spritesheet) 0 -238px/auto;
+	background-image: url($spritesheet) !important;
 	border-radius: 2px;
 	display: flex;
 	height: 80px !important;
 	justify-content: center;
 	margin: 0 8px 0 0;
 	width: 80px !important;
+	background-size: initial !important;
 
 	img {
 		height: auto !important;
@@ -498,6 +547,10 @@ body:not(.subscriber) .arrow.down {
 
 	&.self {
 		background-position: 0 -158px;
+	}
+
+	&.default {
+		background-position: 0 -238px;
 	}
 
 	&.nsfw {
@@ -511,6 +564,10 @@ body:not(.subscriber) .arrow.down {
 		background-position: 0 -398px;
 		box-shadow: inset 0 0 0 1px #fff;
 	}
+}
+
+.linkflair-question .thumbnail.self {
+	background-position: 0 -478px;
 }
 
 body.comments-page {
@@ -541,7 +598,7 @@ body.comments-page {
 
 			li {
 				margin-top: 4px;
-				opacity: 0;
+				opacity: 0.4;
 				order: 2;
 
 				&.reply-button {
@@ -566,7 +623,7 @@ body.comments-page {
 		&.link .entry .flat-list li.first {
 			opacity: 1;
 			order: 1;
-		}	
+		}
 	}
 
 	.morerecursion,
@@ -639,7 +696,7 @@ body.comments-page {
 
 .thing.stickied .parent,
 .thing.stickied.visited .parent,
-body.comments-page div.content .thing.stickied .parent, 
+body.comments-page div.content .thing.stickied .parent,
 body.comments-page div.content .thing.stickied.visited .parent {
 	background: url(%%notification-icon-pinned%%) no-repeat 99% center;
 	content: "";
@@ -658,16 +715,18 @@ body.comments-page .comment {
 	border: none !important;
 	margin-bottom: 8px !important;
 	margin-left: 0;
-	padding-left: 22px !important;
-	padding: 4px !important;
+	padding: 4px 4px 4px 22px !important;
 	position: relative;
 
 	.tagline {
 		margin-left: 40px;
 		overflow: visible;
 
+		time {
+			margin-left: 6px;
+		}
+
 		.expand {
-			background: rgba(103, 193, 245, 0.1);
 			border-radius: 2px 0 0 2px;
 			bottom: 0;
 			font-size: 10px;
@@ -680,7 +739,39 @@ body.comments-page .comment {
 
 			&:hover {
 				background: #67c1f5;
-			}		
+				text-decoration: none;
+			}
+		}
+
+		.author {
+			font-size: 16px;
+			font-weight: 500;
+		}
+	}
+
+	.showreplies {
+		border-radius: 2px;
+		border: 1px solid rgba(255, 255, 255, 0.4) !important;
+		color: #fff;
+		display: inline-block;
+		font-size: 12px;
+		padding: 2px 15px;
+		text-align: left;
+		text-decoration: none;
+		text-transform: uppercase;
+		margin-left: 0;
+		margin-top: 12px;
+		margin-bottom: 8px;
+
+		&:hover {
+			text-decoration: none;
+			border: 1px solid #fff !important;
+		}
+
+		&:active {
+			background: rgba(255,255,255,0.15);
+			color: #e6e6e6;
+			text-decoration: none;
 		}
 	}
 
@@ -748,6 +839,10 @@ body.comments-page .comment {
 }
 
 
+.reddit-infobar .md {
+	color: #fff;
+}
+
 .reddit-infobar.locked-infobar {
 	background: url(%%locked-bg%%);
 	border: none;
@@ -769,7 +864,9 @@ body.comments-page .comment {
 }
 
 .infobar:not(#searchexpando),
-#noresults {
+#noresults,
+.reddit-infobar,
+.reddit-infobar .gold-accent {
 	background: rgba(27,27,27,0.36) url(%%info%%) no-repeat 12px center;
 	border-radius: 3px;
 	border: 1px solid #ffa500;
@@ -806,13 +903,34 @@ body.comments-page .comment {
 	}
 }
 
+.infobar.newsletterbar {
+	border: 1px solid #5584b1!important;
+}
+
+.reddit-infobar.gold-accent {
+	display: block;
+	border: 1px solid #fff088;
+
+	.md {
+		display: block;
+		height: 43px;
+		color: #fff088;
+
+		p {
+			margin: 0;
+			line-height: 54px;
+			height: 53px;
+		}
+	}
+}
+
 body.comments-page .thing.locked {
 	background: url(%%locked-bg%%);
 }
 
 body.listing-page .thing.locked {
 	background: url(%%locked-bg%%);
-	
+
 	.parent {
 		background: url(%%locked%%) no-repeat 99% center;
 		content: "";
@@ -822,9 +940,13 @@ body.listing-page .thing.locked {
 	}
 }
 
-body.comments-page .link.stickied, 
+body.comments-page .link.stickied,
 body.comments-page .link.stickied.visited {
-	margin-top: 156px;
+	@if $banner-height != null {
+		margin-top: $banner-height + (20px * 2) + 57px;
+	} @else {
+		margin-top: 20px + 57px;
+	}
 }
 
 body.comments-page .link.stickied:before {
@@ -894,7 +1016,7 @@ body.comments-page .menuarea ~ .sitetable {
 					background: #67c1f5;
 					color: #fff;
 					text-decoration: none;
-				}		
+				}
 			}
 
 
@@ -943,7 +1065,7 @@ body.comments-page .menuarea ~ .sitetable {
 		background: none;
 		background: rgba(255,255,255,0.1);
 		color: #C6D4DF;
-		
+
 		tr {
 			border: 1px solid rgba(255,255,255,0.2);
 		}
@@ -1006,6 +1128,10 @@ body.comments-page .menuarea ~ .sitetable {
 		margin-bottom: 5px;
 	}
 
+	h5 {
+		font-size: 1.2em;
+	}
+
 	p {
 		margin: 0 0 16px 0;
 	}
@@ -1035,7 +1161,7 @@ body.comments-page .menuarea ~ .sitetable {
 		font-size: 13px;
 		margin: 16px 0;
 		padding: 4px;
-		
+
 		code {
 			margin: 0;
 		}
@@ -1049,7 +1175,7 @@ body.comments-page .menuarea ~ .sitetable {
 	ol {
 		padding-left: 32px;
 		margin: 16px 0;
-		
+
 		li {
 			font-size: 15px;
 			line-height: 1.8em;
@@ -1109,57 +1235,6 @@ body.comments-page .menuarea ~ .sitetable {
 			.dropdown-title {
 				@include sidebarh3(null, null);
 			}
-
-			.dropdown {
-				background: rgba(103, 193, 245, 0.4) url(%%dropdown-arrow%%) no-repeat right 0;
-				border: 0;
-				color: #67c1f5;
-				font-size: 12px;
-				line-height: 31px;
-				outline: none;
-				padding: 8px 31px 8px 15px;
-				top: -2px;
-
-				&:hover {
-					background-position: right 0, 0 0;
-					background-repeat: no-repeat;
-					background: url(%%dropdown-arrow%%), linear-gradient(-60deg, rgb(103, 193, 245) 0%, rgb(65, 122, 155) 100%) no-repeat;
-					color: #fff;
-
-					.selected {
-						color: #fff;
-					}
-				}
-
-				.selected {
-					background: none;
-					color: #67c1f5;
-					font-size: 12px;
-					font-weight: normal;
-					padding-right: 0;
-					text-decoration: none;
-				}
-			}
-
-			.drop-choices {
-				background: rgb(65, 122, 155);
-				border: 0;
-				box-shadow: 0 0 12px #000000;
-				margin-top: 16px;
-				min-width: 120px;
-
-				a {
-					color: rgb(229, 228, 220);
-					font-size: 13px;
-					padding: 5px 12px;
-
-					&:hover {
-						background-color: #212d3d;
-						color: #fff;
-						text-decoration: none;
-					}
-				}
-			}
 		}
 	}
 }
@@ -1192,7 +1267,7 @@ body.comments-page .menuarea ~ .sitetable {
 }
 
 .tagline {
-	color: #c6d4df;
+	color: #9fadb7;
 	font: 13px/20px $special-font;
 	height: 24px;
 
@@ -1216,13 +1291,13 @@ body.comments-page .menuarea ~ .sitetable {
 }
 
 .panestack-title a.title-button.gold {
-    background-color: rgba(255, 240, 136, 0.4);
-    color: #fff088;
-    padding: 4px 8px;
-    border: none;
+	background-color: rgba(255, 240, 136, 0.4);
+	color: #fff088;
+	padding: 4px 8px;
+	border: none;
 
-    &:hover {
-    	background-color: #fff088;
-    	color: #6a4d00;
-    }
+	&:hover {
+		background-color: #fff088;
+		color: #6a4d00;
+	}
 }

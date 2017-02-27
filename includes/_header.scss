@@ -40,7 +40,7 @@
 		width: 23px;
 
 		&:after {
-			background: url(%%sprite%%) 0 0;
+			background: url($spritesheet) 0 0;
 			content: "";
 			height: 23px;
 			position: absolute;
@@ -148,12 +148,16 @@ body:not(.loggedin) #header-bottom-right {
 	}
 }
 
+#modmail {
+	display: none;
+}
+
 #mail,
 #modmail,
 #new_modmail,
 #openRESPrefs .gearIcon {
 	background-color: transparent;
-	background-image: url(%%sprite%%) !important;
+	background-image: url($spritesheet) !important;
 	background-repeat: no-repeat;
 	height: 24px;
 	width: 27px;
@@ -275,7 +279,7 @@ body:not(.loggedin) #header-bottom-right {
 
 #header-bottom-right a.pref-lang,
 .loggedin .logout a {
-	background: #262625 url(%%sprite%%) -77px 0;
+	background: #262625 url($spritesheet) -77px 0;
 	display: inline-block;
 	height: 24px;
 	margin: 0 4px 0 0;
@@ -351,7 +355,7 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 				}
 			}
 
-			input, 
+			input,
 			p,
 			p a {
 				margin-bottom: 0;
@@ -382,7 +386,7 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 
 #header-img,
 #header-img.default-header {
-	background: url(%%sprite%%) -23px -24px;
+	background: url($spritesheet) -23px -24px;
 	border-right: 1px solid rgba(16, 21, 25, 0.3);
 	height: $header-tabs-height;
 	margin: 0;
@@ -390,7 +394,7 @@ body:not(.loggedin) #header-bottom-right .flat-list li:only-child a {
 	width: 74px;
 
 	&:hover {
-		background: url(%%sprite%%), linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
+		background: url($spritesheet), linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
 		background-position: -23px -59px, 0 0;
 	}
 }

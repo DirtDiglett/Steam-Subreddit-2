@@ -3,7 +3,7 @@
 }
 
 .expando-button {
-	background: rgba(103, 193, 245, 0.4) url(%%sprite%%) -80px -182px !important;
+	background: rgba(103, 193, 245, 0.4) url($spritesheet) -80px -182px !important;
 	border-radius: 2px;
 	height: $expando-height;
 	margin: 24px 8px 0 0;
@@ -28,7 +28,7 @@
 
 		$offset: $offset - $expando-height;
 	}
-	
+
 	&.selftext.expanded,
 	&.video.expanded,
 	&.image.expanded,
