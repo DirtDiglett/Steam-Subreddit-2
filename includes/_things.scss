@@ -570,6 +570,14 @@ body:not(.subscriber) .arrow.down {
 	background-position: 0 -478px;
 }
 
+.linkflair-error .thumbnail.self {
+	background-position: 0 -558px;
+}
+
+.linkflair-news .thumbnail.self {
+	background-position: 0 -638px;
+}
+
 body.comments-page {
 	.thing.stickied,
 	.thing.stickied.visited {
