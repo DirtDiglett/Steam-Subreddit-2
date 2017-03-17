@@ -341,56 +341,6 @@
 		}
 	}
 
-	.res-commentBoxes .comment {
-		background-color: #324b68 !important;
-		border: 1px solid rgba(0,0,0,0.4)!important;
-	}
-
-	.res-commentBoxes .comment .comment {
-		background-color: #273b52 !important;
-		border: 1px solid rgba(0,0,0,0.2)!important;
-	}
-
-	.res-commentBoxes .comment .comment .comment {
-		background-color: #324b68 !important;
-		border: 1px solid rgba(0,0,0,0.4)!important;
-	}
-
-	.res-commentBoxes .comment .comment .comment .comment {
-		background-color: #273b52 !important;
-		border: 1px solid rgba(0,0,0,0.2)!important;
-	}
-
-	.res-commentBoxes .comment .comment .comment .comment .comment {
-		background-color: #324b68 !important;
-		border: 1px solid rgba(0,0,0,0.4)!important;
-	}
-
-	.res-commentBoxes .comment .comment .comment .comment .comment .comment {
-		background-color: #273b52 !important;
-		border: 1px solid rgba(0,0,0,0.2)!important;
-	}
-
-	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment {
-		background-color: #324b68 !important;
-		border: 1px solid rgba(0,0,0,0.4)!important;
-	}
-
-	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment {
-		background-color: #273b52 !important;
-		border: 1px solid rgba(0,0,0,0.2)!important;
-	}
-
-	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-		background-color: #324b68 !important;
-		border: 1px solid rgba(0,0,0,0.4)!important;
-	}
-
-	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-		background-color: #273b52 !important;
-		border: 1px solid rgba(0,0,0,0.2)!important;
-	}
-
 
 	.commentarea {
 		.RESSubscriptionButton {
@@ -564,7 +514,10 @@
 	}
 }
 
-
+// Hides the second "Disable the subreddit style" if both are visible.
+.res .toggle.res-sr-style-toggle ~ .sr_style_toggle {
+  display: none;
+}
 // For a fixed-bar SR header.
 body.res.pinHeader-sub,
 body.res.pinHeader-subanduser {
