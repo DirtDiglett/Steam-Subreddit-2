@@ -163,7 +163,6 @@ body:not(.subscriber) .arrow.down {
 	&.stickied,
 	&.stickied.visited {
 		background: #364a2e;
-		margin-bottom: 16px;
 
 		&:hover {
 			background-color: #415a38;
@@ -182,10 +181,6 @@ body:not(.subscriber) .arrow.down {
 		font-weight: normal;
 	}
 
-	&.stickied.even {
-		margin-top: -14px;
-	}
-
 	&.last-clicked {
 		border: none;
 	}
@@ -200,6 +195,16 @@ body:not(.subscriber) .arrow.down {
 
 	.author {
 		font-weight: 500;
+	}
+}
+
+.hot-page {
+	.link.stickied,
+	.link.stickied.visited {
+		margin-bottom: 16px;
+	}
+	.link.stickied.even {
+		margin-top: -14px;
 	}
 }
 
@@ -578,6 +583,58 @@ body:not(.subscriber) .arrow.down {
 	background-position: 0 -638px;
 }
 
+.linkflair-support-thread .thumbnail.self {
+	background-position: 0 -798px;
+	background-color: #4a8db4;
+}
+
+.linkflair-games-suggestion .thumbnail.self {
+	background-position: 0 -878px;
+}
+
+.linkflair-client-update,
+.linkflair-client-update:hover {
+	background-image: url(%%client-update%%);
+	background-repeat: no-repeat;
+	background-position: 98% center;
+
+	.thumbnail.self {
+		background-color: #222325;
+		background-position: 0 -718px;
+	}
+
+	.linkflairlabel {
+		display: none;
+	}
+}
+
+.linkflair-down-notice {
+	background-color: #ffa500 !important;
+
+	.midcol {
+		visibility: hidden;
+	}
+
+	.thumbnail.self {
+		background-position: 0 -958px;
+		background-color: #ffa500;
+	}
+
+	a.title,
+	.tagline {
+		color: #2d2b2b !important
+	}
+
+	.flat-list,
+	.expando-button {
+		visibility: hidden;
+	}
+}
+
+.link.stickied.linkflair-down-notice a.title {
+	color: #2d2b2b !important;
+}
+
 body.comments-page {
 	.thing.stickied,
 	.thing.stickied.visited {
@@ -698,10 +755,6 @@ body.comments-page {
 	}
 }
 
-.thing.comment.spam {
-	background: rgba(255, 11, 0, 0.4) !important;
-}
-
 .thing.stickied .parent,
 .thing.stickied.visited .parent,
 body.comments-page div.content .thing.stickied .parent,
@@ -783,31 +836,6 @@ body.comments-page .comment {
 		}
 	}
 
-	.comment,
-	.res-commentBoxes .comment,
-	.comment .comment .comment,
-	.res-commentBoxes .comment .comment .comment,
-	.comment .comment .comment .comment .comment,
-	.res-commentBoxes .comment .comment .comment .comment .comment,
-	.comment .comment .comment .comment .comment .comment .comment,
-	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment,
-	.comment .comment .comment .comment .comment .comment .comment .comment .comment,
-	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment {
-		background-color: #324b68 !important;
-		border: 1px solid rgba(0,0,0,0.4)!important;
-	}
-	.comment .comment,
-	.res-commentBoxes .comment .comment,
-	.comment .comment .comment .comment,
-	.res-commentBoxes .comment .comment .comment .comment,
-	.comment .comment .comment .comment .comment .comment,
-	.res-commentBoxes .comment .comment .comment .comment .comment .comment,
-	.comment .comment .comment .comment .comment .comment .comment .comment,
-	.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment {
-		background-color: #273b52 !important;
-		border: 1px solid rgba(0,0,0,0.2)!important;
-	}
-
 	&.collapsed {
 		.tagline {
 			margin-left: 0;
@@ -844,6 +872,34 @@ body.comments-page .comment {
 			background: none;
 		}
 	}
+}
+
+.comment,
+.comment .comment .comment,
+.comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res .res-commentBoxes .content .comment,
+.res .res-commentBoxes .content .comment .comment .comment,
+.res .res-commentBoxes .content .comment .comment .comment .comment .comment,
+.res .res-commentBoxes .content .comment .comment .comment .comment .comment .comment .comment,
+.res .res-commentBoxes .content .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+	 background-color: #324b68 !important;
+	 border: 1px solid rgba(0,0,0,0.4)!important;
+}
+
+.comment .comment,
+.comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment,
+.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res .res-commentBoxes .content .comment .comment,
+.res .res-commentBoxes .content .comment .comment .comment .comment,
+.res .res-commentBoxes .content .comment .comment .comment .comment .comment .comment,
+.res .res-commentBoxes .content .comment .comment .comment .comment .comment .comment .comment .comment,
+.res .res-commentBoxes .content .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+	background-color: #273b52 !important;
+	border: 1px solid rgba(0,0,0,0.2)!important;
 }
 
 
