@@ -366,17 +366,12 @@ textarea,
 		}
 
 		.md h1,
+		.md h2,
 		.md h6,
 		.md h3 {
 			color: #fff;
 		}
 	}
-}
-
-// The "Rules" page.
-.modtools-page>div.content {
-	margin: 100px 352px 64px 16px;
-	padding: 0!important;
 }
 
 body.comments-page .usertext-edit textarea {
@@ -401,28 +396,31 @@ body.comments-page .thing .flat-list li.first a {
 
 
 ul.report-reasons {
-	background: rgba(255, 130, 9, 0.2);
-	border-radius: 1px;
+	background: rgba(255, 130, 9, 0.8);
+	border-radius: 4px;
 	border: 1px solid #ff8209;
 	color: #fff;
-	margin-top: 10px;
+	margin: 16px;
 	padding: 16px;
-	width: auto;
+	width: 100%;
+	order: 3;
+	font-family: $special-font;
 
 	li {
 		opacity: 1 !important;
 	}
 
-	.report-reason-title {
+	li.report-reason-title {
 		color: #fff;
-		font-size: 16px;
 		font-weight: normal;
-		padding: 0;
 		text-transform: capitalize;
+		padding: 0;
+		font-size: 18px;
+		margin: 0 !important;
 	}
 
 	li.report-reason {
-		font-size: 13px;
+		font-size: 14px;
 		margin-bottom: 4px;
 	}
 }
@@ -573,6 +571,7 @@ body.search-page .nextprev a,
 @import "includes/header";
 @import "includes/side";
 @import "includes/things"; // Things include both main page links, and comments page stuff.
+@import "includes/rules";
 @import "includes/submit-page";
 @import "includes/search-page";
 @import "includes/expando";
@@ -585,8 +584,7 @@ body.search-page .nextprev a,
 
 // This import will be adjusted as new events with new styling requirements appear.
 //@import "includes/snow";
-//@import "includes/update-banner";
-
+@import "includes/update-banner";
 
 // Disable certain elements
 #header-bottom-right .separator,
@@ -652,38 +650,38 @@ p.parent {
 }
 
 
-@media (max-width: 1135px) {
-	.side a[href$="surveyhero.com/c/922b7f1"] {
-		display: none;
-	}
+// Colors the name of VALVe employees to match Steam Discussion boards.
+// I'd do this in one line if comments used the flair name in the 'thing' class list like links do.. but they do not.
+a.author[href$="/FletcherDunn"],
+a.author[href$="/smeehrrr"],
+a.author[href$="/ErikatValve"],
+a.author[href$="/BurtonJ_"],
+a.author[href$="/afarnsworth_valve"],
+a.author[href$="/martinovalve"],
+a.author[href$="/GabeNewellBellevue"],
+a.author[href$="/HenryG_Valve"],
+a.author[href$="/jacobu_valve"],
+a.author[href$="/Drunken_F00l"],
+a.author[href$="/Programmer_Joe"],
+a.author[href$="/DRiller_Valve"],
+a.author[href$="/cboyd_valve"],
+a.author[href$="/ido_valve"],
+a.author[href$="/vitaliy_valve"],
+a.author[href$="/brianlev_valve"],
+a.author[href$="/mattwood_valve"],
+a.author[href$="/ValveRyan"],
+a.author[href$="/j_cliffe"],
+a.author[href$="/philipla_valve"] {
+	color: #aedd08;
 }
 
-.subreddit-rules-page {
-	max-width: none;
-}
-
-.subreddit-rule-item {
-	background: rgba(84,133,183,0.4);
-	border-radius: 3px;
-	margin: 0 0 8px 0;
-	padding: 8px;
-
-	&:hover {
-		background: rgba(117,204,255,0.37);
-	}
-}
-
-.subreddit-rules-page .md-container .md {
-	.subreddit-rule-title {
-		font-weight: 500;
-		font-family: $special-font;
-	}
-
-	.subreddit-rule-kind {
-		color: #8f98a0;
-	}
-
-	.subreddit-rule-description {
-		color: #c6d4df;
-	}
+// Colors the name of Steam Community Moderators to match Steam Discussion boards.
+// I'd do this in one line if comments used the flair name in the 'thing' class list like links do.. but they do not.
+a.author[href$="/user/ultio"],
+a.author[href$="/user/ianskate"],
+a.author[href$="/user/titoshivan"],
+a.author[href$="/user/Darth_Wound"],
+a.author[href$="/user/Better-Off-Bob"],
+a.author[href$="/user/FrazerJC"] {
+	color: #df7708
 }
