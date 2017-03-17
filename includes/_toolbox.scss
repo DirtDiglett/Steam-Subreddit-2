@@ -18,4 +18,12 @@ body.mod-toolbox {
 	.thing .tagline .flair-level ~ .tb-bracket-button {
 	    margin-left: $flair-small-width + 4px ;
 	}
+
+	.tb-general-button,
+	li a.tb-general-button,
+	.tb-bracket-button {
+		background: none;
+		color: #fff;
+		padding: 2px;
+	}
 }
