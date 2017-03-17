@@ -61,7 +61,7 @@
 
 				&:active {
 					@include modal-button(active);
-				}		
+				}
 			}
 
 			&:last-child a {
@@ -75,7 +75,7 @@
 		min-height: 17px;
 		line-height: 17px;
 		margin-bottom: 2px;
-		padding: 0;		
+		padding: 0;
 	}
 
 	a[href$="give.me.flair.in.r.steam.pm"] {
@@ -107,11 +107,11 @@
 		}
 
 		strong {
-			color: #c6d4df;	
+			color: #c6d4df;
 		}
 
 		h3 {
-			@include sidebarh3(null, margin-inclusive);		
+			@include sidebarh3(null, margin-inclusive);
 
 			border: 0;
 		}
@@ -167,7 +167,7 @@
 			margin-bottom: 18px;
 			padding-left: 30px;
 
-			li {
+			& > li {
 				background: rgba(103, 193, 245, 0.1);
 				border-radius: 1px;
 				color: #c6d4df;
@@ -190,8 +190,93 @@
 					width: 30px;
 				}
 
-				strong {
+				& > p {
+					margin: 0;
+					font-size: 16px !important;
 					color: #fff;
+				}
+
+				strong {
+					color: #2b2b2d;
+
+					em {
+						display: block;
+						font-size: 17px;
+						font-style: normal;
+					}
+				}
+			}
+
+			li {
+				blockquote {
+					margin: 0;
+					border: none;
+					display: none;
+					position: absolute;
+					z-index: 50;
+					left: -378px;
+			    width: 350px;
+			    top: -16px;
+
+					@include modal();
+
+					&:before, &:after {
+						content: "";
+						position: absolute;
+						right: 0;
+						border-style: solid;
+					}
+
+					&:before {
+						top: 19px;
+						margin-right: -20px;
+						border-width: 10px;
+						border-color: transparent transparent transparent #ffffff;
+					}
+
+					&:after {
+						top: 21px;
+						margin-right: -16px;
+						border-width: 8px;
+						border-color: transparent transparent transparent #e0f2fd;
+					}
+
+					p {
+						color: #30455a;
+						margin-bottom: 12px;
+					}
+
+					p:last-child {
+						margin-bottom: 0;
+					}
+
+					& > ul {
+						padding-left: 17px;
+						list-style-type: disc;
+					}
+
+					p + ul {
+						padding-left: 31px;
+						list-style-type: disc;
+
+						li {
+							margin-bottom: 6px;
+						}
+					}
+
+					li {
+						margin-bottom: 12px;
+					}
+
+					li:last-child {
+						margin-bottom: 0;
+					}
+				}
+
+				&:hover {
+					blockquote {
+						display: block;
+					}
 				}
 			}
 		}
@@ -223,32 +308,39 @@
 		}
 
 		// The Community section
-		ul:nth-of-type(2) li {
+		& > ul:nth-of-type(2) li {
+			width: 140px;
+			display: inline-block;
+
 			a {
-				margin-left: 32px;
 				height: 32px;
-				padding: 0 0 0 8px;
-				line-height: 32px;
+    		padding: 0;
+				background: url($spritesheet);
+				display: block;
+				color: transparent;
+			}
 
+			a[href$="discord.gg/steam"] {
+				background-position: -258px -24px;
+				background-color: #7289DA;
 
-				&:before {
-					background: rgba(0, 0, 0, 0.2) url(%%sprite%%);
-					content: "";
-					height: 26px;
-					margin-left: -40px;
-					position: absolute;
-					width: 32px;
-					height: 32px;
+				&:hover {
+					background-color: #7e97f2;
 				}
 			}
 
-			a[href$="steamcommunity.com/groups/reddit"]:before {
-				background-position: -122px -56px
-			}
+			a[href$="steamcommunity.com/groups/reddit"] {
+				background-position: -258px -56px;
+				background-color: #222325;
 
-			a[href$="discord.gg/steam"]:before {
-				background-position: -122px -88px
+				&:hover {
+					background-color: #3b3d40;
+				}
 			}
+		}
+
+		& > ul:nth-of-type(2) li:first-child {
+	    margin-right: 4px;
 		}
 
 		// The Subreddit Friends section (Makes the /r/ less visible)
@@ -315,7 +407,7 @@
 				position: absolute;
 				vertical-align: middle;
 				width: 14px;
-			}		
+			}
 		}
 
 		ul {
@@ -343,13 +435,13 @@
 
 						&:before {
 							background-color: rgba(0, 0, 0, 0.2);
-							background-image: url(%%sprite%%);				
+							background-image: url(%%sprite%%);
 							content: "";
 							margin: -4px 0 0 -45px;
 							min-height: 26px;
 							position: absolute;
 							width: 36px;
-						}			
+						}
 					}
 				}
 			}
@@ -401,7 +493,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 .flairselector {
 	left: 50% !important;
 	margin-left: -170px;
-	overflow: hidden;		
+	overflow: hidden;
 	padding: 16px !important;
 	position: fixed;
 	top: 20% !important;
@@ -483,7 +575,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 				padding-left: $flair-special-width !important;
 			}
 		}
-	}	
+	}
 
 	ul {
 		margin-right: 4px;
@@ -524,11 +616,11 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 				color: #fff;
 				content: "Flair Preview";
 				display: block;
-			}	
+			}
 
 			.flair {
 				margin-bottom: -8px;
-			}	
+			}
 		}
 
 		input[type=text] {
@@ -559,7 +651,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 				content: "Save Flair";
 				font-size: 15px;
 				line-height: 30px;
-			}	
+			}
 		}
 	}
 
@@ -579,7 +671,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		text-transform: capitalize;
 
 		&:hover {
-			background: #66c0f4;			
+			background: #66c0f4;
 			color: #fff;
 		}
 
@@ -620,7 +712,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 	&:hover a,
 	a {
-		color: #66c0f4;	
+		color: #66c0f4;
 	}
 
 	a {
@@ -638,7 +730,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 		&:hover {
 			background-position-y: -142px;
-			color: #fff;	
+			color: #fff;
 		}
 	}
 }
@@ -663,7 +755,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		font: 17px $special-font;
 		left: 15px;
 		letter-spacing: 1px;
-		margin-left: -152px;	
+		margin-left: -152px;
 		position: absolute;
 		text-align: left;
 		text-transform: uppercase;
@@ -696,7 +788,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	.subscribers {
 		span {
 			color: #fff;
-			font-size: 24px;
+			font-size: 18px;
 		}
 
 		span.number:after {
@@ -706,9 +798,9 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 	.users-online {
 		color: #8bc53f;
-		font-size: 18px;
+		font-size: 14px;
 
-		.number {		
+		.number {
 			&:after {
 				content: " In non-Steam game " open-quote "reddit" close-quote;
 			}
@@ -853,8 +945,8 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 			&:hover {
 				&:after {
 					@include sidebarbutton(hover);
-				}			
-			}		
+				}
+			}
 		}
 	}
 }
@@ -877,12 +969,12 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 
 		&:hover {
 			color: #fff;
-		}		
+		}
 	}
 
 	.add {
 		&:hover {
-			background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%);			
+			background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%);
 		}
 
 		&.active:active {
@@ -916,7 +1008,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	&:before {
 		@include sidebarh3(null,null);
 		content: "Login";
-		display: block;		
+		display: block;
 		margin-bottom: 12px;
 	}
 
@@ -1135,7 +1227,7 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 			color: rgba(255, 255, 255, 0.7);
 			font-size: 11px;
 			line-height: 16px;
-			margin: 0;			
+			margin: 0;
 			text-align: left;
 		}
 
@@ -1170,18 +1262,6 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	height: 280px;
 	padding: 8px !important;
 	width: 320px;
-
-	&:after {
-		color: rgba(255,255,255, 0.4);
-		content: "Advertisement";
-		display: block;
-		margin-top: -9px;
-		text-align: center;
-	}
-}
-
-#ad_main.ad300x250:after {
-	margin-top: -19px;
 }
 
 // Maintain a consistent background on these items.
@@ -1202,38 +1282,4 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 	border: none;
 	color: #8f98a0;
 	padding: 16px;
-}
-
-.side {
-	// /r/steam Feedback
-	a[href$="surveyhero.com/c/922b7f1"] {
-		background: none!important;
-		border: none;
-		border-left: 1px solid rgba(16,21,25,0.3);
-		border-right: 1px solid rgba(16,21,25,0.3);
-		color: #d9dadd;
-		display: inline-block;
-		font-size: 13px;
-		font-weight: 400;
-		height: 35px;
-		line-height: 34px;
-		padding: 0 15px;
-		position: absolute;
-		right: 297px;
-		text-shadow: -1px -1px 0 rgba(0,0,0,0.25);
-		top: 195px;
-
-		&:hover {
-			background: linear-gradient(to bottom,#e3eaef 5%,#c7d5e0 95%)!important;
-			color: #000;
-			text-shadow: 1px 1px 0 rgba(255,255,255,0.25);
-		}
-	}
-
-	// /r/steam Design Feedback
-	a[href$="surveyhero.com/c/80f982f"] {
-		display: block;
-		text-align: center;
-		margin-top: 16px;
-	}
 }
