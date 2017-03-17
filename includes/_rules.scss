@@ -1,0 +1,163 @@
+// The "Rules" page.
+.modtools-page > div.content {
+	margin: 20px 352px 64px 16px;
+	padding: 0 !important;
+
+	@if $banner-height != null {
+		margin-top: $banner-height + (20px * 2);
+	} @else {
+		margin-top: 20px;
+	}
+	padding: 0!important;
+}
+
+
+.subreddit-rules-page {
+	max-width: none;
+
+	&:before {
+		left: 4px;
+		top: 8px;
+	}
+}
+
+.subreddit-rule-item:first-of-type {
+	counter-reset: div;
+}
+
+.subreddit-rule-item {
+	counter-increment: div;
+	margin: 0 0 16px 0;
+	padding: 8px;
+	position: relative;
+	@include modal();
+
+
+	&:hover {
+		@include modal();
+	}
+}
+
+.subreddit-rules-page .md-container .md {
+	.subreddit-rule-title {
+		font-weight: 500;
+		font-family: $special-font;
+		font-size: 20px;
+		color: #30455a;
+
+		&:before {
+			content: "Rule " counter(div) ": ";
+		}
+	}
+
+	.subreddit-rule-kind {
+		color: #30455a;
+		display: none;
+	}
+
+	.subreddit-rule-label {
+		font-weight: bold;
+	}
+
+	.subreddit-rule-label,
+	.subreddit-rule-violation-reason {
+		color: #30455a;
+		font-size: 10px;
+	}
+
+	.subreddit-rule-description {
+		color: #30455a;
+
+		strong {
+			color: #2b2b2d;
+		}
+
+		strong em {
+			display: block;
+			font-size: 17px;
+			font-style: normal;
+		}
+
+		li {
+			font-size: 1em;
+		}
+	}
+}
+
+.rules-modal-popup {
+	font-family: $special-font;
+}
+
+.rules-modal-popup .modal-body {
+	padding: 8px;
+	@include modal();
+}
+
+.rules-modal-popup .rules-modal-header .rules-modal-header-title {
+  color: #2d2d2b;
+  display: block;
+  font-size: 24px!important;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.rules-modal-popup .rules-modal-header-description {
+	color: #30455a;
+}
+
+.rules-modal-popup .rules-modal-rules-container {
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.rules-modal-popup .subreddit-rule-title {
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.rules-modal-popup .subreddit-rule {
+	border-radius: 2px;
+	color: #c6d4df;
+	background-color: rgba( 38, 54, 69, 0.6);
+	padding: 8px;
+}
+
+.rules-modal-popup h4.subreddit-rule-title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.rules-modal-popup .subreddit-rule-description {
+	padding-left: 0;
+}
+
+.rules-modal-popup .subreddit-rule-description li {
+  font-size: small;
+}
+
+.rules-modal-content .subreddit-rule-description strong em {
+  display: block;
+  font-size: 16px;
+  font-style: normal;
+}
+
+.rules-modal-content .buttons button {
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 2px;
+	padding: 4px 36px;
+	line-height: 25px;
+	font-size: 13px;
+	color: #407898;
+	text-align: center;
+	border: 0;
+	text-transform: capitalize;
+	font-weight: normal;
+	margin-right: 8px;
+
+	&:hover {
+		color: #fff;
+		background: #67c1f5;
+	}
+}
