@@ -119,7 +119,7 @@ a.author.admin,
 	}
 
 	&:before {
-		background: url(%%flairs-v2%%) 0 0;
+		background: url(%%flairs%%) 0 0;
 		content: "";
 		display: inline-block;
 		height: $flair-height;
@@ -301,12 +301,13 @@ a.author.admin,
 	background: rgba(0,0,0,0.2);
 	border: none;
 	color: #FFF;
-	float: right;
 	font-weight: normal;
 	margin: 0;
 	max-width: none;
 	padding: 0 8px;
 	line-height: 21px;
+	vertical-align: text-bottom;
+	margin-right: 6px;
 }
 
 .flairselector .linkflairlabel {
@@ -316,69 +317,80 @@ a.author.admin,
 .link.linkflair-resolved .linkflairlabel,
 .link .flairselector .linkflair-resolved .linkflairlabel {
 	background: #4c6b22;
-//	border-color: #9cc808;
 	color: #9cc808;
 }
 
 .link.linkflair-psa .linkflairlabel,
 .link .flairselector .linkflair-psa .linkflairlabel {
 	background: #5c226b;
-//	border-color: #ce77e4;
 	color: #e788ff;
 }
 
 .link.linkflair-question .linkflairlabel,
 .link .flairselector .linkflair-question .linkflairlabel {
 	background: #333333;
-//	border-color: #656565;
 	color: #b3b3b3;
 }
 
 .link.linkflair-suggestion .linkflairlabel,
 .link .flairselector .linkflair-suggestion .linkflairlabel {
 	background: #282a35;
-//	border-color: #7d8198;
 	color: #abaec1;
 }
 
 .link.linkflair-news .linkflairlabel,
 .link .flairselector .linkflair-news .linkflairlabel {
 	background: #e4d304;
-//	border-color: #fff790;
 	color: #333;
 }
 
 .link.linkflair-discussion .linkflairlabel,
 .link .flairselector .linkflair-discussion .linkflairlabel {
 	background: #0430d0;
-//	border-color: #6788ff;
 	color: #b6c5ff;
 }
 
 .link.linkflair-error .linkflairlabel,
 .link .flairselector .linkflair-error .linkflairlabel {
 	background: #d06804;
-//	border-color: #ff8209;
 	color: #fff;
 }
 
 .link.linkflair-fluff .linkflairlabel,
 .link .flairselector .linkflair-fluff .linkflairlabel {
 	background: #d0c7a6;
-//	border-color: #fbf6e6;
 	color: #333;
 }
 
 .link.linkflair-meta .linkflairlabel,
 .link .flairselector .linkflair-meta .linkflairlabel {
 	background: #7c9a14;
-//	border-color: #b3dc24;
 	color: #e9ff9b;
 }
 
 .link.linkflair-ugc .linkflairlabel,
 .link .flairselector .linkflair-ugc .linkflairlabel {
 	background: #654101;
-//	border-color: #9a6810;
 	color: #f9c468;
+}
+
+.link.linkflair-support-thread .linkflairlabel,
+.link .flairselector .linkflair-support-thread .linkflairlabel {
+	background: #4a8db4;
+	color: #fff;
+	display: none;
+}
+
+.link.linkflair-games-suggestion .linkflairlabel,
+.link .flairselector .linkflair-support-thread .linkflairlabel {
+	background: #654101;
+	color: #f9c468;
+	display: none;
+}
+
+.link.linkflair-down-notice .linkflairlabel,
+.link .flairselector .linkflair-support-thread .linkflairlabel {
+	background: #ffa500;
+	color: #fff;
+	display: none;
 }
