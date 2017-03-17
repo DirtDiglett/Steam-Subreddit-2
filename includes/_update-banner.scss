@@ -1,5 +1,5 @@
 .side .titlebox {
-	a[href$="comments/5krnce/rsteam_has_a_new_theme/"] {
+	a[href$="/r/steam/about/rules"] {
 		background: #d1dae1 url(%%info-banner%%) no-repeat -1px -1px;
 		border: 1px solid transparent;
 		box-shadow: 0 0 4px #000;
@@ -11,10 +11,11 @@
 		position: absolute;
 		right: 0;
 		top: $header-height + 20px;
+		color: transparent;
 
 		&:before {
 			color: #525557;
-			content: "/r/steam has been updated with a new theme";
+			content: "/r/steam Rules have been updated. Please read.";
 			display: inline-block;
 			font-family: "Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, Calibri, sans-serif;
 			font-size: 17px;
