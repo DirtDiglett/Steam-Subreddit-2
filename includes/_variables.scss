@@ -9,7 +9,7 @@ $header-tabs-margin:			20px !default;
 $spritesheet: "%%sprite-sheet%%";
 
 // Banner
-$banner-height:					60px !default;
+$banner-height:					0;//60px !default;
 
 // Colors
 $anchor-color:					#66c0f4 !default;
@@ -38,7 +38,7 @@ $flair-level-width:				24px !default;
 
 $flair-small-list: "steamlogo", "lambda", "hl2", "blackmesa", "combine", "aperturelogo", "portal2logo", "tf2logo", "csgologo", "dota2logo", "gmodlogo", "skyrimlogo", "left4deadlogo", "portallogo", "borderlands", "frozensynapse", "blackops2", "isaac", "gtav", "dishonored", "fallout", "thedivision", "witcher3", "rocketleague", "batman", "assassinscreed", "vive", "oculus";
 $flair-year-list: "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13";
-$flair-game-list: "1", "5", "10", "25", "50", "100", "250", "500", "1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000", "9000", "10000", "11000", "12000";
+$flair-game-list: "1", "5", "10", "25", "50", "100", "250", "500", "1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000", "9000", "10000", "11000", "12000", "13000", "14000", "15000";
 $flair-special-list: "valve", "steammod", "steammod1", "steamdeveloper", "steamtranslator", "submod", "sourcefilm", "steamdb", "es", "gauge", "pressure", "discordmod", "automod", "cssmod", "contributor";
 
 $flair-level-bignumber-list: "0","100","200","300","400","500","600","700","800","900","1000","1100","1200","1300","1400","1500","1600","1700","1800","1900","2000";
