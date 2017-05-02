@@ -584,7 +584,7 @@ body.search-page .nextprev a,
 
 // This import will be adjusted as new events with new styling requirements appear.
 //@import "includes/snow";
-@import "includes/update-banner";
+//@import "includes/update-banner";
 
 // Disable certain elements
 #header-bottom-right .separator,
@@ -649,7 +649,7 @@ p.parent {
 	color: #fff;
 }
 
-
+/*
 // Colors the name of VALVe employees to match Steam Discussion boards.
 // I'd do this in one line if comments used the flair name in the 'thing' class list like links do.. but they do not.
 a.author[href$="/FletcherDunn"],
@@ -685,3 +685,4 @@ a.author[href$="/user/Better-Off-Bob"],
 a.author[href$="/user/FrazerJC"] {
 	color: #df7708
 }
+*/
