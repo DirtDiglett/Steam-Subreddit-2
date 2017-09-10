@@ -144,4 +144,8 @@ $special-font:					"Segoe UI", Segoe, Roboto, "Helvetica Neue", Helvetica, "Cali
 	@if $update-name == 'winter-sale' {
 		background: #171a21 url(%%winter-sale-header%%) no-repeat 70% 0/1920px auto;
 	}
+
+	@if $update-name == 'summer-sale' {
+		background: #1b2838 url(%%cloudtile%%) repeat;
+	}
 }

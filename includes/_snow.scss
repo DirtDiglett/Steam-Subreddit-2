@@ -185,3 +185,37 @@ html:lang(na) {
 		transform: translateZ(-50px);
 	}
 }
+
+
+
+
+
+
+
+
+/* Summer Sale */
+.side [href$="http://store.steampowered.com/#summersale"] {
+	background-image:url(%%summer-sale-logo-bg%%);
+	position: absolute;
+	z-index: 5;
+	width: 739px;
+	height: 149px;
+	top: 42px;
+  left: 280px;
+}
+
+.side [href$="http://store.steampowered.com/#summersale"]:after {
+  background: rgba(0, 0, 0, 0) url(%%rocket-sprite%%) 0 0 no-repeat;
+  animation: rocket 1s steps(31) infinite;
+  transform-origin: top right;
+  content: "";
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -12px;
+}
+
+@keyframes rocket {
+  100% { background-position: 0 -4805px; }
+}

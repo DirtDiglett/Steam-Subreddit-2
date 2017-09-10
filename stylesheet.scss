@@ -553,7 +553,7 @@ body.search-page #search .search-submit-button,
 
 .sidecontentbox a.helplink,
 .account-activity-box a,
-.side a[href$="surveyhero.com/c/80f982f"],
+//.side a[href$="surveyhero.com/c/80f982f"],
 body.search-page .nextprev a,
 #newlink-with-image-upload .file-upload-button {
 	@include outlinebutton();
@@ -649,40 +649,39 @@ p.parent {
 	color: #fff;
 }
 
-/*
+
 // Colors the name of VALVe employees to match Steam Discussion boards.
 // I'd do this in one line if comments used the flair name in the 'thing' class list like links do.. but they do not.
-a.author[href$="/FletcherDunn"],
-a.author[href$="/smeehrrr"],
-a.author[href$="/ErikatValve"],
-a.author[href$="/BurtonJ_"],
-a.author[href$="/afarnsworth_valve"],
-a.author[href$="/martinovalve"],
-a.author[href$="/GabeNewellBellevue"],
-a.author[href$="/HenryG_Valve"],
-a.author[href$="/jacobu_valve"],
-a.author[href$="/Drunken_F00l"],
-a.author[href$="/Programmer_Joe"],
-a.author[href$="/DRiller_Valve"],
-a.author[href$="/cboyd_valve"],
-a.author[href$="/ido_valve"],
-a.author[href$="/vitaliy_valve"],
-a.author[href$="/brianlev_valve"],
-a.author[href$="/mattwood_valve"],
-a.author[href$="/ValveRyan"],
-a.author[href$="/j_cliffe"],
-a.author[href$="/philipla_valve"] {
-	color: #aedd08;
-}
+//a.author[href$="/FletcherDunn"],
+//a.author[href$="/smeehrrr"],
+//a.author[href$="/ErikatValve"],
+//a.author[href$="/BurtonJ_"],
+//a.author[href$="/afarnsworth_valve"],
+//a.author[href$="/martinovalve"],
+//a.author[href$="/GabeNewellBellevue"],
+//a.author[href$="/HenryG_Valve"],
+//a.author[href$="/jacobu_valve"],
+//a.author[href$="/Drunken_F00l"],
+//a.author[href$="/Programmer_Joe"],
+//a.author[href$="/DRiller_Valve"],
+//a.author[href$="/cboyd_valve"],
+//a.author[href$="/ido_valve"],
+//a.author[href$="/vitaliy_valve"],
+//a.author[href$="/brianlev_valve"],
+//a.author[href$="/mattwood_valve"],
+//a.author[href$="/ValveRyan"],
+//a.author[href$="/j_cliffe"],
+//a.author[href$="/philipla_valve"] {
+//	color: #aedd08;
+//}
 
 // Colors the name of Steam Community Moderators to match Steam Discussion boards.
 // I'd do this in one line if comments used the flair name in the 'thing' class list like links do.. but they do not.
-a.author[href$="/user/ultio"],
-a.author[href$="/user/ianskate"],
-a.author[href$="/user/titoshivan"],
-a.author[href$="/user/Darth_Wound"],
-a.author[href$="/user/Better-Off-Bob"],
-a.author[href$="/user/FrazerJC"] {
-	color: #df7708
-}
-*/
+//a.author[href$="/user/ultio"],
+//a.author[href$="/user/ianskate"],
+//a.author[href$="/user/titoshivan"],
+//a.author[href$="/user/Darth_Wound"],
+//a.author[href$="/user/Better-Off-Bob"],
+//a.author[href$="/user/FrazerJC"] {
+//	color: #df7708
+//}

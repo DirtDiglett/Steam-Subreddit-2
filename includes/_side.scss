@@ -339,10 +339,6 @@
 			}
 		}
 
-		& > ul:nth-of-type(2) li:first-child {
-	    margin-right: 4px;
-		}
-
 		// The Subreddit Friends section (Makes the /r/ less visible)
 		ul li a em {
 			color: rgba(255, 255, 255, 0.4);
@@ -1174,30 +1170,32 @@ body:not(.loggedin) .side a[href$="give.me.flair.in.r.steam.pm"] {
 		}
 	}
 
-	&:not(#moderation_tools) a+.title h1 {
-		font-size: 0;
+	&:not(#moderation_tools) {
+		a+.title h1 {
+			font-size: 0;
 
-		&:before {
-			content: "Moderators";
-			font-size: 16px;
-		}
-	}
-}
-
-// Should target the Moderators
-.spacer:nth-last-of-type(3) {
-	ul.content {
-		overflow: hidden;
-
-		li {
-			height: 24px;
-			overflow: hidden;
-			line-height: 24px;
-			margin-bottom: 2px;
-
-			.flair:hover {
-				width: 800px; // Should prevent layout breakage and just throw it off the screen.
+			&:before {
+				content: "Moderators";
+				font-size: 16px;
 			}
+		}
+
+		ul.content {
+			overflow: hidden;
+
+			li {
+				overflow: hidden;
+				line-height: 24px;
+				margin-bottom: 2px;
+
+				.flair:hover {
+					width: 800px; // Should prevent layout breakage and just throw it off the screen.
+				}
+			}
+		}
+
+		.flair {
+			margin-top: 0;
 		}
 	}
 }
