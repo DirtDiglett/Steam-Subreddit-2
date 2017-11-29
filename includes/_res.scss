@@ -166,7 +166,7 @@
 	}
 
 	#sr-header-area #srDropdown {
-		margin: 0
+		margin: 0;
 	}
 
 	#srDropdownContainer a {
@@ -512,6 +512,10 @@
 	a.voteWeight {
 		background: none !important;
 	}
+}
+
+#sr-header-area #srDropdown:after {
+	display: none;
 }
 
 // Hides the second "Disable the subreddit style" if both are visible.
